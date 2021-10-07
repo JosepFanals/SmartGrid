@@ -1,0 +1,182 @@
+\usepackage[left=3cm,top=3cm,right=2.5cm,bottom=3cm,bindingoffset=0.0cm]{geometry}
+\usepackage{parskip}
+\usepackage{setspace}
+\setstretch{1.25}
+\setlength\parskip{1.5em plus 0.1em minus 0.1em}
+\usepackage{graphicx}
+\usepackage{eurosym}
+\usepackage[english]{babel}
+\usepackage[font=footnotesize, labelsep=period]{caption}
+\usepackage{fancyhdr}
+\fancyhf{}
+\lhead{\footnotesize Smart Grids: from traditional to modernized resilient systems}
+% \rhead{\footnotesize Josep Fanals}
+\rfoot{\footnotesize \thepage}
+\pagestyle{fancy}
+\fancypagestyle{plain}{}
+\usepackage{titlesec}
+\titleformat{\chapter}[block]
+{\bfseries}{\thechapter.}{0.5em}{\MakeUppercase}
+\titlespacing*{\chapter}{0pt}{-33pt}{0.0em}
+\titleformat{\section}[block]
+{\bfseries}{\thesection.}{0.5em}{\normalsize}
+\titlespacing*{\section}{0pt}{1.5em}{1.5em}
+\titleformat{\subsection}[block]
+{\bfseries}{\thesubsection.}{0.5em}{\normalsize}
+\titlespacing*{\subsection}{0pt}{1.5em}{1.5em}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\makeatletter
+\g@addto@macro\normalsize{%
+\setlength{\abovedisplayskip}{0.5em}%
+\setlength{\belowdisplayskip}{0.5em}%
+\setlength{\abovedisplayshortskip}{0.5em}%
+\setlength{\belowdisplayshortskip}{0.5em}%
+ }
+\makeatother
+\setlength{\intextsep}{1.5em}
+\setlength{\textfloatsep}{1.5em}
+\setlength\abovecaptionskip{0.5em}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{
+colorlinks,
+citecolor=black,
+filecolor=black,
+linkcolor=black,
+urlcolor=black
+}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{svg}
+\usepackage[RPvoltages]{circuitikz}
+\usetikzlibrary{arrows, shapes, decorations.markings, arrows.meta}
+\usepackage{listings}
+\usepackage{xcolor}
+\definecolor{gris}{rgb}{0.97,0.97,0.97}
+\definecolor{gris_comment}{rgb}{0.5,0.5,0.5}
+\lstdefinestyle{mystyle}{
+backgroundcolor=\color{gris},
+commentstyle=\color{gris_comment},
+basicstyle=\ttfamily\scriptsize,
+breakatwhitespace=false,
+breaklines=true,
+captionpos=b,
+keepspaces=true,
+numbers=left,
+numbersep=6pt,
+frame=single,
+framexleftmargin=15pt,
+xleftmargin=18.5pt,
+xrightmargin=3.5pt,
+showspaces=false,
+showstringspaces=false,
+showtabs=false,
+tabsize=2
+}
+\lstset{style=mystyle}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\pgfplotsset{samples=2000}
+\usepackage{steinmetz}
+\usepackage{textcomp}
+\urlstyle{same}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{patterns}
+\usepackage{subcaption}
+\tikzset{font=\footnotesize}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Data/}{#1.pdf_tex}
+}
+
+\usepackage{chngcntr}
+\counterwithout{figure}{chapter}
+\counterwithout{figure}{section}
+\counterwithout{figure}{subsection}
+\counterwithout{table}{chapter}
+\counterwithout{table}{section}
+\counterwithout{table}{subsection}
+\counterwithout{equation}{chapter}
+\counterwithout{equation}{section}
+\counterwithout{equation}{subsection}
+
+\usepackage{csquotes}
+\usepackage[style=ieee]{biblatex}
+\addbibresource{bib.bib}
+
+
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage[most]{tcolorbox}
+\usepackage{cleveref} % cref{label} to get the section that contains the exercise
+
+
+% Exercise box, contains a title
+\makeatletter
+\tcbset{
+    exbox/.style 2 args={%
+		parbox=false,
+        enhanced,
+        breakable,
+        colback=black!12!white,
+        colframe=black,
+        attach boxed title to top left={yshift*=-\tcboxedtitleheight},
+		title={\textbf{#2}},
+        boxed title size=title,
+        boxed title style={%
+            sharp corners,
+            rounded corners=northwest,
+            colback=tcbcolframe,
+            boxrule=0pt,
+        },
+        underlay boxed title={%
+            \path[fill=tcbcolframe] (title.south west)--(title.south east)
+                to[out=0, in=180] ([xshift=5mm]title.east)--
+                (title.center-|frame.east)
+                [rounded corners=\kvtcb@arc] |-
+                (frame.north) -| cycle;
+        },
+		before skip=20pt plus 2pt, after skip=20pt plus 2pt,
+        #1
+    },
+}
+\makeatother
+
+\newtcolorbox{exbox}[3][]{%
+    exbox={#1}{#2},
+	label={#3}
+}
+
+% Partial exercise box, doesn't contain a title
+\makeatletter
+\tcbset{
+    pexbox/.style ={%
+		parbox=false,
+        enhanced,
+        breakable,
+        colback=black!12!white,
+        colframe=black,
+		before skip=20pt plus 2pt, after skip=20pt plus 2pt,
+        #1
+    },
+}
+\makeatother
+
+\newtcolorbox{pexbox}[2][]{%
+	pexbox={#1},
+	label={#2}
+}
+
+
+
+
+% \usepgfplotslibrary{external} 
+% \tikzexternalize
+
+
+
