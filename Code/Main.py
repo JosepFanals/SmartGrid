@@ -2,12 +2,13 @@ import pandapower as pp
 import pandas as pd
 from line_param_calc import calc_line
 
-def initialize_net(path_bus, path_line):
+def initialize_net(path_bus, path_line, path_load):
     """
     initialize the grid from the .csv files
 
     :param path_bus: path to the bus .csv file
     :param path_line: path to the line .csv file
+    :param path_load: path to the load .csv file
     :return: the net class
     """
 
@@ -42,6 +43,15 @@ def initialize_net(path_bus, path_line):
                                        max_i_ka=imax,
                                        name=line.name_l,
                                        parallel=line.parallel)
+
+    # loads
+    df_load = pd.read_csv('Datafiles/load1.csv')
+
+    # gens
+
+    # trafos
+
+
 
     return net
 
