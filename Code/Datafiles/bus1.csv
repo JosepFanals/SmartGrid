@@ -1,4 +1,14 @@
 name,vn_kv,type,zone,in_service
-bb1,20,n,None,TRUE
-bb2,23,n,None,TRUE
-bb3,21,n,None,TRUE
+nuclear,25,n,None,TRUE
+load1_i1,36,n,None,TRUE
+load2_i1,36,n,None,TRUE
+load2_i2,36,n,None,TRUE
+load2_i3,36,n,None,TRUE
+intercon,220,n,None,TRUE
+dismant,25,n,None,FALSE
+nl,220,n,None,TRUE
+l1_i1,220,n,None,TRUE
+l2_i1,220,n,None,TRUE
+l2_i2,220,n,None,TRUE
+l2_i3,220,n,None,TRUE
+dm,220,n,None,FALSE

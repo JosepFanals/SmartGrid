@@ -1,4 +1,2 @@
 line_name,from_bus,to_bus,std_type,length,parallel
-l12,bb1,bb2,184-AL1/30-ST1A 110.0,30,1
-l23,bb2,bb3,184-AL1/30-ST1A 110.0,20,1
-l13,bb1,bb3,184-AL1/30-ST1A 110.0,10,1
+l_n_l2i1,nl,l2_i1,184-AL1/30-ST1A 110.0,30,1
