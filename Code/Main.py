@@ -1,5 +1,6 @@
 import pandapower as pp
 import pandas as pd
+from line_param_calc import calc_line
 
 def initialize_net(path_bus, path_line):
     """
@@ -22,13 +23,25 @@ def initialize_net(path_bus, path_line):
     for _, line in df_line.iterrows():
         from_bus = pp.get_element_index(net, "bus", line.from_bus)
         to_bus = pp.get_element_index(net, "bus", line.to_bus)
-        pp.create_line(net,
-                       from_bus,
-                       to_bus,
-                       length_km=line.length,
-                       std_type=line.std_type,
-                       name=line.line_name,
-                       parallel=line.parallel)
+
+        rr, xx, cc, imax = calc_line(line.a,
+                                     line.b,
+                                     line.c,
+                                     line.d,
+                                     line.e,
+                                     line.max_i,
+                                     int(line.parallel))
+
+        pp.create_line_from_parameters(net,
+                                       from_bus,
+                                       to_bus,
+                                       length_km=line.length,
+                                       r_ohm_per_km=rr,
+                                       x_ohm_per_km=xx,
+                                       c_nf_per_km=cc,
+                                       max_i_ka=imax,
+                                       name=line.name_l,
+                                       parallel=line.parallel)
 
     return net
 
