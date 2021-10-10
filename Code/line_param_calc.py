@@ -134,11 +134,6 @@ def calc_line(a, b, c, d, e, immax, npar):
     else:
         print('Error: number of parallel lines is not 1 nor 2')
 
-    rr = 1
-    xx = 2
-    cc = 3
-    imm = 4
-
     return rr, xx, cc, imm
 
 # rr, xx, cc, ii = double_line(11, 2, 4, 5, 6, 1000)

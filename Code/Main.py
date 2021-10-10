@@ -7,6 +7,10 @@ import pandapower.timeseries as timeseries
 from pandapower.timeseries.data_sources.frame_data import DFData
 from line_param_calc import calc_line
 
+pd.set_option('display.max_rows', 500)
+pd.set_option('display.max_columns', 500)
+pd.set_option('display.width', 1000)
+
 def initialize_net(path_bus, path_line, path_demand, path_busload, path_generation, path_busgen):
     """
     initialize the grid from the .csv files
@@ -226,6 +230,7 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
 
 
 if __name__ == "__main__":
+    # load paths
     path_bus = 'Datafiles/bus1.csv'
     path_line = 'Datafiles/line1.csv'
     path_demand = 'Datafiles/demand1.csv'
@@ -233,10 +238,16 @@ if __name__ == "__main__":
     path_generation = 'Datafiles/generation1.csv'
     path_busgen = 'Datafiles/bus_gen1.csv'
 
+    # define net
     net = initialize_net(path_bus, path_line, path_demand, path_busload, path_generation, path_busgen)
 
-    # pp.runpp(net)
-    pp.diagnostic(net)
+    # debug
+    # print(net.line)
+
+    # run
+    pp.runpp(net)
+    print(net.res_bus)
+    # pp.diagnostic(net)
     # timeseries.run_timeseries(net)
 
 # also add trafos and loads
