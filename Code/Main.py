@@ -5,17 +5,22 @@ import pandapower.control as control
 import pandapower.networks as nw
 import pandapower.timeseries as timeseries
 from pandapower.timeseries.data_sources.frame_data import DFData
+from pandapower.plotting import simple_plot
+
 from line_param_calc import calc_line
+
+
 
 pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-def initialize_net(path_bus, path_line, path_demand, path_busload, path_generation, path_busgen):
+def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen):
     """
     initialize the grid from the .csv files
 
     :param path_bus: path to the bus .csv file
+    :param geodata: path to the geodata .csv file
     :param path_line: path to the line .csv file
     :param path_demand: path to the normalized demand .csv file
     :param busload: path to the bus-load look up table .csv file
@@ -24,17 +29,29 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
     :return: the net class
     """
 
-    def create_bus(path_bus):
+    def create_bus(path_bus, path_geodata):
         """
         adapts the data from the bus file (if needed)
 
         :param path_bus:
+        :param path_geodata:
         :return: the net with the buses added
         """
 
         df_bus = pd.read_csv(path_bus)
+        df_geodata = pd.read_csv(path_geodata)
+
         net.bus = df_bus
+
+        # adapt geodata
+        for ll in range(len(df_geodata)):
+            indx_bus = pp.get_element_index(net, "bus", df_geodata['name'][ll])
+            df_geodata['name'][ll] = indx_bus
+
+        net.bus_geodata = df_geodata
+
         return net
+
 
     def create_line(path_line):
         """
@@ -118,12 +135,13 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
         for ll in range(len(df_busload)):
             pp.create_load(net, bus=load_indx['bus'][ll], p_mw=pmw_ts[0, ll], q_mvar=qmvar_ts[0, ll], name=load_name[ll], index=int(ll))
 
-        # add qmvar
-        # df_load_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=load_name.values)
-
-        # df_load_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=net.load.index)
-        # ds_load_ts = DFData(df_load_ts)
-        # const_load = control.ConstControl(net, element='load', element_index=net.load.index, variable={'p_mw', 'q_mvar'}, data_source=ds_load_ts, profile_name=net.load.index)
+        # timeseries
+        df_pload_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=net.load.index)
+        df_qload_ts = pd.DataFrame(qmvar_ts, index=list(range(Nt)), columns=net.load.index)
+        ds_pload_ts = DFData(df_pload_ts)
+        ds_qload_ts = DFData(df_qload_ts)
+        const_load = control.ConstControl(net, element='load', element_index=net.load.index, variable='p_mw', data_source=ds_pload_ts, profile_name=net.load.index)
+        const_load = control.ConstControl(net, element='load', element_index=net.load.index, variable='q_mvar', data_source=ds_qload_ts, profile_name=net.load.index)  # add the reactive like this?
 
         return net
 
@@ -169,14 +187,15 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
         for i in range(Nt):  # number of time periods
             pmw_ts[i,:] = df_gen['p_mw'][:] * df_generation['norm'][i]
 
-
+        # gen structure for 1 t
         for ll in range(len(df_busgen)):
             pp.create_gen(net, bus=gen_indx['bus'][ll], p_mw=pmw_ts[0, ll], vm_pu=gen_vpu[ll], name=gen_name[ll], index=int(ll))
 
 
-        # df_gen_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=gen_name.values)
-        # ds_gen_ts = DFData(df_gen_ts)
-        # const_gen = control.ConstControl(net, element='gen', element_index=gen_name.values, variable='p_mw', data_source=ds_gen_ts, profile_name=gen_name.values)
+        # timeseries
+        df_gen_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=net.gen.index)
+        ds_gen_ts = DFData(df_gen_ts)
+        const_gen = control.ConstControl(net, element='gen', element_index=net.gen.index, variable='p_mw', data_source=ds_gen_ts, profile_name=net.gen.index)
 
         return net
 
@@ -208,7 +227,7 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
     net = pp.create_empty_network()
 
     # buses
-    net = create_bus(path_bus)
+    net = create_bus(path_bus, path_geodata)
 
     # lines
     net = create_line(path_line)
@@ -232,6 +251,7 @@ def initialize_net(path_bus, path_line, path_demand, path_busload, path_generati
 if __name__ == "__main__":
     # load paths
     path_bus = 'Datafiles/bus1.csv'
+    path_geodata = 'Datafiles/geodata1.csv'
     path_line = 'Datafiles/line1.csv'
     path_demand = 'Datafiles/demand1.csv'
     path_busload = 'Datafiles/bus_load1.csv'
@@ -239,15 +259,15 @@ if __name__ == "__main__":
     path_busgen = 'Datafiles/bus_gen1.csv'
 
     # define net
-    net = initialize_net(path_bus, path_line, path_demand, path_busload, path_generation, path_busgen)
+    net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen)
 
-    # debug
-    # print(net.line)
+    # run timeseries
+    ow = timeseries.OutputWriter(net, output_path="./Results/", output_file_type=".xlsx")
+    ow.log_variable('res_bus', 'vm_pu')
+    ow.log_variable('res_line', 'loading_percent')
+    timeseries.run_timeseries(net)
 
-    # run
-    pp.runpp(net)
-    print(net.res_bus)
-    # pp.diagnostic(net)
-    # timeseries.run_timeseries(net)
+    # plot
+    # pp.plotting.simple_plot(net)
+    simple_plot(net)
 
-# also add trafos and loads

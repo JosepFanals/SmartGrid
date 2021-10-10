@@ -8,7 +8,6 @@ from pandapower.timeseries.data_sources.frame_data import DFData
 
 # load a pandapower network
 net = nw.mv_oberrhein(scenario='generation')
-# print(net.load)
 # number of time steps
 n_ts = 95
 # load your timeseries from a file (here csv file)
@@ -32,31 +31,8 @@ const_sgen = control.ConstControl(net, element='sgen', element_index=net.sgen.in
 df = pd.DataFrame(np.random.normal(1., 0.1, size=(n_ts, len(net.load.index))),
                   index=list(range(n_ts)), columns=net.load.index) * net.load.p_mw.values
 ds = DFData(df)
-# print(ds)
 const_load = control.ConstControl(net, element='load', element_index=net.load.index,
                                   variable='p_mw', data_source=ds, profile_name=net.load.index)
 
 # starting the timeseries simulation for one day -> 96 15 min values.
 timeseries.run_timeseries(net)
-
-# print(net.load.index)
-print(net.res_bus)
-# print(net.load.p_mw.values)
-# print(net.sgen)
-
-# print(net.bus.type)
-# for ll in range(100,153):
-    # print(net.bus.type.iloc[ll])
-
-
-# initialising the outputwriter to save data to excel files in the current folder. You can change this to .json, .csv, or .pickle as well
-ow = timeseries.OutputWriter(net, output_path="./", output_file_type=".xlsx")
-# adding vm_pu of all buses and line_loading in percent of all lines as outputs to be stored
-ow.log_variable('res_bus', 'vm_pu')
-ow.log_variable('res_line', 'loading_percent')
-
-# starting the timeseries simulation for one day -> 96 15 min values.
-timeseries.run_timeseries(net)
-# now checkout the folders res_bus and res_line in your current working dir
-
-print(net.bus_geodata)
