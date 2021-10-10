@@ -1,7 +1,10 @@
 import pandapower as pp
 import pandas as pd
-# import control
-# import timeseries
+import numpy as np
+import pandapower.control as control
+import pandapower.networks as nw
+import pandapower.timeseries as timeseries
+from pandapower.timeseries.data_sources.frame_data import DFData
 from line_param_calc import calc_line
 
 def initialize_net(path_bus, path_line, path_demand, path_busload):
@@ -97,6 +100,15 @@ def initialize_net(path_bus, path_line, path_demand, path_busload):
         df_load.columns.values[0] = "name"
 
         # create time series from the basic load df
+        Nt = len(df_demand)
+        Nl = len(df_load)
+        pmw_ts = np.zeros((Nt, Nl), dtype=float)
+        for i in range(Nt):  # number of time periods
+            pmw_ts[i,:] = df_load['p_mw'][:] * df_demand['norm'][i]
+
+        df_load_ts = pd.DataFrame(pmw_ts, index=range(Nt), columns=load_name.values)
+        ds_load_ts = DFData(df_load_ts)
+        const_load = control.ConstControl(net, element='load', element_index=load_name.values, variable='p_mw', data_source=ds_load_ts, profile_name=load_name.values)
 
         return net
 
