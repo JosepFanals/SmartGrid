@@ -39,4 +39,9 @@ const_load = control.ConstControl(net, element='load', element_index=net.load.in
 timeseries.run_timeseries(net)
 
 print(net.load.index)
-print(net.load.p_mw.values)
+# print(net.load.p_mw.values)
+# print(net.sgen)
+
+# print(net.bus.type)
+# for ll in range(100,153):
+    # print(net.bus.type.iloc[ll])

@@ -1,9 +1,9 @@
 name,vn_kv,type,zone,in_service
-nuclear,25,n,None,TRUE
-load1_i1,36,n,None,TRUE
-load2_i1,36,n,None,TRUE
-load2_i2,36,n,None,TRUE
-load2_i3,36,n,None,TRUE
+nuclear,25,n,None,FALSE
+load1_i1,36,n,None,FALSE
+load2_i1,36,n,None,FALSE
+load2_i2,36,n,None,FALSE
+load2_i3,36,n,None,FALSE
 intercon,220,n,None,TRUE
 dismant,25,n,None,FALSE
 nl,220,n,None,TRUE
