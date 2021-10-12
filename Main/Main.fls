@@ -676,7 +676,3 @@ INPUT ./Chapters/Introduction.tex
 INPUT ./Chapters/Introduction.tex
 INPUT ./Chapters/Phase1.tex
 INPUT ./Chapters/Phase1.tex
-INPUT ./Main.aux
-INPUT ./Main.out
-INPUT ./Main.run.xml
-OUTPUT Main.run.xml
