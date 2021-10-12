@@ -15,7 +15,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen):
+def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo):
     """
     initialize the grid from the .csv files
 
@@ -26,6 +26,7 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     :param busload: path to the bus-load look up table .csv file
     :param path_generation: path to the normalized generation .csv file
     :param busgen: path to the bus-generator look up table .csv file
+    :param trafo: path to the trafo .csv file
     :return: the net class
     """
 
@@ -222,6 +223,38 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
         return net
 
 
+    def create_trafo(path_trafo):
+        """
+        defines the transformers
+
+        :param path_trafo:
+        :return: the net with the transformers added
+        """
+
+        df_trafo = pd.read_csv(path_trafo)
+
+        # for trafo in df_trafo:
+        for _, trafo in df_trafo.iterrows():
+            hv_bus = pp.get_element_index(net, "bus", trafo.hv_bus)
+            lv_bus = pp.get_element_index(net, "bus", trafo.lv_bus)
+
+            pp.create_transformer_from_parameters(net,
+                                                  hv_bus,
+                                                  lv_bus,
+                                                  trafo.sn_mva,
+                                                  trafo.vn_hv_kv,
+                                                  trafo.vn_lv_kv,
+                                                  trafo.vkr_percent,
+                                                  trafo.vk_percent,
+                                                  trafo.pfe_kw,
+                                                  trafo.i0_percent)
+
+        return net
+
+
+
+
+
 
     # create empty network
     net = pp.create_empty_network()
@@ -242,6 +275,7 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     net = create_intercon(path_bus)
 
     # trafos
+    net = create_trafo(path_trafo)
 
 
 
@@ -257,9 +291,10 @@ if __name__ == "__main__":
     path_busload = 'Datafiles/bus_load1.csv'
     path_generation = 'Datafiles/generation1.csv'
     path_busgen = 'Datafiles/bus_gen1.csv'
+    path_trafo = 'Datafiles/trafo1.csv'
 
     # define net
-    net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen)
+    net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
 
     # run timeseries
     ow = timeseries.OutputWriter(net, output_path="./Results/", output_file_type=".xlsx")
@@ -267,7 +302,10 @@ if __name__ == "__main__":
     ow.log_variable('res_line', 'loading_percent')
     timeseries.run_timeseries(net)
 
+    # run diagnostic
+    # pp.diagnostic(net)
+
     # plot
     # pp.plotting.simple_plot(net)
-    simple_plot(net)
+    # simple_plot(net)
 
