@@ -1,0 +1,110 @@
+% draw network
+
+\begin{figure}[!htb]\centering
+
+  \begin{circuitikz}[/tikz/circuitikz/bipoles/length=1cm, line width=0.8pt]
+
+    % grid
+    \draw[gray!50!white, line width=0.5pt] (0.0,0.0) to [short] (8.0,0.0);
+    \draw[gray!50!white, line width=0.5pt] (0.0,1.6) to [short] (8.0,1.6);
+    \draw[gray!50!white, line width=0.5pt] (0.0,3.2) to [short] (8.0,3.2);
+    \draw[gray!50!white, line width=0.5pt] (0.0,4.8) to [short] (8.0,4.8);
+    \draw[gray!50!white, line width=0.5pt] (0.0,6.4) to [short] (8.0,6.4);
+    \draw[gray!50!white, line width=0.5pt] (0.0,8.0) to [short] (8.0,8.0);
+
+    \draw[gray!50!white, line width=0.5pt] (0.0,0.0) to [short] (0.0,8.0);
+    \draw[gray!50!white, line width=0.5pt] (1.6,0.0) to [short] (1.6,8.0);
+    \draw[gray!50!white, line width=0.5pt] (3.2,0.0) to [short] (3.2,8.0);
+    \draw[gray!50!white, line width=0.5pt] (4.8,0.0) to [short] (4.8,8.0);
+    \draw[gray!50!white, line width=0.5pt] (6.4,0.0) to [short] (6.4,8.0);
+    \draw[gray!50!white, line width=0.5pt] (8.0,0.0) to [short] (8.0,8.0);
+
+
+    % generators
+    \draw (3.2,-1.8) to [sV, fill=magenta!70!cyan] (3.2,-1.2);
+    \draw [short] (3.2,-1.2) to [short] (3.2,-1.0);
+    \draw (-1.8,1.6) to [sV, fill=green!50!white] (-1.2,1.6);
+    \draw [short] (-1.2,1.6) to [short] (-1.0,1.6);
+    \draw (9.2,1.6) to [sV, fill=cyan!50!white] (9.8,1.6);
+    \draw [short] (9.2,1.6) to [short] (9.0,1.6);
+    \draw (4.8,3.6) to [sV, fill=black!60!white] (4.8,3.0);
+    \draw [short] (4.8,3.6) to [short] (4.8,3.8);
+    \draw (9.2,4.8) to [sV, fill=yellow!60!white] (9.8,4.8);
+    \draw [short] (9.2,4.8) to [short] (9.0,4.8);
+    \draw (1.6,9.2) to [sV, fill=orange!60!white] (1.6,9.8);
+    \draw [short] (1.6,9.0) to [short] (1.6,9.2);
+
+
+    % large buses
+    \draw[line width=2.5pt] (2.7,0) to [short] (3.7,0);
+    \draw[line width=2.5pt] (0.0,1.1) to [short] (0,2.1);
+    \draw[line width=2.5pt] (8.0,1.1) to [short] (8,2.1);
+    \draw[line width=2.5pt] (1.1,8) to [short] (2.1,8);
+    \draw[line width=2.5pt] (2.7,3.2) to [short] (3.7,3.2);
+    \draw[line width=2.5pt] (2.7,4.8) to [short] (3.7,4.8);
+    \draw[line width=2.5pt] (4.3,6.4) to [short] (5.3,6.4);
+    \draw[line width=2.5pt] (0.0,5.9) to [short] (-0.0,6.9);
+    \draw[line width=2.5pt] (8,4.3) to [short] (8,5.3);
+    \draw[line width=2.5pt] (4.3,4.8) to [short] (5.3,4.8);
+
+    % small buses
+    \draw[line width=2.5pt] (2.9,-1) to [short] (3.5,-1);
+    \draw[line width=2.5pt] (-1.0,1.3) to [short] (-1,1.9);
+    \draw[line width=2.5pt] (9,1.3) to [short] (9,1.9);
+    \draw[line width=2.5pt] (4.5,3.8) to [short] (5.1,3.8);
+    \draw[line width=2.5pt] (9,5.1) to [short] (9,4.5);
+    \draw[line width=2.5pt] (1.3,9.0) to [short] (1.9,9.0);
+
+    % trafos
+    \draw (3.2,-1.0) to [voosource] (3.2,0.0);
+    \draw (-1,1.6) to [voosource] (0,1.6);
+    \draw (8,1.6) to [voosource] (9,1.6);
+    \draw (1.6,8) to [voosource] (1.6,9);
+    \draw (8,4.8) to [voosource] (9,4.8);
+    \draw (4.8,4.8) to [voosource] (4.8,3.8);
+
+    % loads
+
+
+    % lines
+    \draw (3.15,0) to [short] (3.15,3.2);
+    \draw (3.25,0) to [short] (3.25,3.2);
+    \draw (3.15,3.2) to [short] (3.15,4.8);
+    \draw (3.25,3.2) to [short] (3.25,4.8);
+    \draw (4.6,4.8) to [short] (4.6,5.1);
+    \draw (4.6,5.1) to [short] (3.4,5.1);
+    \draw (3.4,5.1) to [short] (3.4,4.8);
+    \draw (3.15,4.8) to [short] (3.15,5.1);
+    \draw (3.25,4.8) to [short] (3.25,5.1);
+    \draw (3.15,5.1) to [short] (4.55,6.1);
+    \draw (3.25,5.1) to [short] (4.65,6.1);
+    \draw (4.55,6.1) to [short] (4.55,6.4);
+    \draw (4.65,6.1) to [short] (4.65,6.4);
+    \draw (5.0,6.4) to [short] (5.0,6.1);
+    \draw (5.0,6.1) to [short] (7.7,5.1);
+    \draw (7.7,5.1) to [short] (8.0,5.1);
+    \draw (0,6.4) to [short] (0.3,6.4);
+    \draw (0.3,6.4) to [short] (3.0,5.1);
+    \draw (3.0,5.1) to [short] (3.0,4.8);
+
+
+    % legend
+    \node at (8,8) {\begin{tikzpicture} \draw[black, line width=0.8pt, fill=magenta!70!cyan] circle (4pt); \end{tikzpicture} \footnotesize Nuclear}
+
+
+
+
+
+  \end{circuitikz}
+
+  \caption{Overview of the network}
+  \label{fig:net1}
+\end{figure}
+
+
+
+% plot all voltages
+
+% plot all lines loading
+
+% figure with loadings in red intense depending in magnitude

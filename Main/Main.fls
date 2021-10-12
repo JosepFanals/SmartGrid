@@ -662,6 +662,7 @@ INPUT ./Main.bbl
 INPUT ./Main.bbl
 INPUT ./Main.bbl
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-regular.luc
+INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman12-bold.luc
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-bold.luc
 INPUT ./Data/Logo.png
 INPUT ./Data/Logo.png
@@ -673,6 +674,8 @@ OUTPUT Main.toc
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman8-regular.luc
 INPUT ./Chapters/Introduction.tex
 INPUT ./Chapters/Introduction.tex
+INPUT ./Chapters/Phase1.tex
+INPUT ./Chapters/Phase1.tex
 INPUT ./Main.aux
 INPUT ./Main.out
 INPUT ./Main.run.xml
