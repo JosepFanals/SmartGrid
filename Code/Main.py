@@ -7,6 +7,9 @@ import pandapower.timeseries as timeseries
 from pandapower.timeseries.data_sources.frame_data import DFData
 from pandapower.plotting import simple_plot
 
+import sys
+import codecs
+
 from line_param_calc import calc_line
 
 
@@ -247,7 +250,8 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
                                                   trafo.vkr_percent,
                                                   trafo.vk_percent,
                                                   trafo.pfe_kw,
-                                                  trafo.i0_percent)
+                                                  trafo.i0_percent,
+                                                  in_service=trafo.in_service)
 
         return net
 
@@ -300,11 +304,14 @@ if __name__ == "__main__":
     ow = timeseries.OutputWriter(net, output_path="./Results/", output_file_type=".xlsx")
     ow.log_variable('res_bus', 'vm_pu')
     ow.log_variable('res_line', 'loading_percent')
+    ow.log_variable('res_bus', 'p_mw')
     timeseries.run_timeseries(net)
 
     # run diagnostic
     # pp.diagnostic(net)
-    print(net.bus)
+    print(net.res_load)
+    print(net.res_line)
+    print(net.res_gen)
 
     # plot
     # pp.plotting.simple_plot(net)

@@ -1,7 +1,7 @@
-name,hv_bus,lv_bus,sn_mva,vn_hv_kv,vn_lv_kv,vkr_percent,vk_percent,pfe_kw,i0_percent
-tr1,nl,nuclear,500,220,25,0,10.5,0,0
-tr2,l1_i1,load1_i1,300,220,36,0,10.5,0,0
-tr3,l2_i1,load2_i1,200,220,36,0,10.5,0,0
-tr4,l2_i2,load2_i2,200,220,36,0,10.5,0,0
-tr5,l2_i3,load2_i3,200,220,36,0,10.5,0,0
-tr6,dm,dismant,200,220,25,0,10.5,0,0
+name,hv_bus,lv_bus,sn_mva,vn_hv_kv,vn_lv_kv,vkr_percent,vk_percent,pfe_kw,i0_percent,in_service
+tr1,nl,nuclear,500,220,25,0,10.5,0,0,TRUE
+tr2,l1_i1,load1_i1,300,220,36,0,10.5,0,0,TRUE
+tr3,l2_i1,load2_i1,200,220,36,0,10.5,0,0,TRUE
+tr4,l2_i2,load2_i2,200,220,36,0,10.5,0,0,TRUE
+tr5,l2_i3,load2_i3,200,220,36,0,10.5,0,0,TRUE
+tr6,dm,dismant,200,220,25,0,10.5,0,0,TRUE
