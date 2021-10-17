@@ -87,7 +87,8 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
                                            c_nf_per_km=cc,
                                            max_i_ka=imax,
                                            name=line.name_l,
-                                           parallel=line.parallel)
+                                           parallel=line.parallel,
+                                           in_service=line.in_service)
 
         return net
 

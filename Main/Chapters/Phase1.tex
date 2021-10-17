@@ -352,28 +352,35 @@ Figure \ref{fig:lines_ph1} shows that the line connected to the interconnection 
  
 % TODO: check if is 2 or 2.5 hours for lines!!!!
 
-In the case of line failures, there is a total disconnection time of 2.5 hours; instead, for transformers it is 8 hours. The expected time that an element will be disconnected in a year is found by multiplying the aforementioned disconnection time by the number of failures that take place during a year. Table \ref{tab:lt1} displays the yearly disconnection time and explains the consequences. This will allow to estimate the penalties due disconnection. 
+In the case of line failures, there is a total disconnection time of 2.5 hours; instead, for transformers it is 8 hours. The expected time that an element will be disconnected in a year is found by multiplying the aforementioned disconnection time by the number of failures that take place during a year. Table \ref{tab:lt1} displays the yearly disconnection time and explains the consequences spotted by running the power flow. This will allow to estimate the penalties due disconnection. 
 
 \begin{table}[!htb]\centering
   \begin{tabular}[]{ccc}
     \hline 
     \textbf{Element} & \textbf{Disconnection time (h)} & \textbf{Consequences} \\
     \hline
-    Line 8-10 & 12.50 & ? \\
-    Line 9-10 & 6.25 & ? \\
-    Line 9-11 & 8.85 & ? \\
-    Line 9-12 & 13.98 & ? \\
-    Line 11-6 & 13.98 & ? \\
-    Trafo 1-8 & 1.20 & No load served \\
-    Trafo 2-9 & 1.20 & Load 2 unserved \\
-    Trafo 3-10 & 1.20 & Load 3 unserved \\
-    Trafo 4-11 & 1.20 & Load 4 unserved \\
-    Trafo 5-12 & 1.20 & Load 5 unserved \\
+    Line 8-10 & 12.50 & No load served - divergence \\
+    Line 9-10 & 6.25 & No load served - divergence \\
+    Line 9-11 & 8.85 & Loads at buses 2, 3 and 5 unserved \\
+    Line 9-12 & 13.98 & Load at bus 5 unserved \\
+    Line 11-6 & 13.98 & No load served \\
+    Trafo 1-8 & 1.20 & No load served - divergence \\
+    Trafo 2-9 & 1.20 & Load at bus 2 unserved \\
+    Trafo 3-10 & 1.20 & Load at bus 3 unserved \\
+    Trafo 4-11 & 1.20 & Load at bus 4 unserved \\
+    Trafo 5-12 & 1.20 & Load at bus 5 unserved \\
     \hline
   \end{tabular}
   \caption{Disconnection time and consequences of losing each element}
   \label{tab:lt1}
 \end{table}
+Once the unserved loads and the associated disconnection times are known, the next step has to do with applying the penalty as follows:
+\begin{equation}
+  C_{discon} \approx \sum_{i=1}^{10} \overline{P}_{uns,i} t_{discon,i} C_p,
+  \label{eq:discon}
+\end{equation}
+where $C_{discon}$ is the total disconnection cost, $i$ represents the index of the line or transformer with a total of 10 elements prone to be disconnected (see Table \ref{tab:lt1}), $\overline{P}_{uns,i}$ is the mean unserved power, $t_{discon,i}$ the disconnection time, and $C_p$ the penalty cost to apply. Equation \ref{eq:discon} is an approximation in the sense that the unserved power varies according to the time of the day. To not overcomplicate the problem, it has been decided to pick a representative value such as the average. 
 
+The application of Equation \ref{eq:discon} yields a total yearly penalty cost of 4.99 M\texteuro. For the most part, it is due to the disconnection of lines. Meshing more the system would decrease this cost, but on the other side, it would increase the investment cost. Hence, there is a trade-off between cost and reliability.
 
-All the calculations related to costs have not set an inferior limit to the voltages. However, some of them are likely to be unacceptable in reality. The project will proceed to discuss solutions to this issue in the following phases.
+All the calculations related to costs have not set an inferior limit to the voltages. However, some of them are likely to be unacceptable in reality. The project will proceed to discuss solutions to this issue in the following phases. 

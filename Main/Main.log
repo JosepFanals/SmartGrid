@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.10.3)  17 OCT 2021 12:48
+This is LuaHBTeX, Version 1.14.0 (MiKTeX 21.8) (format=lualatex 2021.10.3)  17 OCT 2021 13:27
  restricted system commands enabled.
  file:line:error style messages enabled.
 **c:/Users/JOSEP/Desktop/SmartGrid/Main/Main
@@ -1982,10 +1982,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 326.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 326.
-)
-[6
+ [6
 
-] [7]
+])
+[7]
 Chapter 3.
 (./Chapters/Code.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
@@ -2005,21 +2005,21 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 71225 strings out of 478106
- 1456138,3417909 words of node,token memory allocated
- 1376 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 87 attribute, 69 glue_sp
-ec, 81 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:12,2:34169,3:8554,4:31848,5:32012,6:149,7:36537,8:137,9:79973,
+ 71228 strings out of 478106
+ 1456146,3417909 words of node,token memory allocated
+ 1388 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 91 attribute, 69 glue_sp
+ec, 83 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
+   avail lists: 1:13,2:34164,3:8553,4:31848,5:32012,6:148,7:36537,8:137,9:79973,
 10:54,11:3060
- 89067 multiletter control sequences out of 65536+600000
+ 89069 multiletter control sequences out of 65536+600000
  57 fonts using 5408487 bytes
  109i,19n,109p,1226b,2292s stack positions out of 5000i,500n,10000p,200000b,80000s
 <//?/c:/program files/miktex 2.9/fonts/opentype/public/lm/lmmono8-regular.otf></
 /?/c:/program files/miktex 2.9/fonts/opentype/public/lm/lmroman7-regular.otf>{C:
-/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiK
-TeX 2.9/fonts/enc/dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvip
-s/lm/lm-mathit.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc
+/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Program Files/MiK
+TeX 2.9/fonts/enc/dvips/lm/lm-mathex.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/
+dvips/lm/lm-rm.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathit.enc
 }<//?/c:/program files/miktex 2.9/fonts/opentype/public/lm/lmroman8-bold.otf><//
 ?/c:/program files/miktex 2.9/fonts/opentype/public/lm/lmroman8-regular.otf><//?
 /c:/program files/miktex 2.9/fonts/opentype/public/lm/lmroman10-regular.otf><//?
@@ -2030,10 +2030,11 @@ m Files/MiKTeX 2.9/fonts/type1/public/lm/lmex10.pfb><C:/Program Files/MiKTeX 2.9
 c/lm/lmmi7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmmi8.pfb><C:/
 Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmr10.pfb><C:/Program Files/MiKTe
 X 2.9/fonts/type1/public/lm/lmr7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/pu
-blic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (13 pages, 228433 bytes).
+blic/lm/lmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Main.pdf (13 pages, 235269 bytes).
 
-PDF statistics: 542 PDF objects out of 1000 (max. 8388607)
- 337 named destinations out of 1000 (max. 131072)
+PDF statistics: 551 PDF objects out of 1000 (max. 8388607)
+ 338 named destinations out of 1000 (max. 131072)
  280 words of extra memory for PDF output out of 10000 (max. 100000000)
 
