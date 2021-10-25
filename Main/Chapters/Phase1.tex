@@ -1,4 +1,5 @@
 % draw network
+A system such as the one displayed in Figure \ref{fig:net1} is analyzed. The network operates at the transmission level and feds dispersed demand points that symbolyze distribution grids. The grid has an interconnection with a transmission grid, and at the same time, some power is provided by the nuclear power plant. Initially, there are no renewable power plants nor storage systems, which compromises the security of the grid.
 
 \begin{figure}[!htb]\centering
 
@@ -156,19 +157,17 @@
 
 
 
-    % \node at (8,8) {\begin{tikzpicture} \draw[black, line width=0.8pt, fill=magenta!70!cyan] circle (4pt); \end{tikzpicture} \footnotesize Nuclear}
-
-    % \node at (8,8) {\begin{tikzpicture} \draw[-{Triangle[length=5mm, width=2mm]}] (8,8.4) -- (9,8.4) ; \end{tikzpicture} \footnotesize Load I}
-
-
-
-
-
   \end{circuitikz}
 
   \caption{Overview of the network}
   \label{fig:net1}
 \end{figure}
+
+
+The first step to analyze the system is to know the demand and the generation profile. In order to model them, the hourly demand and generation data of Spain have been collected \cite{esios}. To obtain a typical working day, a statistical analysis has been performed taking into account only the days from the 1st of January to the 31st of March, from Tuesday to Thursday and removing the national holidays. The result then has been normalized. analyze the system is This way, the consumption profile is obtained by from the product of the normalized demand and the peak power consumption of 375~MW for load type I and 140~MW for type II. For the generation profile, for simplicity, it has been assumed that the nuclear power plant follows the demand curve, i.e., it is not acting as a constant generator.
+
+
+
 
 
 % voltages
@@ -320,6 +319,8 @@
 \clearpage
 \newpage
 % estimate operating costs
+
+\section{Operating costs}
 Regarding the operating costs, some estimations are made in order to asses the influence of importing energy and the impact of faults on lines and transformers. 
 
 First, the cost of importing energy depends on the time zone: valley, flat or peak. The analysis that follows considers a working day, which is precisely the date for which the voltages and loading profiles have been shown in Figures \ref{fig:vpu_ph1} and \ref{fig:lines_ph1} respectively. The cost of importing the energy is mathematically expressed as:
@@ -384,3 +385,15 @@ where $C_{discon}$ is the total disconnection cost, $i$ represents the index of 
 The application of Equation \ref{eq:discon} yields a total yearly penalty cost of 4.99 M\texteuro. For the most part, it is due to the disconnection of lines. Meshing more the system would decrease this cost, but on the other side, it would increase the investment cost. Hence, there is a trade-off between cost and reliability.
 
 All the calculations related to costs have not set an inferior limit to the voltages. However, some of them are likely to be unacceptable in reality. The project will proceed to discuss solutions to this issue in the following phases. 
+
+\section{Problem identification}
+The network modeled presents some serious issues. First, in case of fault, the demand cannot be covered. The network is a ramified line but does not have any interconnection within the system. If a fault occurs, the two branches are not connected and have to support the demand of the remaining part on its own. In the case of the nuclear power plant, it cannot produce enough energy to fulfill all the demand and in the case of the interconnection, if it was to cover all, it would be overloaded. 
+
+This leads to the second problem the network faces, there is a risk of overloading. This may happen in case or fault or if the the nuclear power plant shuts down because there is no other source of generation. This could lead to burning hence security and material damage issue. A third drawback is the high impact of the interruptions. As many line are single lines and there are no multiple connections, only ramifications, a fault has a high chance to directly disconnect the network. Finally, the voltage cannot be kept constant enough. It is usually accepted to fluctuate 10\% around the nominal 1~p.u. while in the current transmission network, the voltage reaches almost 0.8~p.u..
+
+\section{Solution suggestion}
+As some of the lines present some overloading and demand coverage problems, we suggest improving lines to better ones which are able to transport more power. In order to do so, the critical lines could be changed from single to double lines and/or even change the conductors to thicker cables which allow a larger amount of power flow. Another approach would be to add more lines to the grid to overcome the demand coverage but we must also be aware that when adding new lines to the system we are also increasing the possibility of line failures which may affect interruptibility and cause economic losses to the system.
+
+On the other hand, adding generation points to the system would also help overcome the stated problems in the previous point. If power is more accessible in different locations, the demand can be fulfilled from various points without saturating the most critical lines while evenly distributing the generation. Finally, another solution could be to change the 220~kV existing lines to 400~kV ones in order to allow these to transport higher amounts of power. With this change, only the amount of power transported would be around three times higher than the current one. However, it has to be taken into account that there would have to be an additional transformer to adapt the 220~kV from the interconnection to 400 kV, and the rest of the transformers would have to be replaced to match nominal voltages. 
+
+
