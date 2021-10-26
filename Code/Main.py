@@ -76,7 +76,10 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
                                          line.d,
                                          line.e,
                                          line.max_i,
-                                         int(line.parallel))
+                                         int(line.parallel),
+                                         line.Rca,
+                                         line.Dext,
+                                         line.kg)
 
             pp.create_line_from_parameters(net,
                                            from_bus,

@@ -1,8 +1,8 @@
-name_l,from_bus,to_bus,length,a,b,c,d,e,max_i,parallel,in_service
-line1,nl,l2_i1,100,6,7,6,6,6,888.98,2,TRUE
-line2,l2_i1,l1_i1,50,6,7,6,6,6,888.98,2,TRUE
-line3,l1_i1,l2_i2,70.7107,6,7,6,6,6,888.98,2,TRUE
-line4,l1_i1,l2_i3,111.8034,10,3,0,0,0,888.98,1,TRUE
-line5,l2_i2,intercon,111.8034,10,3,0,0,0,888.98,1,TRUE
-line6,l1_i1,dm,50,10,3,0,0,0,888.98,1,FALSE
+name_l,from_bus,to_bus,length,a,b,c,d,e,max_i,parallel,in_service,Rca,Dext,kg
+line1,nl,l2_i1,100,6,7,6,6,6,888.98,2,TRUE,0.062,30.42,0.809
+line2,l2_i1,l1_i1,50,6,7,6,6,6,888.98,2,TRUE,0.062,30.42,0.809
+line3,l1_i1,l2_i2,70.7107,6,7,6,6,6,888.98,2,TRUE,0.062,30.42,0.809
+line4,l1_i1,l2_i3,111.8034,10,3,0,0,0,888.98,1,TRUE,0.062,30.42,0.809
+line5,l2_i2,intercon,111.8034,10,3,0,0,0,888.98,1,TRUE,0.062,30.42,0.809
+line6,l1_i1,dm,50,10,3,0,0,0,888.98,1,FALSE,0.062,30.42,0.809
 

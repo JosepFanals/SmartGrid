@@ -1,6 +1,6 @@
 import numpy as np
 
-def calc_line(a, b, c, d, e, immax, npar):
+def calc_line(a, b, c, d, e, immax, npar, Rca, Dext, kgg):
     """
     calculate r, x, c, and return also Imax
 
@@ -11,16 +11,23 @@ def calc_line(a, b, c, d, e, immax, npar):
     :param e: vertical distance between B1 and C1
     :param immax: max current in A
     :param npar: number of parallel lines (1 or 2)
+    :param Rca: ac resistance in ohm/km
+    :param Dext: external diameter in mm
+    :param kg: factor of roughly 0.8
     :return: r, x, c, imax
     """
 
-    def single_line(a, b, immax):
+    def single_line(a, b, immax, Rca, Dext, kgg):
         """
         calculate the R, X, C parameters, also return Imax
 
         :param a: horizontal distance between A and C
         :param b: vertical distance between A and B
         :param immax: max current in A
+        :param Rca: ac resistance in ohm/km
+        :param Dext: external diameter in mm
+        :param kg: factor of roughly 0.8
+
         :return: R, X, C, Imax, in the units desired by pandapower
         """
 
@@ -29,9 +36,13 @@ def calc_line(a, b, c, d, e, immax, npar):
 
         w = 2 * np.pi * 50  # rad / s
         Imax = immax * 1e-3  # kA
-        Stot = 547.3 * 1e-6  # m2, the total section
-        R_ac_75 = 0.07316 * 1e-3  # ohm / m
-        kg = 0.809  # from the slides in a 54 + 7
+        # Stot = 547.3 * 1e-6  # m2, the total section
+        # R_ac_75 = 0.07316 * 1e-3  # ohm / m
+        # kg = 0.809  # from the slides in a 54 + 7
+
+        R_ac_75 = Rca * 1e-3  # ohm / m, should we correct by temperatures?
+        Stot = np.pi * Dext ** 2 / 4 * 1e-6  # m2, the total section
+        kg = kgg
 
         r = np.sqrt(Stot / np.pi)  # considering the total section
 
@@ -55,7 +66,7 @@ def calc_line(a, b, c, d, e, immax, npar):
         return R_km, X_km, C_km, Imax
 
 
-    def double_line(a, b, c, d, e, immax):
+    def double_line(a, b, c, d, e, immax, Rca, Dext, kgg):
         """
         calculate the R, X, C parameters, also return Imax
 
@@ -65,6 +76,9 @@ def calc_line(a, b, c, d, e, immax, npar):
         :param d: vertical distance between A1 and B1
         :param e: vertical distance between B1 and C1
         :param immax: max current in A
+        :param Rca: ac resistance in ohm/km
+        :param Dext: external diameter in mm
+        :param kgg: factor of roughly 0.8
         :return: R, X, C, Imax, in the units desired by pandapower
         """
 
@@ -73,9 +87,15 @@ def calc_line(a, b, c, d, e, immax, npar):
 
         w = 2 * np.pi * 50  # rad / s
         Imax = immax * 1e-3 * 2  # kA, for the full line, x2
-        Stot = 547.3 * 1e-6  # m2, the total section
-        R_ac_75 = 0.07316 * 1e-3  # ohm / m
-        kg = 0.809  # from the slides in a 54 + 7
+        # Stot = 547.3 * 1e-6  # m2, the total section
+        # R_ac_75 = 0.07316 * 1e-3  # ohm / m
+        # kg = 0.809  # from the slides in a 54 + 7
+
+        R_ac_75 = Rca * 1e-3  # ohm / m, should we correct by temperatures?
+        Stot = np.pi * Dext ** 2 / 4 * 1e-6  # m2, the total section
+        kg = kgg
+
+
 
         r = np.sqrt(Stot / np.pi)  # considering the total section
 
@@ -128,9 +148,9 @@ def calc_line(a, b, c, d, e, immax, npar):
         return R_km, X_km, C_km, Imax
 
     if npar == 1:
-        rr, xx, cc, imm = single_line(a, b, immax)
+        rr, xx, cc, imm = single_line(a, b, immax, Rca, Dext, kgg)
     elif npar == 2:
-        rr, xx, cc, imm = double_line(a, b, c, d, e, immax)
+        rr, xx, cc, imm = double_line(a, b, c, d, e, immax, Rca, Dext, kgg)
     else:
         print('Error: number of parallel lines is not 1 nor 2')
 
