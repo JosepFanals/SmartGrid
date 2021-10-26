@@ -332,7 +332,8 @@ def run_store_timeseries(net, identifier):
     ow.log_variable('res_bus', 'vm_pu')
     ow.log_variable('res_line', 'loading_percent')
     ow.log_variable('res_line', 'pl_mw')
-    timeseries.run_timeseries(net)
+    # timeseries.run_timeseries(net)
+    timeseries.run_timeseries(net, continue_on_divergence=True)
 
     # store other data, like state of the lines...
     df_lines_states = pd.DataFrame([net.line['name'], net.line['from_bus'], net.line['to_bus'], net.line['in_service']])
@@ -341,7 +342,8 @@ def run_store_timeseries(net, identifier):
 
     # store diagnostic
     diagn = pp.diagnostic(net, report_style='compact')
-    df_diagn = pd.DataFrame(diagn)
+    # df_diagn = pd.DataFrame(diagn)
+    df_diagn = pd.DataFrame.from_dict(list(diagn))
     df_diagn.to_excel("./Results/Cases/Case_"+identifier+"/diagnostic.xlsx")
 
     return ()
@@ -377,16 +379,23 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
     n_cases = len(perms_extra)
     n_lines = len(net_ini.line)
 
-    # evaluate the state by connecting the extra lines
-    for kk in range(n_cases):
-        # copy the net
+    # disconnect the initial lines and run the cross cases with connecting the others
+    for jj in range(n_lines - n_extra_lines):
         net_2 = pp.pandapowerNet(net_ini)
+        net_2.line['in_service'][jj] = False
 
-        # change state of the line (True/False)
-        net_2.line['in_service'][n_lines - n_extra_lines:] = perms_extra[kk][:]
+        # evaluate the state by connecting the extra lines
+        for kk in range(n_cases):
+            # copy the net
+            net_3 = pp.pandapowerNet(net_2)
 
-        # run timeseries and store
-        run_store_timeseries(net_2, str(kk))
+            # change state of the line (True/False)
+            net_3.line['in_service'][n_lines - n_extra_lines:] = perms_extra[kk][:]
+
+            # run timeseries and store
+            run_store_timeseries(net_3, str(jj) + '_' + str(kk))
+            # run_store_timeseries(net_3, str(jj))
+            # run_store_timeseries(net_3, str(hash(str(jj) + '_' + str(kk))))
 
     return ()
 
