@@ -4,6 +4,7 @@ import numpy as np
 import pandapower.control as control
 import pandapower.networks as nw
 import pandapower.timeseries as timeseries
+import itertools
 from pandapower.timeseries.data_sources.frame_data import DFData
 from pandapower.plotting import simple_plot
 
@@ -260,10 +261,6 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
         return net
 
 
-
-
-
-
     # create empty network
     net = pp.create_empty_network()
 
@@ -285,39 +282,148 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     # trafos
     net = create_trafo(path_trafo)
 
-
-
     return net
+
+
+
+def get_Plosses(net, prnt=False):
+    """
+    returns the active power losses
+
+    :param net: full grid
+    :param prnt: to print the value
+    :return: total active power losses
+    """
+
+    Pll = sum(net.res_line['pl_mw'])
+    if prnt is True:
+        print('The active power losses are: ', Pll, 'MW')
+
+    return Pll
+
+
+def get_max_loading(net, prnt=False):
+    """
+    returns the maximum loading in percentage
+
+    :param net: full grid
+    :param prnt: to print the value
+    :return: maximum percentual loading of the lines
+    """
+
+    L_max = max(net.res_line['loading_percent'])
+    if prnt is True:
+        print('The maximum loading is: ', L_max, '%')
+
+    return L_max
+
+
+def run_store_timeseries(net, identifier):
+    """
+    run the timeseries and store the data
+
+    :param net: full grid
+    :param identifier: the name to append to the .xlsx file
+    :return: nothing, just store in .xlsx
+    """
+
+    ow = timeseries.OutputWriter(net, output_path="./Results/Cases/Case_"+identifier, output_file_type=".xlsx")
+
+    ow.log_variable('res_bus', 'vm_pu')
+    ow.log_variable('res_line', 'loading_percent')
+    ow.log_variable('res_line', 'pl_mw')
+    timeseries.run_timeseries(net)
+
+    # store other data, like state of the lines...
+    df_lines_states = pd.DataFrame([net.line['name'], net.line['from_bus'], net.line['to_bus'], net.line['in_service']])
+    df_lls = df_lines_states.T
+    df_lls.to_excel("./Results/Cases/Case_"+identifier+"/lines_states.xlsx")
+
+    # store diagnostic
+    diagn = pp.diagnostic(net, report_style='compact')
+    df_diagn = pd.DataFrame(diagn)
+    df_diagn.to_excel("./Results/Cases/Case_"+identifier+"/diagnostic.xlsx")
+
+    return ()
+
+
+def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=0):
+    """
+    run contingencies by disconnecting lines for now
+
+    :param path: path of the datafiles to create the grid
+    :param n_extra_lines: number of added lines to combine, the last ones in the .csv
+    :return: store in xlsx files
+    """
+
+    def perms(n_extra_lines):
+        """
+        generate the permutations
+
+        :param n_extra_lines: number of added lines to combine
+        :return: list of permutations
+        """
+        # lst = ['True', 'False'] * n_extra_lines
+        lst = [True, False] * n_extra_lines
+        perms_all = set(itertools.permutations(lst, int(n_extra_lines)))
+        perms_all = list(perms_all)
+
+        return perms_all
+
+    perms_extra = perms(n_extra_lines)
+
+    net_ini = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
+
+    n_cases = len(perms_extra)
+    n_lines = len(net_ini.line)
+
+    # evaluate the state by connecting the extra lines
+    for kk in range(n_cases):
+        # copy the net
+        net_2 = pp.pandapowerNet(net_ini)
+
+        # change state of the line (True/False)
+        net_2.line['in_service'][n_lines - n_extra_lines:] = perms_extra[kk][:]
+
+        # run timeseries and store
+        run_store_timeseries(net_2, str(kk))
+
+    return ()
 
 
 if __name__ == "__main__":
     # load paths
-    path_bus = 'Datafiles/bus1.csv'
-    path_geodata = 'Datafiles/geodata1.csv'
-    path_line = 'Datafiles/line1.csv'
-    path_demand = 'Datafiles/demand1.csv'
-    path_busload = 'Datafiles/bus_load1.csv'
-    path_generation = 'Datafiles/generation1.csv'
-    path_busgen = 'Datafiles/bus_gen1.csv'
-    path_trafo = 'Datafiles/trafo1.csv'
+    path_bus = 'Datafiles/phII/bus1.csv'
+    path_geodata = 'Datafiles/phII/geodata1.csv'
+    path_line = 'Datafiles/phII/line1.csv'
+    path_demand = 'Datafiles/phII/demand1.csv'
+    path_busload = 'Datafiles/phII/bus_load1.csv'
+    path_generation = 'Datafiles/phII/generation1.csv'
+    path_busgen = 'Datafiles/phII/bus_gen1.csv'
+    path_trafo = 'Datafiles/phII/trafo1.csv'
 
     # define net
     net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
 
-    # run timeseries
-    ow = timeseries.OutputWriter(net, output_path="./Results/", output_file_type=".xlsx")
-    ow.log_variable('res_bus', 'vm_pu')
-    ow.log_variable('res_line', 'loading_percent')
-    ow.log_variable('res_bus', 'p_mw')
-    timeseries.run_timeseries(net)
+    # run and store timeseries data, for only 1 case
+    # run_store_timeseries(net, '000')
+
+    # run contingencies
+    run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+
+    # ------------- Others -------------
 
     # run diagnostic
     # pp.diagnostic(net)
-    print(net.res_load)
-    print(net.res_line)
-    print(net.res_gen)
+    # print(net.res_load)
+    # print(net.res_line)
+    # print(net.res_gen)
 
     # plot
     # pp.plotting.simple_plot(net)
     # simple_plot(net)
+
+    # get_Plosses(net, prnt=True)
+    # get_max_loading(net, prnt=True)
+
 
