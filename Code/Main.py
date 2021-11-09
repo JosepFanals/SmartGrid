@@ -349,6 +349,21 @@ def run_store_timeseries(net, identifier):
     return ()
 
 
+def perms(n_extra_lines):
+    """
+    generate the permutations
+
+    :param n_extra_lines: number of added lines to combine
+    :return: list of permutations
+    """
+    # lst = ['True', 'False'] * n_extra_lines
+    lst = [True, False] * n_extra_lines
+    perms_all = set(itertools.permutations(lst, int(n_extra_lines)))
+    perms_all = list(perms_all)
+
+    return perms_all
+
+
 def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=0):
     """
     run contingencies by disconnecting lines for now
@@ -357,21 +372,6 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
     :param n_extra_lines: number of added lines to combine, the last ones in the .csv
     :return: store in xlsx files
     """
-
-    def perms(n_extra_lines):
-        """
-        generate the permutations
-
-        :param n_extra_lines: number of added lines to combine
-        :return: list of permutations
-        """
-        # lst = ['True', 'False'] * n_extra_lines
-        lst = [True, False] * n_extra_lines
-        perms_all = set(itertools.permutations(lst, int(n_extra_lines)))
-        perms_all = list(perms_all)
-
-        return perms_all
-
     perms_extra = perms(n_extra_lines)
 
     net_ini = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
@@ -397,6 +397,50 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
             # run_store_timeseries(net_3, str(jj))
             # run_store_timeseries(net_3, str(hash(str(jj) + '_' + str(kk))))
 
+    # return ()
+    return n_lines, n_extra_lines, n_cases
+
+
+def process_contingencies(n_lines, n_extra_lines, n_cases):
+    """
+    merge all excels into one but different sheets
+
+    :param n_lines: number of total lines
+    :param n_extra_lines: number of added lines
+    :param n_cases: resulting total number of cases
+    :return: nothing, just store
+    """
+
+    dd0 = pd.DataFrame([])
+
+    nnx = n_cases * (n_lines - n_extra_lines)
+    f0_vpu = dd0.to_excel("./Results/All_vpu_" + str(nnx) + ".xlsx")
+    f0_load = dd0.to_excel("./Results/All_load_" + str(nnx) + ".xlsx")
+    f0_pl = dd0.to_excel("./Results/All_pl_" + str(nnx) + ".xlsx")
+    f0_diag = dd0.to_excel("./Results/All_diag_" + str(nnx) + ".xlsx")
+    f0_line = dd0.to_excel("./Results/All_line_" + str(nnx) + ".xlsx")
+
+
+    w_vpu = pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx")
+
+    for jj in range(n_lines - n_extra_lines):
+        for kk in range(n_cases):
+            fold_path = "./Results/Cases/Case_" + str(jj) + "_" + str(kk)
+            f1_vpu = pd.read_excel(fold_path + "/res_bus/vm_pu.xlsx")
+            f1_load = pd.read_excel(fold_path + "/res_line/loading_percent.xlsx")
+            f1_pl = pd.read_excel(fold_path + "/res_line/pl_mw.xlsx")
+            f1_diag = pd.read_excel(fold_path + "/diagnostic.xlsx")
+            f1_line = pd.read_excel(fold_path + "/lines_states.xlsx")
+
+            # f1_vpu.to_excel(pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx"), sheet_name=str(jj) + "_" + str(kk))
+            # print(f1_vpu)
+            # with pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx") as writer:
+            f1_vpu.to_excel(w_vpu, sheet_name=str(jj) + '_' + str(kk))
+
+    w_vpu.save()
+
+
+
     return ()
 
 
@@ -418,7 +462,16 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    # run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+
+    # merge excels
+    # define now my own way
+    n_lines = 11
+    n_extra_lines = 6
+    n_cases = len(perms(n_extra_lines))
+
+    process_contingencies(n_lines, n_extra_lines, n_cases)
 
     # ------------- Others -------------
 
