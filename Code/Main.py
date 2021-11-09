@@ -422,6 +422,10 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
 
 
     w_vpu = pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx")
+    w_load = pd.ExcelWriter("./Results/All_load_" + str(nnx) + ".xlsx")
+    w_pl = pd.ExcelWriter("./Results/All_pl_" + str(nnx) + ".xlsx")
+    w_diag = pd.ExcelWriter("./Results/All_diag_" + str(nnx) + ".xlsx")
+    w_line = pd.ExcelWriter("./Results/All_line_" + str(nnx) + ".xlsx")
 
     for jj in range(n_lines - n_extra_lines):
         for kk in range(n_cases):
@@ -432,14 +436,17 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
             f1_diag = pd.read_excel(fold_path + "/diagnostic.xlsx")
             f1_line = pd.read_excel(fold_path + "/lines_states.xlsx")
 
-            # f1_vpu.to_excel(pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx"), sheet_name=str(jj) + "_" + str(kk))
-            # print(f1_vpu)
-            # with pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx") as writer:
             f1_vpu.to_excel(w_vpu, sheet_name=str(jj) + '_' + str(kk))
+            f1_load.to_excel(w_load, sheet_name=str(jj) + '_' + str(kk))
+            f1_pl.to_excel(w_pl, sheet_name=str(jj) + '_' + str(kk))
+            f1_diag.to_excel(w_diag, sheet_name=str(jj) + '_' + str(kk))
+            f1_line.to_excel(w_line, sheet_name=str(jj) + '_' + str(kk))
 
     w_vpu.save()
-
-
+    w_load.save()
+    w_pl.save()
+    w_diag.save()
+    w_line.save()
 
     return ()
 
@@ -462,14 +469,14 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
     # run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
 
     # merge excels
     # define now my own way
-    n_lines = 11
-    n_extra_lines = 6
-    n_cases = len(perms(n_extra_lines))
+    # n_lines = 11
+    # n_extra_lines = 6
+    # n_cases = len(perms(n_extra_lines))
 
     process_contingencies(n_lines, n_extra_lines, n_cases)
 
