@@ -332,6 +332,7 @@ def run_store_timeseries(net, identifier):
     ow.log_variable('res_bus', 'vm_pu')
     ow.log_variable('res_line', 'loading_percent')
     ow.log_variable('res_line', 'pl_mw')
+    ow.log_variable('line', 'parallel')
     # timeseries.run_timeseries(net)
     timeseries.run_timeseries(net, continue_on_divergence=True)
 
@@ -399,6 +400,61 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
 
     # return ()
     return n_lines, n_extra_lines, n_cases
+
+
+def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, n_lines, n_extra_lines, n_cases):
+    """
+    Find the optimal configuration of lines considering convergence, losses, voltages, and costs
+
+    :param path_diagN: path of the diagnostic N cases
+    :param path_lineN: path of the line N cases
+    :param path_loadN: path of the loading of the lines N cases
+    :param path_plN: path of the losses through the lines N cases
+    :param path_vpuN: path of the voltages N cases
+
+    :return: optimal case
+    """
+
+    diag = pd.read_excel(path_diagN, sheet_name=None)
+    line = pd.read_excel(path_lineN, sheet_name=None)
+    load = pd.read_excel(path_loadN, sheet_name=None)
+    pl = pd.read_excel(path_plN, sheet_name=None)
+    vpu = pd.read_excel(path_vpuN, sheet_name=None)
+
+
+    # for jj in range(n_lines - n_extra_lines):
+        # for kk in range(n_cases):
+            # diag = pd.read_excel(path_diagN, sheet_name=str(jj) + '_' + str(kk))
+            # line = pd.read_excel(path_lineN, sheet_name=str(jj) + '_' + str(kk))
+            # load = pd.read_excel(path_loadN, sheet_name=str(jj) + '_' + str(kk))
+            # pl = pd.read_excel(path_plN, sheet_name=str(jj) + '_' + str(kk))
+            # vpu = pd.read_excel(path_vpuN, sheet_name=str(jj) + '_' + str(kk))
+
+            # print(diag)
+    on_off_all_lines = []
+    for name, sheet in diag.items():
+        if len(sheet) == 0:
+            on_off_lines = line[name]['in_service']
+            on_off_all_lines.append(on_off_lines)
+
+            # loadings
+            loadings = load[name]
+            conditional_loading = loadings[loadings[:] > 80]
+
+            # vpu
+            vpuss = vpu[name]
+            conditional_vpu1 = vpuss[vpuss[:] > 1.10]
+            conditional_vpu2 = vpuss[vpuss[:] < 0.90]
+
+        
+            print(name, conditional_vpu2.isnull().values.any())
+
+
+    return ()
+
+
+
+
 
 
 def process_contingencies(n_lines, n_extra_lines, n_cases):
@@ -469,13 +525,21 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
 
     # merge excels
-    process_contingencies(n_lines, n_extra_lines, n_cases)
+    # process_contingencies(n_lines, n_extra_lines, n_cases)
+
+    path_diagN = 'Results/All_diag_320.xlsx'
+    path_lineN = 'Results/All_line_320.xlsx'
+    path_loadN = 'Results/All_load_320.xlsx'
+    path_plN = 'Results/All_pl_320.xlsx'
+    path_vpuN = 'Results/All_vpu_320.xlsx'
+
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, 11, 6, 64)
 
 
-    print(n_cases)
+
     # ------------- Others -------------
 
     # run diagnostic
