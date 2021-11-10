@@ -1,0 +1,250 @@
+This chapter considers upgrading the system by means of installing additional lines. In the previous analysis, it was visible that the disconnection of specific lines resulted in an unsolvable problem. Often, no solution was obtained as a result of an exceedingly high demand compared to the available generation. The criteria $N-1$ was therefore not met, yet it is usually treated as a requirement by control center operators \cite{wang2013risk, gourtani2016robust}. 
+
+The central aim of this chapter is reaching a robust grid, where a single failure does not compromise the full system. Several solutions were proposed, such as meshing the network, rising the voltage level, etc. This chapter is devoted to exploring the implications of such proposals. First, a more theoretical explanation describing the formulation is presented, and then, the analysis of results takes place. These results include electrical magnitudes as well as economic data. An optimal configuration is finally provided.
+
+\section{Addition of lines}
+Recall that the original system depicted in Figure \ref{fig:net1} was for the most part a radial system, in the sense that there was no redundancy in the connection of lines. The operating costs are non-negligible since a significant amount of energy cannot be delivered during faults. To combat this issue, the installation of various new lines (in red) is contemplated, as shown in Figure \ref{fig:net2}.
+
+
+\begin{figure}[!htb]\centering
+
+  \begin{circuitikz}[/tikz/circuitikz/bipoles/length=1cm, line width=0.8pt]
+
+    % grid
+    \draw[gray!50!white, line width=0.5pt] (0.0,0.0) to [short] (8.0,0.0);
+    \draw[gray!50!white, line width=0.5pt] (0.0,1.6) to [short] (8.0,1.6);
+    \draw[gray!50!white, line width=0.5pt] (0.0,3.2) to [short] (8.0,3.2);
+    \draw[gray!50!white, line width=0.5pt] (0.0,4.8) to [short] (8.0,4.8);
+    \draw[gray!50!white, line width=0.5pt] (0.0,6.4) to [short] (8.0,6.4);
+    \draw[gray!50!white, line width=0.5pt] (0.0,8.0) to [short] (8.0,8.0);
+
+    \draw[gray!50!white, line width=0.5pt] (0.0,0.0) to [short] (0.0,8.0);
+    \draw[gray!50!white, line width=0.5pt] (1.6,0.0) to [short] (1.6,8.0);
+    \draw[gray!50!white, line width=0.5pt] (3.2,0.0) to [short] (3.2,8.0);
+    \draw[gray!50!white, line width=0.5pt] (4.8,0.0) to [short] (4.8,8.0);
+    \draw[gray!50!white, line width=0.5pt] (6.4,0.0) to [short] (6.4,8.0);
+    \draw[gray!50!white, line width=0.5pt] (8.0,0.0) to [short] (8.0,8.0);
+
+
+    % generators
+    \draw (3.2,-1.8) to [sV, fill=magenta!70!cyan] (3.2,-1.2);
+    \draw [short] (3.2,-1.2) to [short] (3.2,-1.0);
+    \draw (-1.8,1.6) to [sV, fill=green!50!white] (-1.2,1.6);
+    \draw [short] (-1.2,1.6) to [short] (-1.0,1.6);
+    \draw (9.2,1.6) to [sV, fill=cyan!50!white] (9.8,1.6);
+    \draw [short] (9.2,1.6) to [short] (9.0,1.6);
+    \draw (4.8,3.6) to [sV, fill=black!60!white] (4.8,3.0);
+    \draw [short] (4.8,3.6) to [short] (4.8,3.8);
+    \draw (8.4,4.8) to [sV, fill=yellow!60!white] (9.0,4.8);
+    \draw [short] (8.0,4.8) to [short] (8.4,4.8);
+    \draw (1.6,9.2) to [sV, fill=orange!60!white] (1.6,9.8);
+    \draw [short] (1.6,9.0) to [short] (1.6,9.2);
+
+
+    % large buses
+    \draw[line width=2.5pt] (2.7,0) to [short] (3.7,0);
+    \draw[line width=2.5pt] (0.0,1.1) to [short] (0,2.1);
+    \draw[line width=2.5pt] (8.0,1.1) to [short] (8,2.1);
+    \draw[line width=2.5pt] (1.1,8) to [short] (2.1,8);
+    \draw[line width=2.5pt] (2.7,3.2) to [short] (3.7,3.2);
+    \draw[line width=2.5pt] (2.7,4.8) to [short] (3.7,4.8);
+    \draw[line width=2.5pt] (4.3,6.4) to [short] (5.3,6.4);
+    \draw[line width=2.5pt] (0.0,5.9) to [short] (-0.0,6.9);
+    \draw[line width=2.5pt] (8,4.3) to [short] (8,5.3);
+    \draw[line width=2.5pt] (4.3,4.8) to [short] (5.3,4.8);
+
+    % small buses
+    \draw[line width=2.5pt] (2.9,-1) to [short] (3.5,-1);
+    \draw[line width=2.5pt] (-1.0,1.3) to [short] (-1,1.9);
+    \draw[line width=2.5pt] (9,1.3) to [short] (9,1.9);
+    \draw[line width=2.5pt] (4.5,3.8) to [short] (5.1,3.8);
+    \draw[line width=2.5pt] (1.3,9.0) to [short] (1.9,9.0);
+
+    \draw[line width=2.5pt] (1.75,3.2) to [short] (1.75,2.6);
+    \draw[line width=2.5pt] (1.75,4.8) to [short] (1.75,4.2);
+    \draw[line width=2.5pt] (-0.95,6.7) to [short] (-0.95,6.1);
+    \draw[line width=2.5pt] (4.5,7.35) to [short] (5.1,7.35);
+
+    % trafos
+    \draw (3.2,-1.0) to [voosource] (3.2,0.0);
+    \draw (-1,1.6) to [voosource] (0,1.6);
+    \draw (8,1.6) to [voosource] (9,1.6);
+    \draw (1.6,8) to [voosource] (1.6,9);
+    \draw (4.8,4.8) to [voosource] (4.8,3.8);
+
+    \draw (-1,6.4) to [voosource] (0,6.4);
+    \draw (4.8,6.4) to [voosource] (4.8,7.4);
+    \draw (2.7,4.5) to [voosource] (1.7,4.5);
+    \draw (2.7,2.9) to [voosource] (1.7,2.9);
+
+    % loads
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (-1,6.4) -- (-1.6,6.4);
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (4.8,7.4) -- (4.8,8.0);
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=red!60!white, fill=red!60!white] (1.7,4.5) -- (1.1,4.5);
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (1.7,2.9) -- (1.1,2.9);
+
+    \draw (3.0,4.8) to [short] (3.0,4.5);
+    \draw (3.0,4.5) to [short] (2.7,4.5);
+
+    \draw (3.0,3.2) to [short] (3.0,2.9);
+    \draw (3.0,2.9) to [short] (2.7,2.9);
+
+    % lines
+    \draw (3.15,0) to [short] (3.15,3.2);
+    \draw (3.25,0) to [short] (3.25,3.2);
+    \draw (3.15,3.2) to [short] (3.15,4.8);
+    \draw (3.25,3.2) to [short] (3.25,4.8);
+    \draw (4.6,4.8) to [short] (4.6,5.1);
+    \draw (4.6,5.1) to [short] (3.4,5.1);
+    \draw (3.4,5.1) to [short] (3.4,4.8);
+    \draw (3.15,4.8) to [short] (3.15,5.1);
+    \draw (3.25,4.8) to [short] (3.25,5.1);
+    \draw (3.15,5.1) to [short] (4.55,6.1);
+    \draw (3.25,5.1) to [short] (4.65,6.1);
+    \draw (4.55,6.1) to [short] (4.55,6.4);
+    \draw (4.65,6.1) to [short] (4.65,6.4);
+    \draw (5.0,6.4) to [short] (5.0,6.1);
+    \draw (5.0,6.1) to [short] (7.7,5.1);
+    \draw (7.7,5.1) to [short] (8.0,5.1);
+    \draw (0,6.4) to [short] (0.3,6.4);
+    \draw (0.3,6.4) to [short] (3.0,5.1);
+    \draw (3.0,5.1) to [short] (3.0,4.8);
+
+    % proposed new lines
+    \draw[dashed, draw=red] (8, 4.4) to [short] (3.5,4.4);
+    \draw[dashed, draw=red] (3.5,4.4) to [short] (3.5,4.8);
+    \draw[dashed, draw=red] (8,4.4) to [short] (3.5,3.2);
+    \draw[dashed, draw=red] (4.5,6.4) to [short] (0,6.4);
+    \draw[dashed, draw=red] (3,0) to [short] (3,4.8);
+    \draw[dashed, draw=red] (3,3.2) to [short] (0,6.2);
+    \draw[dashed, draw=red] (3,0) to [short] (0,6.2);
+
+    % legend
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (3.0,8.4) -- (4.0,8.4);
+    \draw[-{Triangle[length=5mm, width=2mm]}, draw=red!60!white, fill=red!60!white] (3.0,9.1) -- (4.0,9.1);
+    \draw (3.2,9.8) to [sV, fill=magenta!70!cyan] (3.8,9.8);
+
+    \draw (6.0,9.8) to [sV, fill=black!60!white] (6.6,9.8);
+    \draw (6.0,9.1) to [sV, fill=yellow!60!white] (6.6,9.1);
+    \draw (6.0,8.4) to [sV, fill=green!50!white] (6.6,8.4);
+
+    \draw (9.0,9.8) to [sV, fill=orange!60!white] (9.6,9.8);
+    \draw (9.0,9.1) to [sV, fill=cyan!50!white] (9.6,9.1);
+    \draw[dashed, draw=red] (9.0,8.4) to [short] (9.5,8.4);
+
+    \node at (4.73, 9.8) {\footnotesize Nuclear};
+    \node at (4.66, 9.1) {\footnotesize Load I};
+    \node at (4.72, 8.4) {\footnotesize Load II};
+
+    \node at (7.64, 9.8) {\footnotesize Dismantled};
+    \node at (7.49, 9.1) {\footnotesize Intercon.};
+    \node at (7.28, 8.4) {\footnotesize Wind};
+
+    \node at (10.25, 9.8) {\footnotesize Solar};
+    \node at (10.40, 9.1) {\footnotesize Storage};
+    \node at (10.45, 8.4) {\footnotesize New line};
+
+    \draw[gray!50!white, line width=0.5pt] (8.5,8.0) to [short] (10.1,8.0);
+    \draw[gray!50!white, line width=0.5pt] (8.5,6.4) to [short] (10.1,6.4);
+    \draw[gray!50!white, line width=0.5pt] (8.5,6.4) to [short] (8.5,8.0);
+    \draw[gray!50!white, line width=0.5pt] (10.1,6.4) to [short] (10.1,8.0);
+
+    \node at (9.30, 6.2) {\footnotesize 50 km};
+    \node[rotate=90] at (10.3, 7.2) {\footnotesize 50 km};
+
+    \draw [fill=gray, opacity=0.2, line width=0.01pt] (2.95,10.15) rectangle (11.5,8.05);
+    \draw [fill=gray, opacity=0.2, line width=0.01pt] (11.5,8.05) rectangle (8.05,6.05);
+
+    % buses nodes and labels
+    \node at (3.6, 0.2) {8};
+    \node at (3.6, -1.0) {1};
+    \node at (3.6, 4.6) {9};
+    \node at (1.75, 5.0) {2};
+    \node at (3.6, 3.0) {10};
+    \node at (1.75, 3.45) {3};
+    \node at (4.4, 6.6) {11};
+    \node at (4.4, 7.6) {4};
+    \node at (0.2, 6.7) {12};
+    \node at (-1.2, 6.7) {5};
+    \node at (5.2, 4.6) {13};
+    \node at (5.3, 3.8) {7};
+    \node at (7.8, 4.6) {6}; 
+
+  \end{circuitikz}
+
+  \caption{Overview of the network with the addition of lines}
+  \label{fig:net2}
+\end{figure}
+
+
+By installing new lines, an additional installation cost has to be considered, but a reduction on the operating costs is expected. It is worth worth mentioning that not all contemplated new lines ought to be installed. Rather, by adding one or two of them, the system could already be operating under the desired conditions. There is a cost-benefit tradeoff, so only a few specific new lines will be selected. 
+
+\subsection{Formulation}
+The formulation of the topology deserves special attention. Mathematically, it is defined as:
+\begin{equation}
+  \{\mathcal{N} \in \mathcal{P}([n]) \left. \right\vert |\mathcal{N}|=k \},
+\end{equation}
+where $\mathcal{N}$ denotes a subset, that is, possible topology out of the full set of configurations $\mathcal{P}([n])$, $[n] = \{\mathbf{1}_{\sigma_1},\mathbf{1}_{\sigma_2},...,\mathbf{1}_{\sigma_n}\}$ represents the set of elements that cause variations on the topology, and $k$ symbolizes the total amount of possibilities. In the contingency analysis, the set $[n]$ is a function of the state of the elements (mainly, lines). These can be in service or out of service, so can be regarded as boolean variables. The employed notation, of the form $\mathbf{1}_{\sigma_i}$, is 1 if the indicator variable $\sigma_i$ holds true; otherwise, it is 0. The indicator variable, in the case under study, is simply the state of each particular line.
+
+Note that the whole set $\mathcal{P}$ can be further divided into the set composed of the original lines $\mathcal{A}$, and the set of new lines $\mathcal{B}$. Let $j$ indicate the number of lines in the original set $\mathcal{A}$, and $n-j$ the amount of lines in the new set $\mathcal{B}$. In the particularized case shown in Figure \ref{fig:net2}, $j=5$ and $n-j=6$. Thus, these subsets are expanded and explicitly become:
+\begin{equation}
+  \begin{cases}
+  \mathcal{A} = \{\mathbf{1}_{\sigma_{1}}, \mathbf{1}_{\sigma_{2}},..., \mathbf{1}_{\sigma_{j}}\}, \\
+  \mathcal{B} = \{\mathbf{1}_{\sigma_{j+1}}, \mathbf{1}_{\sigma_{j+2}},..., \mathbf{1}_{\sigma_{n}}\}. \\
+\end{cases}
+\end{equation}
+To perform the contingency analysis, we consider that one of the original lines if faulted. For instance, if line $i$ ends up disconnected, $\sigma_i\gets$ \texttt{false} while the rest of original lines $\sigma_r\gets$ \texttt{true} for $r=\{1,2,...,i-1,i+1,...,j\}$.
+
+On the other hand, in the subset $\mathcal{B}$ it is not straightforward to estimate which lines should be connected or disconnected. Perhaps installing a single additional line is enough to meet the $N-1$ criteria, or maybe more lines are required. Hence, it has been decided that all permutations have to be analyzed. Since $\sigma$ are boolean variables, the total number $k$ of contingencies to simulate are:
+\begin{equation}
+  k = j 2^{(n-j)},
+\end{equation}
+so if $j=5$ and $n-j=6$, this results in $k=320$ different topologies. Thus, a total of 320 timeseries power flows are computed. 
+
+Security analysis in power systems has been traditionaly based on the usage of the DC power flow \cite{stott2009dc, capitanescu2011state}. It offers the advantage of being non-iterative (and consequently, fast), and allows to determine the influence of faults with the usage of transmission factors. However, its solution is just an approximation. Since the amount of situations remains reasonable, it has been decided to solve them with the typical Newton-Raphson up to the default precision of $1\cdot 10^{-8}$~MVA \cite{pandapower2018}. 
+
+The general procedure to perform the contingency analysis is shown in Algorithm \ref{alg:1}.
+
+\begin{algorithm}[!htb]
+\DontPrintSemicolon
+  
+\KwInput{\texttt{net} initialized class, $j$, $n$}
+  \KwOutput{stored results}
+  Generate permutations $\forall \bm{\sigma}_{g}$ where $g=[1,2,...,2^{(n-j)}]$
+
+  \For{$i=[1,2,...,j]$}
+  {
+    $\sigma_i\gets$\texttt{false}
+
+    $\sigma_r\gets$\texttt{true}, where $r\neq i$ and $r\leq j$
+
+    $\mathcal{A}\gets \{\mathbf{1}_{\sigma_{1}}, \mathbf{1}_{\sigma_{2}},..., \mathbf{1}_{\sigma_{j}}\}$\\
+
+    \For{$g=[1,2,...,2^{(n-j)}]$}
+    {
+      $[\sigma_{j+1}, \sigma_{j+2},..., \sigma_n] \gets \bm{\sigma}_g$
+
+    $\mathcal{B} \gets \{\mathbf{1}_{\sigma_{j+1}}, \mathbf{1}_{\sigma_{j+2}},..., \mathbf{1}_{\sigma_{n}}\}$\\
+
+    $\mathcal{N} \gets \mathcal{A} \cup \mathcal{B}$
+
+    \texttt{pandapower.timeseries.run\_timeseries(}$\mathcal{N}$,\texttt{net)}
+
+    Store results
+    }
+  }
+\caption{Pseudocode to solve the contingencies}
+\label{alg:1}
+\end{algorithm}
+
+
+
+\subsection{Results}
+
+
+\section{Rising the voltage level}
+\subsection{Description}
+\subsection{Results}
+% but also consider the added lines here!?
+
+% \section{Change in conductors}  % do it? or have always the same conductors?

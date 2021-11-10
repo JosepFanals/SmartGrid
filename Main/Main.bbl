@@ -39,6 +39,249 @@
       \field{note}{Accessed: 2021-10-25}
       \field{title}{Sistema de Información del Operador del Sistema (ESIOS). Perfiles de demanda y generación.}
     \endentry
+    \entry{wang2013risk}{article}{}
+      \name{author}{2}{}{%
+        {{hash=dbb923b2eb3740d28592b75b64ac32c9}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Qin},
+           giveni={Q\bibinitperiod}}}%
+        {{hash=143df4aa2aa2c21c457392646b38e72c}{%
+           family={McCalley},
+           familyi={M\bibinitperiod},
+           given={James\bibnamedelima D},
+           giveni={J\bibinitperiod\bibinitdelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{b559269b114e473cd2a004d5829b46c0}
+      \strng{fullhash}{b559269b114e473cd2a004d5829b46c0}
+      \strng{bibnamehash}{b559269b114e473cd2a004d5829b46c0}
+      \strng{authorbibnamehash}{b559269b114e473cd2a004d5829b46c0}
+      \strng{authornamehash}{b559269b114e473cd2a004d5829b46c0}
+      \strng{authorfullhash}{b559269b114e473cd2a004d5829b46c0}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Power Systems}
+      \field{number}{3}
+      \field{title}{Risk and “N-1” criteria coordination for real-time operations}
+      \field{volume}{28}
+      \field{year}{2013}
+      \field{pages}{3505\bibrangedash 3506}
+      \range{pages}{2}
+    \endentry
+    \entry{gourtani2016robust}{article}{}
+      \name{author}{4}{}{%
+        {{hash=3ee4bb3617c5204efaea3bae304fee23}{%
+           family={Gourtani},
+           familyi={G\bibinitperiod},
+           given={Arash},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ffa3655bfa0cc57b5669b76ee998f23a}{%
+           family={Xu},
+           familyi={X\bibinitperiod},
+           given={Huifu},
+           giveni={H\bibinitperiod}}}%
+        {{hash=e234cde764cd90ca3d1f1a7b9f735dd8}{%
+           family={Pozo},
+           familyi={P\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=4b612ec0d7578d134002ec086a2aa9b0}{%
+           family={Nguyen},
+           familyi={N\bibinitperiod},
+           given={Tri-Dung},
+           giveni={T\bibinithyphendelim D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{8b96bb2abd3d2fb07c75bb036d5fe24f}
+      \strng{fullhash}{08d60ce30e9b06cb033cda6a49e2d604}
+      \strng{bibnamehash}{08d60ce30e9b06cb033cda6a49e2d604}
+      \strng{authorbibnamehash}{08d60ce30e9b06cb033cda6a49e2d604}
+      \strng{authornamehash}{8b96bb2abd3d2fb07c75bb036d5fe24f}
+      \strng{authorfullhash}{08d60ce30e9b06cb033cda6a49e2d604}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Mathematical Methods of Operations Research}
+      \field{number}{3}
+      \field{title}{Robust unit commitment with n-1 security criteria}
+      \field{volume}{83}
+      \field{year}{2016}
+      \field{pages}{373\bibrangedash 408}
+      \range{pages}{36}
+    \endentry
+    \entry{stott2009dc}{article}{}
+      \name{author}{3}{}{%
+        {{hash=ea4abf08cea760899580ccfb5c261a31}{%
+           family={Stott},
+           familyi={S\bibinitperiod},
+           given={Brian},
+           giveni={B\bibinitperiod}}}%
+        {{hash=881046c873da5f2558db4bb16964d033}{%
+           family={Jardim},
+           familyi={J\bibinitperiod},
+           given={Jorge},
+           giveni={J\bibinitperiod}}}%
+        {{hash=d4107d7b3923b9ce0bfc2a75518bb04a}{%
+           family={Alsaç},
+           familyi={A\bibinitperiod},
+           given={Ongun},
+           giveni={O\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{642039ebd2c129b562edde6b1bc293ae}
+      \strng{fullhash}{642039ebd2c129b562edde6b1bc293ae}
+      \strng{bibnamehash}{642039ebd2c129b562edde6b1bc293ae}
+      \strng{authorbibnamehash}{642039ebd2c129b562edde6b1bc293ae}
+      \strng{authornamehash}{642039ebd2c129b562edde6b1bc293ae}
+      \strng{authorfullhash}{642039ebd2c129b562edde6b1bc293ae}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{IEEE Transactions on Power Systems}
+      \field{number}{3}
+      \field{title}{DC power flow revisited}
+      \field{volume}{24}
+      \field{year}{2009}
+      \field{pages}{1290\bibrangedash 1300}
+      \range{pages}{11}
+    \endentry
+    \entry{capitanescu2011state}{article}{}
+      \name{author}{7}{}{%
+        {{hash=f399a5bbd78b7c75c6518fdace03fd25}{%
+           family={Capitanescu},
+           familyi={C\bibinitperiod},
+           given={Florin},
+           giveni={F\bibinitperiod}}}%
+        {{hash=1435ab87f627fd0194681fb991cbea6e}{%
+           family={Ramos},
+           familyi={R\bibinitperiod},
+           given={JL\bibnamedelima Martinez},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=fab700d62b979bf23aace13bdefa54ac}{%
+           family={Panciatici},
+           familyi={P\bibinitperiod},
+           given={Patrick},
+           giveni={P\bibinitperiod}}}%
+        {{hash=bb7b950de5a113aba61047de028d9d9c}{%
+           family={Kirschen},
+           familyi={K\bibinitperiod},
+           given={Daniel},
+           giveni={D\bibinitperiod}}}%
+        {{hash=904d45c2c1abb6743ae99318ea681b82}{%
+           family={Marcolini},
+           familyi={M\bibinitperiod},
+           given={A\bibnamedelima Marano},
+           giveni={A\bibinitperiod\bibinitdelim M\bibinitperiod}}}%
+        {{hash=97f85550464e275e801141dff2daadc7}{%
+           family={Platbrood},
+           familyi={P\bibinitperiod},
+           given={Ludovic},
+           giveni={L\bibinitperiod}}}%
+        {{hash=a66465f00752277e96b03f8046d66d7b}{%
+           family={Wehenkel},
+           familyi={W\bibinitperiod},
+           given={Louis},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{a81ffd724781f5966f87686d14b757f1}
+      \strng{fullhash}{cf870ecafe1ab986ad5c9e5b13d15047}
+      \strng{bibnamehash}{cf870ecafe1ab986ad5c9e5b13d15047}
+      \strng{authorbibnamehash}{cf870ecafe1ab986ad5c9e5b13d15047}
+      \strng{authornamehash}{a81ffd724781f5966f87686d14b757f1}
+      \strng{authorfullhash}{cf870ecafe1ab986ad5c9e5b13d15047}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Electric Power Systems Research}
+      \field{number}{8}
+      \field{title}{State-of-the-art, challenges, and future trends in security constrained optimal power flow}
+      \field{volume}{81}
+      \field{year}{2011}
+      \field{pages}{1731\bibrangedash 1741}
+      \range{pages}{11}
+    \endentry
+    \entry{pandapower2018}{article}{}
+      \name{author}{8}{}{%
+        {{hash=21c3cb188199830f0fd5f4f4b05fb505}{%
+           family={Thurner},
+           familyi={T\bibinitperiod},
+           given={L.},
+           giveni={L\bibinitperiod}}}%
+        {{hash=e623644c7a12fddbb7a468ece3e76f78}{%
+           family={Scheidler},
+           familyi={S\bibinitperiod},
+           given={A.},
+           giveni={A\bibinitperiod}}}%
+        {{hash=ab27c068f5d1a83b0c66ff161abcd447}{%
+           family={Schafer},
+           familyi={S\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=bf12788a5683b899946253d1ead73eba}{%
+           family={Menke},
+           familyi={M\bibinitperiod},
+           given={J.\bibnamedelimi H.},
+           giveni={J\bibinitperiod\bibinitdelim H\bibinitperiod}}}%
+        {{hash=fe0647655af2943133bfdff7d45af557}{%
+           family={Dollichon},
+           familyi={D\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod}}}%
+        {{hash=93f9d5b14a95e447a0d1e0e4f1f5240e}{%
+           family={Meier},
+           familyi={M\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=123a83b5dc97c749dd674b3ae7867f7f}{%
+           family={Meinecke},
+           familyi={M\bibinitperiod},
+           given={S.},
+           giveni={S\bibinitperiod}}}%
+        {{hash=0b14831114ca1c3e0875fd46e7ee4978}{%
+           family={Braun},
+           familyi={B\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{f5dd5773003895039b0924d8cd7f3473}
+      \strng{fullhash}{0e25169a8afe9b4f41361c4207356b50}
+      \strng{bibnamehash}{0e25169a8afe9b4f41361c4207356b50}
+      \strng{authorbibnamehash}{0e25169a8afe9b4f41361c4207356b50}
+      \strng{authornamehash}{f5dd5773003895039b0924d8cd7f3473}
+      \strng{authorfullhash}{0e25169a8afe9b4f41361c4207356b50}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{0885-8950}
+      \field{journaltitle}{IEEE Transactions on Power Systems}
+      \field{title}{pandapower - an Open Source Python Tool for Convenient Modeling, Analysis and Optimization of Electric Power Systems}
+      \field{year}{2018}
+      \verb{doi}
+      \verb 10.1109/TPWRS.2018.2829021
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1709.06743
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1709.06743
+      \endverb
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

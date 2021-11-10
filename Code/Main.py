@@ -470,16 +470,12 @@ if __name__ == "__main__":
 
     # run contingencies
     n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
-    # run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
 
     # merge excels
-    # define now my own way
-    # n_lines = 11
-    # n_extra_lines = 6
-    # n_cases = len(perms(n_extra_lines))
-
     process_contingencies(n_lines, n_extra_lines, n_cases)
 
+
+    print(n_cases)
     # ------------- Others -------------
 
     # run diagnostic

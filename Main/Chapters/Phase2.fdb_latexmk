@@ -1,0 +1,14 @@
+# Fdb version 3
+["pdflatex"] 1636502622 "Phase2.tex" "Phase2.pdf" "Phase2" 1636502622
+  "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1617738065 3524 cb3e574dea2d1052e39280babc910dc8 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx10.tfm" 1617738065 1328 c834bbb027764024c09d3d2bf908b5f0 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx5.tfm" 1617738065 1332 f817c21a1ba54560425663374f1b651a ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmbx7.tfm" 1617738065 1336 3125ccb448c1a09074e3aa4a9832f130 ""
+  "/usr/share/texmf-dist/fonts/tfm/public/cm/cmtt10.tfm" 1617738065 768 1321e9409b4137d6fb428ac9dc956269 ""
+  "/usr/share/texmf-dist/web2c/texmf.cnf" 1632262313 39911 2da6c67557ec033436fe5418a70a8a61 ""
+  "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1632262331 2812680 f00e3221b64091c6aa1d5e9865ac9aca ""
+  "Phase2.aux" 1636494991 8 a94a2480d3289e625eea47cd1b285758 ""
+  "Phase2.tex" 1636502620 12365 1e009780f9cb8320990430d18d8e81da ""
+  (generated)
+  "Phase2.pdf"
+  "Phase2.log"

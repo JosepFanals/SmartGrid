@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  26 OCT 2021 20:20
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  10 NOV 2021 00:45
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1218,7 +1218,14 @@ Package biblatex Info: ... file 'biblatex.cfg' found.
  (/usr/share/texmf-dist/tex/latex/biblatex/biblatex.cfg
 File: biblatex.cfg 
 ))
-(/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
+(/usr/share/texmf-dist/tex/latex/tools/bm.sty
+Package: bm 2019/07/24 v1.2d Bold Symbol Support (DPC/FMi)
+\symboldoperators=\mathgroup6
+\symboldletters=\mathgroup7
+\symboldsymbols=\mathgroup8
+LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
+LaTeX Info: Redefining \bm on input line 209.
+) (/usr/share/texmf-dist/tex/latex/lm/lmodern.sty
 Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
 LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
 (Font)                  OT1/cmr/m/n --> OT1/lmr/m/n on input line 22.
@@ -1352,6 +1359,53 @@ LaTeX Info: Redefining \Cpagerefrange on input line 2370.
 LaTeX Info: Redefining \labelcref on input line 2370.
 LaTeX Info: Redefining \labelcpageref on input line 2370.
 Package cleveref Info: `listings' support loaded on input line 3131.
+) (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count473
+\algocf@hangindent=\skip95
+ (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count474
+) (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip96
+\skiplinenumber=\skip97
+\skiprule=\skip98
+\skiphlne=\skip99
+\skiptext=\skip100
+\skiplength=\skip101
+\algomargin=\skip102
+\skipalgocfslide=\skip103
+\algowidth=\dimen349
+\inoutsize=\dimen350
+\inoutindent=\dimen351
+\interspacetitleruled=\dimen352
+\interspacealgoruled=\dimen353
+\interspacetitleboxruled=\dimen354
+\algocf@ruledwidth=\skip104
+\algocf@inoutbox=\box107
+\algocf@inputbox=\box108
+\AlCapSkip=\skip105
+\AlCapHSkip=\skip106
+\algoskipindent=\skip107
+\algocf@nlbox=\box109
+\algocf@hangingbox=\box110
+\algocf@untilbox=\box111
+\algocf@skipuntil=\skip108
+\algocf@capbox=\box112
+\algocf@lcaptionbox=\skip109
+\algoheightruledefault=\skip110
+\algoheightrule=\skip111
+\algotitleheightruledefault=\skip112
+\algotitleheightrule=\skip113
+\c@algocfline=\count475
+\c@algocfproc=\count476
+\c@algocf=\count477
+\algocf@algoframe=\box113
+\algocf@algobox=\box114
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1421,16 +1475,16 @@ LaTeX Font Info:    ... okay on input line 7.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count473
-\scratchdimen=\dimen349
-\scratchbox=\box107
-\nofMPsegments=\count474
-\nofMParguments=\count475
+\scratchcounter=\count478
+\scratchdimen=\dimen355
+\scratchbox=\box115
+\nofMPsegments=\count479
+\nofMParguments=\count480
 \everyMPshowfont=\toks48
-\MPscratchCnt=\count476
-\MPscratchDim=\dimen350
-\MPnumerator=\count477
-\makeMPintoPDFobject=\count478
+\MPscratchCnt=\count481
+\MPscratchDim=\dimen356
+\MPnumerator=\count482
+\makeMPintoPDFobject=\count483
 \everyMPtoPDFconversion=\toks49
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1450,7 +1504,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count479
+\c@section@level=\count484
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -1466,7 +1520,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count480
+\c@lstlisting=\count485
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.17} (current compat level: 1.16).
 
@@ -1494,7 +1548,7 @@ Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
 Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
-<Data/Logo.png, id=67, 640.3925pt x 170.6375pt>
+<Data/Logo.png, id=99, 640.3925pt x 170.6375pt>
 File: Data/Logo.png Graphic file (type png)
 <use Data/Logo.png>
 Package luatex.def Info: Data/Logo.png  used on input line 39.
@@ -1656,34 +1710,38 @@ Missing character: There is no ; (U+003B) in font nullfont!
 
 ] [7]) [8]
 Chapter 3.
+(./Chapters/Phase2.tex [9
+
+] [10]) [11]
+Chapter 4.
 (./Chapters/Code.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
- [9
+ [12
 
-] [10] [11] [12] [13] [14] [15]) [16] [17
+] [13] [14] [15] [16] [17] [18]) [19] [20
 
 ] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 6842F0D218D0224F03CC011391C53A9A;698.
+(rerunfilecheck)             Checksum: D83C47C8DBCC504A163778DE8A042160;1641.
 Package logreq Info: Writing requests to 'Main.run.xml'.
 
 \openout1 = Main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 70180 strings out of 478531
- 1456013,2848258 words of node,token memory allocated
- 1403 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 91 attribute, 71 glue_spec, 83 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:15,2:34594,3:8705,4:32778,5:32752,6:148,7:39901,8:138,9:82296,10:58,11:3155
- 87415 multiletter control sequences out of 65536+600000
- 58 fonts using 5540175 bytes
+ 73282 strings out of 478531
+ 1456070,2848258 words of node,token memory allocated
+ 1536 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 105 attribute, 88 glue_spec, 90 attribute_list, 2 write, 24 pdf_literal, 1 pdf_action, 24 pdf_colorstack nodes
+   avail lists: 1:16,2:34584,3:8709,4:32778,5:32752,6:149,7:39915,8:137,9:82296,10:58,11:3155
+ 90430 multiletter control sequences out of 65536+600000
+ 78 fonts using 6982439 bytes
  112i,19n,117p,1192b,2290s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (18 pages, 211948 bytes).
+</usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Main.pdf (21 pages, 317095 bytes).
 
-PDF statistics: 774 PDF objects out of 1000 (max. 8388607)
- 688 compressed objects within 7 object streams
- 509 named destinations out of 1000 (max. 131072)
- 304 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 908 PDF objects out of 1000 (max. 8388607)
+ 803 compressed objects within 9 object streams
+ 542 named destinations out of 1000 (max. 131072)
+ 368 words of extra memory for PDF output out of 10000 (max. 100000000)
 
