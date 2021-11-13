@@ -403,6 +403,68 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
     return n_lines, n_extra_lines, n_cases
 
 
+def process_contingencies(n_lines, n_extra_lines, n_cases):
+    """
+    merge all excels into one but different sheets
+
+    :param n_lines: number of total lines
+    :param n_extra_lines: number of added lines
+    :param n_cases: resulting total number of cases
+    :return: nothing, just store
+    """
+
+    dd0 = pd.DataFrame([])
+
+    nnx = n_cases * (n_lines - n_extra_lines)
+    f0_vpu = dd0.to_excel("./Results/All_vpu_" + str(nnx) + ".xlsx")
+    f0_load = dd0.to_excel("./Results/All_load_" + str(nnx) + ".xlsx")
+    f0_pl = dd0.to_excel("./Results/All_pl_" + str(nnx) + ".xlsx")
+    f0_diag = dd0.to_excel("./Results/All_diag_" + str(nnx) + ".xlsx")
+    f0_line = dd0.to_excel("./Results/All_line_" + str(nnx) + ".xlsx")
+    f0_parallel = dd0.to_excel("./Results/All_parallel_" + str(nnx) + ".xlsx") 
+    f0_pmw = dd0.to_excel("./Results/All_pmw_" + str(nnx) + ".xlsx")
+
+
+    w_vpu = pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx")
+    w_load = pd.ExcelWriter("./Results/All_load_" + str(nnx) + ".xlsx")
+    w_pl = pd.ExcelWriter("./Results/All_pl_" + str(nnx) + ".xlsx")
+    w_diag = pd.ExcelWriter("./Results/All_diag_" + str(nnx) + ".xlsx")
+    w_line = pd.ExcelWriter("./Results/All_line_" + str(nnx) + ".xlsx")
+    w_parallel = pd.ExcelWriter("./Results/All_parallel_" + str(nnx) + ".xlsx")
+    w_pmw = pd.ExcelWriter("./Results/All_pmw_" + str(nnx) + ".xlsx")
+
+    for jj in range(n_lines - n_extra_lines):
+        for kk in range(n_cases):
+            fold_path = "./Results/Cases/Case_" + str(jj) + "_" + str(kk)
+            f1_vpu = pd.read_excel(fold_path + "/res_bus/vm_pu.xlsx")
+            f1_load = pd.read_excel(fold_path + "/res_line/loading_percent.xlsx")
+            f1_pl = pd.read_excel(fold_path + "/res_line/pl_mw.xlsx")
+            f1_diag = pd.read_excel(fold_path + "/diagnostic.xlsx")
+            f1_line = pd.read_excel(fold_path + "/lines_states.xlsx")
+            f1_parallel = pd.read_excel(fold_path + "/line/parallel.xlsx")
+            f1_pmw = pd.read_excel(fold_path + "/load/p_mw.xlsx")
+
+            f1_vpu.to_excel(w_vpu, sheet_name=str(jj) + '_' + str(kk))
+            f1_load.to_excel(w_load, sheet_name=str(jj) + '_' + str(kk))
+            f1_pl.to_excel(w_pl, sheet_name=str(jj) + '_' + str(kk))
+            f1_diag.to_excel(w_diag, sheet_name=str(jj) + '_' + str(kk))
+            f1_line.to_excel(w_line, sheet_name=str(jj) + '_' + str(kk))
+            f1_parallel.to_excel(w_parallel, sheet_name=str(jj) + '_' + str(kk))
+            f1_pmw.to_excel(w_pmw, sheet_name=str(jj) + '_' + str(kk))
+
+
+    w_vpu.save()
+    w_load.save()
+    w_pl.save()
+    w_diag.save()
+    w_line.save()
+    w_parallel.save()
+    w_pmw.save()
+
+    return ()
+
+
+
 def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases):
     """
     Find the optimal configuration of lines considering convergence, losses, voltages, and costs
@@ -471,73 +533,8 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
             if full_condition is True:
                 print(name)
         
-
-
     return ()
 
-
-
-
-
-
-def process_contingencies(n_lines, n_extra_lines, n_cases):
-    """
-    merge all excels into one but different sheets
-
-    :param n_lines: number of total lines
-    :param n_extra_lines: number of added lines
-    :param n_cases: resulting total number of cases
-    :return: nothing, just store
-    """
-
-    dd0 = pd.DataFrame([])
-
-    nnx = n_cases * (n_lines - n_extra_lines)
-    f0_vpu = dd0.to_excel("./Results/All_vpu_" + str(nnx) + ".xlsx")
-    f0_load = dd0.to_excel("./Results/All_load_" + str(nnx) + ".xlsx")
-    f0_pl = dd0.to_excel("./Results/All_pl_" + str(nnx) + ".xlsx")
-    f0_diag = dd0.to_excel("./Results/All_diag_" + str(nnx) + ".xlsx")
-    f0_line = dd0.to_excel("./Results/All_line_" + str(nnx) + ".xlsx")
-    f0_parallel = dd0.to_excel("./Results/All_parallel_" + str(nnx) + ".xlsx") 
-    f0_pmw = dd0.to_excel("./Results/All_pmw_" + str(nnx) + ".xlsx")
-
-
-    w_vpu = pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx")
-    w_load = pd.ExcelWriter("./Results/All_load_" + str(nnx) + ".xlsx")
-    w_pl = pd.ExcelWriter("./Results/All_pl_" + str(nnx) + ".xlsx")
-    w_diag = pd.ExcelWriter("./Results/All_diag_" + str(nnx) + ".xlsx")
-    w_line = pd.ExcelWriter("./Results/All_line_" + str(nnx) + ".xlsx")
-    w_parallel = pd.ExcelWriter("./Results/All_parallel_" + str(nnx) + ".xlsx")
-    w_pmw = pd.ExcelWriter("./Results/All_pmw_" + str(nnx) + ".xlsx")
-
-    for jj in range(n_lines - n_extra_lines):
-        for kk in range(n_cases):
-            fold_path = "./Results/Cases/Case_" + str(jj) + "_" + str(kk)
-            f1_vpu = pd.read_excel(fold_path + "/res_bus/vm_pu.xlsx")
-            f1_load = pd.read_excel(fold_path + "/res_line/loading_percent.xlsx")
-            f1_pl = pd.read_excel(fold_path + "/res_line/pl_mw.xlsx")
-            f1_diag = pd.read_excel(fold_path + "/diagnostic.xlsx")
-            f1_line = pd.read_excel(fold_path + "/lines_states.xlsx")
-            f1_parallel = pd.read_excel(fold_path + "/line/parallel.xlsx")
-            f1_pmw = pd.read_excel(fold_path + "/load/p_mw.xlsx")
-
-            f1_vpu.to_excel(w_vpu, sheet_name=str(jj) + '_' + str(kk))
-            f1_load.to_excel(w_load, sheet_name=str(jj) + '_' + str(kk))
-            f1_pl.to_excel(w_pl, sheet_name=str(jj) + '_' + str(kk))
-            f1_diag.to_excel(w_diag, sheet_name=str(jj) + '_' + str(kk))
-            f1_line.to_excel(w_line, sheet_name=str(jj) + '_' + str(kk))
-            f1_parallel.to_excel(w_parallel, sheet_name=str(jj) + '_' + str(kk))
-            f1_pmw.to_excel(w_pmw, sheet_name=str(jj) + '_' + str(kk))
-
-    w_vpu.save()
-    w_load.save()
-    w_pl.save()
-    w_diag.save()
-    w_line.save()
-    w_parallel.save()
-    w_pmw.save()
-
-    return ()
 
 
 if __name__ == "__main__":
@@ -558,21 +555,21 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
 
     # merge excels
-    # process_contingencies(n_lines, n_extra_lines, n_cases)
+    process_contingencies(n_lines, n_extra_lines, n_cases)
+    nxx = n_cases * (n_lines - n_extra_lines)
 
-    path_diagN = 'Results/All_diag_320.xlsx'
-    path_lineN = 'Results/All_line_320.xlsx'
-    path_loadN = 'Results/All_load_320.xlsx'
-    path_plN = 'Results/All_pl_320.xlsx'
-    path_vpuN = 'Results/All_vpu_320.xlsx'
-    path_parallelN = 'Results/All_parallel_320.xlsx'
-    path_pmwN = 'Results/All_pmw_320.xlsx'
+    path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
+    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+    path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
+    path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
+    path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
+    path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
+    path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-
-    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, 11, 6, 64)
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
 
 
