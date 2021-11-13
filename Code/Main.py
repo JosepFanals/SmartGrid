@@ -333,6 +333,7 @@ def run_store_timeseries(net, identifier):
     ow.log_variable('res_line', 'loading_percent')
     ow.log_variable('res_line', 'pl_mw')
     ow.log_variable('line', 'parallel')
+    ow.log_variable('load', 'p_mw')  # try to read the load to calculate then the efficiency
     # timeseries.run_timeseries(net)
     timeseries.run_timeseries(net, continue_on_divergence=True)
 
@@ -402,7 +403,7 @@ def run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_bu
     return n_lines, n_extra_lines, n_cases
 
 
-def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, n_lines, n_extra_lines, n_cases):
+def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases):
     """
     Find the optimal configuration of lines considering convergence, losses, voltages, and costs
 
@@ -411,6 +412,8 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
     :param path_loadN: path of the loading of the lines N cases
     :param path_plN: path of the losses through the lines N cases
     :param path_vpuN: path of the voltages N cases
+    :param path_parallelN: path of the number of parallel lines, N cases
+    :param path_pmwloadN: path of the MW of load in the buses, N cases
 
     :return: optimal case
     """
@@ -420,34 +423,54 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
     load = pd.read_excel(path_loadN, sheet_name=None)
     pl = pd.read_excel(path_plN, sheet_name=None)
     vpu = pd.read_excel(path_vpuN, sheet_name=None)
+    parallel = pd.read_excel(path_parallelN, sheet_name=None)
+    pmwload = pd.read_excel(path_pmwN, sheet_name=None)
 
 
-    # for jj in range(n_lines - n_extra_lines):
-        # for kk in range(n_cases):
-            # diag = pd.read_excel(path_diagN, sheet_name=str(jj) + '_' + str(kk))
-            # line = pd.read_excel(path_lineN, sheet_name=str(jj) + '_' + str(kk))
-            # load = pd.read_excel(path_loadN, sheet_name=str(jj) + '_' + str(kk))
-            # pl = pd.read_excel(path_plN, sheet_name=str(jj) + '_' + str(kk))
-            # vpu = pd.read_excel(path_vpuN, sheet_name=str(jj) + '_' + str(kk))
-
-            # print(diag)
     on_off_all_lines = []
     for name, sheet in diag.items():
-        if len(sheet) == 0:
+        if len(sheet) == 0:  # if no diagnostic errors
             on_off_lines = line[name]['in_service']
             on_off_all_lines.append(on_off_lines)
+            n_parallel = parallel[name]
+            n_parallel_subset = n_parallel.loc[0, 0:].T  # only the first row, all are equal
 
             # loadings
             loadings = load[name]
-            conditional_loading = loadings[loadings[:] > 80]
+            loadings_subset = loadings.loc[0:, 0:]
+            conditional_loading = loadings_subset[loadings_subset[:] > 80].isnull().values.all()
+            # if True, good, we are below 80%
 
             # vpu
             vpuss = vpu[name]
-            conditional_vpu1 = vpuss[vpuss[:] > 1.10]
-            conditional_vpu2 = vpuss[vpuss[:] < 0.90]
+            vpuss_subset = vpuss.loc[0:, 0:]
+            conditional_vpu1 = vpuss_subset[vpuss_subset[:] > 1.10].isnull().values.all()
+            conditional_vpu2 = vpuss_subset[0.01 < vpuss_subset[:]][vpuss_subset[:] < 0.90].isnull().values.all()  # to avoid the 0.0 
+            # if both are True, we are good
 
+            # active power losses
+            pls = pl[name]
+            pls_subset = pls.loc[0:, 0:]
+            pmws = pmwload[name]
+            pmw_subset = pmws.loc[0:, 0:]
+
+            ok_losses = True
+            kk = 0
+            while ok_losses is True and kk < 24:  # calculate efficiency at any time
+                P_load_all = sum(pmw_subset.loc[kk,:])
+                P_loss_all = sum(pls_subset.loc[kk,:])
+                P_gen_all = P_load_all + P_loss_all
+                eff = P_load_all / P_gen_all
+                if eff < 0.98: 
+                    ok_losses = False
+                kk += 1
+
+            # if ok_losses is True, we are good
+
+            full_condition = conditional_loading and conditional_vpu1 and conditional_vpu2 and ok_losses
+            if full_condition is True:
+                print(name)
         
-            print(name, conditional_vpu2.isnull().values.any())
 
 
     return ()
@@ -475,6 +498,8 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
     f0_pl = dd0.to_excel("./Results/All_pl_" + str(nnx) + ".xlsx")
     f0_diag = dd0.to_excel("./Results/All_diag_" + str(nnx) + ".xlsx")
     f0_line = dd0.to_excel("./Results/All_line_" + str(nnx) + ".xlsx")
+    f0_parallel = dd0.to_excel("./Results/All_parallel_" + str(nnx) + ".xlsx") 
+    f0_pmw = dd0.to_excel("./Results/All_pmw_" + str(nnx) + ".xlsx")
 
 
     w_vpu = pd.ExcelWriter("./Results/All_vpu_" + str(nnx) + ".xlsx")
@@ -482,6 +507,8 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
     w_pl = pd.ExcelWriter("./Results/All_pl_" + str(nnx) + ".xlsx")
     w_diag = pd.ExcelWriter("./Results/All_diag_" + str(nnx) + ".xlsx")
     w_line = pd.ExcelWriter("./Results/All_line_" + str(nnx) + ".xlsx")
+    w_parallel = pd.ExcelWriter("./Results/All_parallel_" + str(nnx) + ".xlsx")
+    w_pmw = pd.ExcelWriter("./Results/All_pmw_" + str(nnx) + ".xlsx")
 
     for jj in range(n_lines - n_extra_lines):
         for kk in range(n_cases):
@@ -491,18 +518,24 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
             f1_pl = pd.read_excel(fold_path + "/res_line/pl_mw.xlsx")
             f1_diag = pd.read_excel(fold_path + "/diagnostic.xlsx")
             f1_line = pd.read_excel(fold_path + "/lines_states.xlsx")
+            f1_parallel = pd.read_excel(fold_path + "/line/parallel.xlsx")
+            f1_pmw = pd.read_excel(fold_path + "/load/p_mw.xlsx")
 
             f1_vpu.to_excel(w_vpu, sheet_name=str(jj) + '_' + str(kk))
             f1_load.to_excel(w_load, sheet_name=str(jj) + '_' + str(kk))
             f1_pl.to_excel(w_pl, sheet_name=str(jj) + '_' + str(kk))
             f1_diag.to_excel(w_diag, sheet_name=str(jj) + '_' + str(kk))
             f1_line.to_excel(w_line, sheet_name=str(jj) + '_' + str(kk))
+            f1_parallel.to_excel(w_parallel, sheet_name=str(jj) + '_' + str(kk))
+            f1_pmw.to_excel(w_pmw, sheet_name=str(jj) + '_' + str(kk))
 
     w_vpu.save()
     w_load.save()
     w_pl.save()
     w_diag.save()
     w_line.save()
+    w_parallel.save()
+    w_pmw.save()
 
     return ()
 
@@ -535,8 +568,11 @@ if __name__ == "__main__":
     path_loadN = 'Results/All_load_320.xlsx'
     path_plN = 'Results/All_pl_320.xlsx'
     path_vpuN = 'Results/All_vpu_320.xlsx'
+    path_parallelN = 'Results/All_parallel_320.xlsx'
+    path_pmwN = 'Results/All_pmw_320.xlsx'
 
-    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, 11, 6, 64)
+
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, 11, 6, 64)
 
 
 
