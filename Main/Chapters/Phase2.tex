@@ -119,6 +119,10 @@ Recall that the original system depicted in Figure \ref{fig:net1} was for the mo
     \draw[dashed, draw=red] (3,3.2) to [short] (0,6.2);
     \draw[dashed, draw=red] (3,0) to [short] (0,6.2);
 
+    \draw[dashed, draw=red] (8,5.0) to [short] (4.8,5.0);
+    \draw[dashed, draw=red] (4.8,5.0) to [short] (4.8,4.8);
+    \draw[dashed, draw=red] (8,4.4) to [short] (3.3,0);
+
     % legend
     \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (3.0,8.4) -- (4.0,8.4);
     \draw[-{Triangle[length=5mm, width=2mm]}, draw=red!60!white, fill=red!60!white] (3.0,9.1) -- (4.0,9.1);
@@ -186,7 +190,7 @@ The formulation of the topology deserves special attention. Mathematically, it i
 \end{equation}
 where $\mathcal{N}$ denotes a subset, that is, possible topology out of the full set of configurations $\mathcal{P}([n])$, $[n] = \{\mathbf{1}_{\sigma_1},\mathbf{1}_{\sigma_2},...,\mathbf{1}_{\sigma_n}\}$ represents the set of elements that cause variations on the topology, and $k$ symbolizes the total amount of possibilities. In the contingency analysis, the set $[n]$ is a function of the state of the elements (mainly, lines). These can be in service or out of service, so can be regarded as boolean variables. The employed notation, of the form $\mathbf{1}_{\sigma_i}$, is 1 if the indicator variable $\sigma_i$ holds true; otherwise, it is 0. The indicator variable, in the case under study, is simply the state of each particular line.
 
-Note that the whole set $\mathcal{P}$ can be further divided into the set composed of the original lines $\mathcal{A}$, and the set of new lines $\mathcal{B}$. Let $j$ indicate the number of lines in the original set $\mathcal{A}$, and $n-j$ the amount of lines in the new set $\mathcal{B}$. In the particularized case shown in Figure \ref{fig:net2}, $j=5$ and $n-j=6$. Thus, these subsets are expanded and explicitly become:
+Note that the whole set $\mathcal{P}$ can be further divided into the set composed of the original lines $\mathcal{A}$, and the set of new lines $\mathcal{B}$. Let $j$ indicate the number of lines in the original set $\mathcal{A}$, and $n-j$ the amount of lines in the new set $\mathcal{B}$. In the particularized case shown in Figure \ref{fig:net2}, $j=6$ and $n-j=8$. Thus, these subsets are expanded and explicitly become:
 \begin{equation}
   \begin{cases}
   \mathcal{A} = \{\mathbf{1}_{\sigma_{1}}, \mathbf{1}_{\sigma_{2}},..., \mathbf{1}_{\sigma_{j}}\}, \\
@@ -199,7 +203,7 @@ On the other hand, in the subset $\mathcal{B}$ it is not straightforward to esti
 \begin{equation}
   k = j 2^{(n-j)},
 \end{equation}
-so if $j=5$ and $n-j=6$, this results in $k=320$ different topologies. Thus, a total of 320 timeseries power flows are computed. 
+so if $j=6$ and $n-j=8$, this results in $k=1536$ different topologies. Thus, a total of $1536$ timeseries power flows are computed. 
 
 Security analysis in power systems has been traditionaly based on the usage of the DC power flow \cite{stott2009dc, capitanescu2011state}. It offers the advantage of being non-iterative (and consequently, fast), and allows to determine the influence of faults with the usage of transmission factors. However, its solution is just an approximation. Since the amount of situations remains reasonable, it has been decided to solve them with the typical Newton-Raphson up to the default precision of $1\cdot 10^{-8}$~MVA \cite{pandapower2018}. 
 

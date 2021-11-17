@@ -490,6 +490,7 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
 
 
     on_off_all_lines = []
+    vec_config = []
     for name, sheet in diag.items():
         if len(sheet) == 0:  # if no diagnostic errors
         # if True:
@@ -533,8 +534,101 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
             full_condition = conditional_loading and conditional_vpu1 and conditional_vpu2 and ok_losses
             if full_condition is True:
                 print(name)
-        
+                vec_config.append(name)
+
+    df_configs = pd.DataFrame(vec_config)
+    df_configs.to_excel("./Results/OK_configs.xlsx")
+
     return ()
+
+
+def select_best(path_configs, path_res_lines, path_ini_lines, n_lines, n_extra_lines, n_cases):
+    """
+    Find the single optimal configuration, also considering costs
+
+    :param path_configs: path to the OK_configs.xlsx file
+    :param path_res_lines: path to the solution for all lines, to read the sheet and states
+    :param path_ini_lines: to know the distances
+    :return: data for the optimal configuration
+    """
+
+    # data costs of the lines
+    c_2line = 407521  # euro/km
+    c_1line = 288289  # euro/km
+
+    # store costs
+    lengths = pd.read_csv(path_ini_lines)['length']
+    circuits = pd.read_csv(path_ini_lines)['parallel']
+    costs = []
+    for ll in range(len(circuits)):
+        if circuits.loc[ll] == 1:
+            costs.append(c_1line * lengths.loc[ll])
+        elif circuits.loc[ll] == 2:
+            costs.append(c_2line * lengths.loc[ll])
+
+    costs = np.array(costs)
+
+    # use lines operating state
+    res_configs = pd.read_excel(path_configs)
+    res_lines = pd.read_excel(path_res_lines, sheet_name=None)
+    name_configs_prev = list(res_configs.iloc[:,1])
+
+    # check if the same _yy is in all lines
+    configs_all = []
+    for xx in name_configs_prev:
+        namex = xx.split('_')[1]
+        configs_all.append(namex)
+
+    nice_configs = set(configs_all)
+    n_count_max = 0
+    n_config = '00'
+
+    # look max number of occurrences
+    for nn in nice_configs:
+        occurr = configs_all.count(nn)
+        if occurr > n_count_max:
+            n_count_max = occurr
+
+    # store the names of the configurations always valid
+    valid_configs = []
+    if n_count_max == n_lines - n_extra_lines:
+        for nn in nice_configs:
+            occurr = configs_all.count(nn)
+            if occurr == n_count_max:
+                valid_configs.append(nn)
+
+
+
+
+    # only check 0_xx to get the data
+    costs_configs = []
+    dic_configs = {}
+    for name, sheet in res_lines.items():
+        nxx = name.split('_')[1]
+        if nxx in valid_configs:
+            on_off_lines = np.array(res_lines[name]['in_service'])
+            c_total = np.dot(on_off_lines, costs)
+            dic_configs[nxx] = c_total
+
+
+    names_final = np.array(list(dic_configs.keys()))
+    costs_final = np.array(list(dic_configs.values()))
+    # print(dic_configs.keys())
+    # print(dic_configs.values())
+    print(names_final)
+    print(costs_final)
+
+    # final_configs = pd.DataFrame([np.array(dic_configs.keys()), np.array(dic_configs.values())], columns=['configs', 'costs'])
+    final_configs = pd.DataFrame([names_final, costs_final])
+    # final_configs = pd.DataFrame([np.transpose(names_final), np.transpose(costs_final)])
+    print(final_configs)
+
+    final_configs.transpose().to_excel("./Results/OPT_configs.xlsx")
+
+    return ()
+
+
+
 
 
 
@@ -560,26 +654,29 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
 
-    # n_cases = 64
-    # n_lines = 12
-    # n_extra_lines = 6
-    # merge excels
+    # process_contingencies(n_lines, n_extra_lines, n_cases)
 
-    process_contingencies(n_lines, n_extra_lines, n_cases)
-    nxx = n_cases * (n_lines - n_extra_lines)
+#     # store
+#     nxx = n_cases * (n_lines - n_extra_lines)
+#     path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
+#     path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+#     path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
+#     path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
+#     path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
+#     path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
+#     path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-    path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
-    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-    path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
-    path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
-    path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
-    path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
-    path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
+    # find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
-    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
-
+    path_configs = 'Results/OK_configs.xlsx'
+    path_lineN = 'Results/All_line_1536.xlsx'
+    path_line_ini = 'Datafiles/phII/line2.csv'
+    n_cases = 256
+    n_lines = 14
+    n_extra_lines = 8
+    select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
 
     end_time = time.time()
     print(end_time - time_start, 's')
