@@ -7,12 +7,12 @@ import pandapower.timeseries as timeseries
 import itertools
 from pandapower.timeseries.data_sources.frame_data import DFData
 from pandapower.plotting import simple_plot
+import time
 
 import sys
 import codecs
 
 from line_param_calc import calc_line
-
 
 
 pd.set_option('display.max_rows', 500)
@@ -492,6 +492,7 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
     on_off_all_lines = []
     for name, sheet in diag.items():
         if len(sheet) == 0:  # if no diagnostic errors
+        # if True:
             on_off_lines = line[name]['in_service']
             on_off_all_lines.append(on_off_lines)
             n_parallel = parallel[name]
@@ -538,10 +539,14 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
 
 
 if __name__ == "__main__":
+
+    time_start = time.time()
+
     # load paths
     path_bus = 'Datafiles/phII/bus1.csv'
     path_geodata = 'Datafiles/phII/geodata1.csv'
-    path_line = 'Datafiles/phII/line1.csv'
+    path_line = 'Datafiles/phII/line2.csv'
+    # path_line = 'Datafiles/phII/line1.csv'
     path_demand = 'Datafiles/phII/demand1.csv'
     path_busload = 'Datafiles/phII/bus_load1.csv'
     path_generation = 'Datafiles/phII/generation1.csv'
@@ -557,7 +562,11 @@ if __name__ == "__main__":
     # run contingencies
     n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
 
+    # n_cases = 64
+    # n_lines = 12
+    # n_extra_lines = 6
     # merge excels
+
     process_contingencies(n_lines, n_extra_lines, n_cases)
     nxx = n_cases * (n_lines - n_extra_lines)
 
@@ -572,6 +581,8 @@ if __name__ == "__main__":
     find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
 
+    end_time = time.time()
+    print(end_time - time_start, 's')
 
     # ------------- Others -------------
 
