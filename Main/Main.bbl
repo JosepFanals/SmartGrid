@@ -282,6 +282,24 @@
       \verb https://arxiv.org/abs/1709.06743
       \endverb
     \endentry
+    \entry{acer}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=29dfabe6590cb5f89305b35b3cbfd23f}{%
+           family={{Agency for the Cooperation of Energy Regulators (ACER)}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \strng{fullhash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \strng{bibnamehash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \strng{authorbibnamehash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \strng{authornamehash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \strng{authorfullhash}{29dfabe6590cb5f89305b35b3cbfd23f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{UIC Report - Electricity Infraestructure. 2015.}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

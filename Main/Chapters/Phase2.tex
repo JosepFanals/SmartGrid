@@ -123,6 +123,24 @@ Recall that the original system depicted in Figure \ref{fig:net1} was for the mo
     \draw[dashed, draw=red] (4.8,5.0) to [short] (4.8,4.8);
     \draw[dashed, draw=red] (8,4.4) to [short] (3.3,0);
 
+    \draw[draw=red] (6,4.85) to [short] (6.3,5.15);
+    \draw[draw=red] (6.2,4.85) to [short] (6.5,5.15);
+
+    \draw[draw=red] (6,4.25) to [short] (6.3,4.55);
+    \draw[draw=red] (6.2,4.25) to [short] (6.5,4.55);
+
+    \draw[draw=red] (2,6.25) to [short] (2.3,6.55);
+    \draw[draw=red] (2.2,6.25) to [short] (2.5,6.55);
+
+    \draw[draw=red] (2.85,1.5) to [short] (3.15,1.8);
+    \draw[draw=red] (2.85,1.7) to [short] (3.15,2.0);
+
+    \draw[draw=red] (2.3,3.6) to [short] (2.6,3.9);
+    \draw[draw=red] (2.2,3.7) to [short] (2.5,4.0);
+
+    \draw[draw=red] (5.3,1.6) to [short] (5.0,1.9);
+    \draw[draw=red] (5.4,1.7) to [short] (5.1,2.0);
+
     % legend
     \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (3.0,8.4) -- (4.0,8.4);
     \draw[-{Triangle[length=5mm, width=2mm]}, draw=red!60!white, fill=red!60!white] (3.0,9.1) -- (4.0,9.1);
@@ -176,7 +194,7 @@ Recall that the original system depicted in Figure \ref{fig:net1} was for the mo
 
   \end{circuitikz}
 
-  \caption{Overview of the network with the addition of lines}
+  \caption{Overview of the network with the addition of lines. Double line if double circuit.}
   \label{fig:net2}
 \end{figure}
 
@@ -240,15 +258,78 @@ The general procedure to perform the contingency analysis is shown in Algorithm 
 \caption{Pseudocode to solve the contingencies}
 \label{alg:1}
 \end{algorithm}
+Out of all results extracted, an analysis procedure is required in order to determine which configuration meets the $N-1$ criteria. The requirements are listed below:
+\begin{itemize}
+  \item The losses in the lines have to stay below 2\%.
+    \vspace{-0.5cm}
+    \item The voltages have to be between a range of $\pm$10\%.
+      \vspace{-0.5cm}
+    \item All lines have to remain below 80\% its maximum capacity.
+\end{itemize}
+Apart from these requirements, an additional criteria has to do with the costs. These will be critical when choosing the best configuration out of all possible ones. Table \ref{tab:net_cost} displays the costs for the lines, depending on their representative voltage level and the number of circuits.
 
+\begin{table}[!htb]\centering
+  \begin{tabular}{cccc}
+    \hline
+    \textbf{Type} & \textbf{Mean (\texteuro)} & \textbf{Min-max range (\texteuro)} & \textbf{Median (\texteuro)} \\
+    \hline
+    380-400~kV, 2 circuits & 1060919 & 579771 - 1401585 & 1023703 \\
+    380-400~kV, 1 circuits & 598231 & 302664 - 766802 & 597841 \\
+    220-225~kV, 2 circuits & 407521 & 354696 - 461664 & 437263 \\
+    220-225~kV, 1 circuits & 288289 & 157926 - 298247 & 218738 \\
+    \hline
+  \end{tabular}
+  \caption{Network infraestructure costs for the lines. Data from \cite{acer}.}
+  \label{tab:net_cost}
+\end{table}
+
+It has been decided to calculate the costs with mean value.
 
 
 \subsection{Results}
+Out of all results extracted, an analysis procedure is required in order to determine which configuration meets the $N-1$ criteria. The prechosen configurations are the ones that ensure that in spite of the disconnection of a given element, the power flow remains feasible and the design criterias are met. A total of 39 have satisfied all requirements. Table \ref{tab:top10_1} shows the top 10 cheapest topologies, according to the costs in Table \ref{tab:net_cost}. 
 
+\begin{table}[!htb]\centering
+  \begin{tabular}{ccc}
+    \hline
+    \textbf{Identifier} & \textbf{Additional lines} & \textbf{Infraestructure cost (M\texteuro)}\\
+    \hline
+    19 & [6-13, 6-10, 8-9, 10-12] &  359.50 \\
+    214 & [6-13, 6-10, 11-12, 8-9] & 362.99 \\
+    77 & [6-13, 8-9, 10-12, 9-6] & 375.04 \\
+    49 & [6-13, 11-12, 8-9, 9-6] & 378.54 \\
+    80 & [6-13, 6-10, 11-12, 8-9, 10-12] & 420.63 \\
+    189 & [6-13, 6-10, 8-9, 10-12, 9-6] & 420.63 \\
+    45 & [6-13, 6-10, 8-9, 10-12, 8-12] & 423.96 \\
+    70 & [6-13, 8-9, 10-12, 9-6] & 424.12 \\
+    157 & [6-13, 6-10, 11-12, 8-9, 8-12] & 427.46 \\
+    250 & [6-13, 11-12, 8-9, 10-12, 9-6] & 436.17 \\
+    \hline
+  \end{tabular}
+  \caption{Best configurations with the additional lines}
+  \label{tab:top10_1}
+\end{table}
+The results indicate that the differences in the infraestructure costs are rather minimal. However, installing only four additional lines tends to be the best option. Line 6-13 has been found necessary to ensure a proper operating state of the system under all near-optimal configurations. This makes sense considering that the interconnection usually provides most of the power. Hence, a strong connection to the network is convenient. In fact, the best topology includes two lines connecting the slack bus to the rest of the system are present. 
+
+By ensuring that the $N-1$ criteria is met, we guarantee that all power will be provided independently of which element fails. In reality, this matter may be a bit more complex as two lines could fail simultaneously. Nevertheless, the associated cross-probability is extremely low, and hence, neglected. This implies that no operating costs have to be calculated; it is known beforehand that they will be null as all power is provided for the optimal configuration.
 
 \section{Rising the voltage level}
 \subsection{Description}
+While installing more lines is a technically feasible strategy, it may not be the most optimal in terms of costs since the voltage level of the grid could be increased. The price to pay for such a change is the replacement of the initial transformers of 25/220~kV and 36/220~kV, for transformers that raise the voltage up to 400~kV (thus, 25/380~kV and 36/380~kV).
+
+In practical terms, raising the voltage may not be as simple as replacing four transformers. For instance, the insulators and the switchgear would have to be changed as well. In the worst scenario, the lines in the towers would have to be more separated, which could cause a replacement of the whole set of supports. To keep the problem arguably simple, it is taken into account that the cost of the transformer station is proportional to the voltage --- as can be deduced in \cite{acer}.
+
+The benefits of increasing the votlage become obvious when observing that the power in a three-phase system such as this one is given by:
+\begin{equation}
+  S = \sqrt{3}V_{ll}I,
+\end{equation}
+where $V_{ll}$ identifies the line voltage. With this simple relationship, if it is assumed that $S$ remains constant, and $V_{ll}$ increases by a factor of $380/220\approx \sqrt{3}$, the current would decrease by approximately a factor of $\sqrt{3}$. This means that the active power losses, which are proportional to the square of the current, are roughly reduced by a factor of 3. 
+
+% estimate what substations we could have (or use all substations), and then multiply more or less 40000 * (380 - 220) = 6.4 M euros for each substation changed. Then also evaluate the extra lines needed in the contingency analysis, and see if the total cost is lower than the cost in table tab:top10_1
+
+
 \subsection{Results}
+The same amount of contingencies as before are computed. Out of the 1536, this time more permutations have become feasible. Of course, raising the voltage has a positive effect in this regard, as previously hypothesized. 
+
 % but also consider the added lines here!?
 
-% \section{Change in conductors}  % do it? or have always the same conductors?

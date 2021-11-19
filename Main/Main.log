@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  17 NOV 2021 22:50
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  19 NOV 2021 02:15
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1712,36 +1712,36 @@ Missing character: There is no ; (U+003B) in font nullfont!
 Chapter 3.
 (./Chapters/Phase2.tex [9
 
-] [10]) [11]
+] [10] [11] [12]) [13]
 Chapter 4.
 (./Chapters/Code.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
- [12
+ [14
 
-] [13] [14] [15] [16] [17] [18]) [19] [20
+] [15] [16] [17] [18] [19] [20]) [21] [22
 
 ] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: D83C47C8DBCC504A163778DE8A042160;1641.
+(rerunfilecheck)             Checksum: 86F11B8C84FC5FFBF195408A45751261;1641.
 Package logreq Info: Writing requests to 'Main.run.xml'.
 
 \openout1 = Main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 73327 strings out of 478531
- 1456070,2848258 words of node,token memory allocated
- 1536 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 105 attribute, 88 glue_spec, 90 attribute_list, 2 write, 24 pdf_literal, 1 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:16,2:34584,3:8709,4:32778,5:32752,6:149,7:39915,8:137,9:82296,10:58,11:3155
- 90475 multiletter control sequences out of 65536+600000
+ 73613 strings out of 478531
+ 1456061,2848258 words of node,token memory allocated
+ 1548 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 109 attribute, 88 glue_spec, 92 attribute_list, 2 write, 24 pdf_literal, 1 pdf_action, 24 pdf_colorstack nodes
+   avail lists: 1:14,2:34583,3:8710,4:32778,5:32752,6:149,7:39915,8:137,9:82296,10:58,11:3155
+ 90755 multiletter control sequences out of 65536+600000
  78 fonts using 6982439 bytes
  112i,19n,117p,1192b,2290s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (21 pages, 317409 bytes).
+Output written on Main.pdf (23 pages, 327111 bytes).
 
-PDF statistics: 908 PDF objects out of 1000 (max. 8388607)
- 803 compressed objects within 9 object streams
- 542 named destinations out of 1000 (max. 131072)
+PDF statistics: 928 PDF objects out of 1000 (max. 8388607)
+ 820 compressed objects within 9 object streams
+ 548 named destinations out of 1000 (max. 131072)
  368 words of extra memory for PDF output out of 10000 (max. 100000000)
 
