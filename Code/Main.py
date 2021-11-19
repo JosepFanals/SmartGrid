@@ -525,9 +525,11 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
                 P_loss_all = sum(pls_subset.loc[kk,:])
                 P_gen_all = P_load_all + P_loss_all
                 eff = P_load_all / P_gen_all
-                if eff < 0.98: 
+                if eff < 0.98:
                     ok_losses = False
                 kk += 1
+                print('Losses: Pload, Ploss, Pgen, eff: ')
+                print(P_load_all, P_loss_all, P_gen_all, eff)
 
             # if ok_losses is True, we are good
 
@@ -535,6 +537,9 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
             if full_condition is True:
                 print(name)
                 vec_config.append(name)
+
+            print('Condition: load, vpu1, vpu2, loss: ')
+            print(conditional_loading, conditional_vpu1, conditional_vpu2, ok_losses)
 
     df_configs = pd.DataFrame(vec_config)
     df_configs.to_excel("./Results/OK_configs.xlsx")
@@ -636,17 +641,29 @@ if __name__ == "__main__":
 
     time_start = time.time()
 
-    # load paths
-    path_bus = 'Datafiles/phII/bus1.csv'
-    path_geodata = 'Datafiles/phII/geodata1.csv'
-    path_line = 'Datafiles/phII/line2.csv'
-    # path_line = 'Datafiles/phII/line1.csv'
-    path_demand = 'Datafiles/phII/demand1.csv'
-    path_busload = 'Datafiles/phII/bus_load1.csv'
-    path_generation = 'Datafiles/phII/generation1.csv'
-    path_busgen = 'Datafiles/phII/bus_gen1.csv'
-    path_trafo = 'Datafiles/phII/trafo1.csv'
 
+    # ------------- Inputs -------------
+    # load paths
+    # path_bus = 'Datafiles/phII/bus1.csv'
+    # path_geodata = 'Datafiles/phII/geodata1.csv'
+    # path_line = 'Datafiles/phII/line2.csv'
+    # path_demand = 'Datafiles/phII/demand1.csv'
+    # path_busload = 'Datafiles/phII/bus_load1.csv'
+    # path_generation = 'Datafiles/phII/generation1.csv'
+    # path_busgen = 'Datafiles/phII/bus_gen1.csv'
+    # path_trafo = 'Datafiles/phII/trafo1.csv'
+
+    path_bus = 'Datafiles/phII_380kV/bus1.csv'
+    path_geodata = 'Datafiles/phII_380kV/geodata1.csv'
+    path_line = 'Datafiles/phII_380kV/line2.csv'
+    path_demand = 'Datafiles/phII_380kV/demand1.csv'
+    path_busload = 'Datafiles/phII_380kV/bus_load1.csv'
+    path_generation = 'Datafiles/phII_380kV/generation1.csv'
+    path_busgen = 'Datafiles/phII_380kV/bus_gen1.csv'
+    path_trafo = 'Datafiles/phII_380kV/trafo1.csv'
+
+
+    # ------------- Running -------------
     # define net
     net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
 
@@ -654,32 +671,36 @@ if __name__ == "__main__":
     # run_store_timeseries(net, '000')
 
     # run contingencies
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
+    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
 
-    # process_contingencies(n_lines, n_extra_lines, n_cases)
+    process_contingencies(n_lines, n_extra_lines, n_cases)
 
-#     # store
-#     nxx = n_cases * (n_lines - n_extra_lines)
-#     path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
-#     path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-#     path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
-#     path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
-#     path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
-#     path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
-#     path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-    # find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
+    # ------------- Processing -------------
+    # store
+    nxx = n_cases * (n_lines - n_extra_lines)
+    path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
+    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+    path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
+    path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
+    path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
+    path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
+    path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
+
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
     path_configs = 'Results/OK_configs.xlsx'
     path_lineN = 'Results/All_line_1536.xlsx'
-    path_line_ini = 'Datafiles/phII/line2.csv'
-    n_cases = 256
-    n_lines = 14
-    n_extra_lines = 8
+    path_line_ini = 'Datafiles/phII_380kV/line2.csv'
+    # n_cases = 256
+    # n_lines = 14
+    # n_extra_lines = 8
     select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
 
     end_time = time.time()
     print(end_time - time_start, 's')
+
+
 
     # ------------- Others -------------
 

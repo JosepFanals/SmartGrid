@@ -292,7 +292,7 @@ Out of all results extracted, an analysis procedure is required in order to dete
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
     \hline
-    \textbf{Identifier} & \textbf{Additional lines} & \textbf{Infraestructure cost (M\texteuro)}\\
+    \textbf{Identifier} & \textbf{New lines} & \textbf{Infraestructure cost (M\texteuro)}\\
     \hline
     19 & [6-13, 6-10, 8-9, 10-12] &  359.50 \\
     214 & [6-13, 6-10, 11-12, 8-9] & 362.99 \\
@@ -325,11 +325,56 @@ The benefits of increasing the votlage become obvious when observing that the po
 \end{equation}
 where $V_{ll}$ identifies the line voltage. With this simple relationship, if it is assumed that $S$ remains constant, and $V_{ll}$ increases by a factor of $380/220\approx \sqrt{3}$, the current would decrease by approximately a factor of $\sqrt{3}$. This means that the active power losses, which are proportional to the square of the current, are roughly reduced by a factor of 3. 
 
+Regarding the costs, representative values in \texteuro/km are gathered in Table \ref{tab:sub_cost}. While there is a certain dependence on the type, a generic substation could be taken as reference. Thus, a cost of 42627~\texteuro/kV is chosen as an indicator. It is considered that all elements in the substation would have to be replaced to adapt the new voltage level of 380~kV. If there are four substations to be replaced, the total cost for doing so becomes 64.79~M\texteuro. 
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{cccc}
+    \hline
+    \textbf{Type} & \textbf{Mean (\texteuro/kV)} & \textbf{Min-max range (\texteuro/kV)} & \textbf{Median (\texteuro/kV)} \\
+    \hline
+    All substations & 42627 & 24994 - 55508 & 36755 \\
+    All GIS substations & 46237 & 29837 - 56017 & 37449 \\
+    AIS with 9+ bays & 44008 & 28838 - 56157 & 41080 \\
+    AIS with 5-8 bays & 35593 & 19936 - 37251 & 29021 \\
+    AIS with 1-4 bays & 33192 & 20276 - 48319 & 26628 \\
+    \hline
+  \end{tabular}
+  \caption{Network infraestructure costs for the substation. Data from \cite{acer}.}
+  \label{tab:sub_cost}
+\end{table}
+
+
+
 % estimate what substations we could have (or use all substations), and then multiply more or less 40000 * (380 - 220) = 6.4 M euros for each substation changed. Then also evaluate the extra lines needed in the contingency analysis, and see if the total cost is lower than the cost in table tab:top10_1
 
 
 \subsection{Results}
-The same amount of contingencies as before are computed. Out of the 1536, this time more permutations have become feasible. Of course, raising the voltage has a positive effect in this regard, as previously hypothesized. 
+The same amount of contingencies as before are computed. Out of the 1536, this time more permutations have become feasible (52 in total). Of course, raising the voltage has a positive effect in this regard, as previously hypothesized. In any case there is a trade-off situation: while the kilometers of new lines may decrease, there is an additional cost due to the new substations. It has to be assessed if the saving due to raising the voltage outweights the cost of installing new substations. Table \ref{tab:cost_trafos2} shows such results for the 10 cheapest options, where the cost of the substations are independent on the topology.
 
-% but also consider the added lines here!?
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{ccccc}
+    \hline
+    \textbf{Identifier} & \textbf{New lines} & \textbf{Lines (M\texteuro)} & \textbf{Transformers (M\texteuro)} & \textbf{Total (M\texteuro)} \\
+        \hline
+    163 & [6-13, 8-9, 10-12] & 313.92 & 64.79 & 378.71 \\
+    133 & [6-13, 11-12, 8-9] & 317.41 & 64.79 & 382.20 \\
+    235 & [6-13, 8-9, 8-12] & 320.75 & 64.79 & 385.54 \\
+    30 & [6-13, 8-12, 6-8] & 346.07 & 64.79 & 410.86 \\
+    19 & [6-13, 6-10, 8-9, 10-12] & 359.50 & 64.79 & 424.29 \\
+    214 & [6-13, 6-10, 11-12, 8-9] & 362.99 & 64.79 & 427.78 \\
+    58 & [6-13, 6-10, 8-9, 8-12] & 366.33 & 64.79 & 431.12 \\
+    77 & [6-13, 8-9, 10-12, 9-6] & 375.04 & 64.79 & 439.83 \\
+    169 & [6-13, 8-9, 10-12, 8-12] & 378.38 & 64.79 & 443.17 \\
+    49 & [6-13, 11-12, 8-9, 9-6] & 378.54 & 64.79 & 443.33 \\
+        \hline
+    \end{tabular}
+    \caption{Economic results of replacing the substations}
+    \label{tab:cost_trafos2}
+\end{table}
+A similar conlcusion as before is reached. A new line that connects the interconnection with the dismantled plant is required to meet the planning requirements and achieve an optimal topology. Notice that thanks to the increase in the voltage level, only three new lines should be installed in the optimal configurations. This allows to reduce the cost of these new lines up to 313.92~M\texteuro \ in the best scenario. However, the extra cost due to the replacement of the transformers implies that the total cost of 378.71~M\texteuro \ surpasses the minimum cost indicated in Table \ref{tab:top10_1}, which is equal to 359.50~M\texteuro. 
+
+Therefore, even if both options do not differ much in costs, it would still be better to operate around the nominal voltage of 220~kV. This does not mean, however, that installing more lines is the only feasible solution to confront the technical issues. This may have been true some decades ago, but nowadays, power systems can benefit from the penetration of renewables. Renewable sources of generation can be connected near the loads, which allows to reduce the losses and improve the efficiency of the system. A scenario with renewables is covered in the following chapter.
+
+
 

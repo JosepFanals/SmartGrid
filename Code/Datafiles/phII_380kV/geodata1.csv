@@ -1,0 +1,14 @@
+name,x,y,coords
+nuclear,2.1,0.1,None
+load1_i1,2.1,2.1,None
+load2_i1,2.1,3.1,None
+load2_i2,3.1,4.1,None
+load2_i3,0.1,4.1,None
+intercon,5.0,3.0,None
+dismant,3.1,3.1,None
+nl,2.0,0.0,None
+l1_i1,2.0,3.0,None
+l2_i1,2.0,2.0,None
+l2_i2,3.0,4.0,None
+l2_i3,0.0,4.0,None
+dm,3.0,3.0,None

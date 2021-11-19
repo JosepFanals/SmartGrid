@@ -1,0 +1,14 @@
+name,vn_kv,type,zone,in_service
+nuclear,25,n,None,TRUE
+load1_i1,36,n,None,TRUE
+load2_i1,36,n,None,TRUE
+load2_i2,36,n,None,TRUE
+load2_i3,36,n,None,TRUE
+intercon,380,n,None,TRUE
+dismant,25,n,None,FALSE
+nl,380,n,None,TRUE
+l1_i1,380,n,None,TRUE
+l2_i1,380,n,None,TRUE
+l2_i2,380,n,None,TRUE
+l2_i3,380,n,None,TRUE
+dm,380,n,None,TRUE
