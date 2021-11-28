@@ -19,7 +19,7 @@ pd.set_option('display.max_rows', 500)
 pd.set_option('display.max_columns', 500)
 pd.set_option('display.width', 1000)
 
-def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo):
+def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, rene=False, path_solar_prof=None, path_wind_prof=None):
     """
     initialize the grid from the .csv files
 
@@ -31,6 +31,7 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     :param path_generation: path to the normalized generation .csv file
     :param busgen: path to the bus-generator look up table .csv file
     :param trafo: path to the trafo .csv file
+    :param rene: boolean for renewables
     :return: the net class
     """
 
@@ -209,6 +210,69 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
         return net
 
 
+    def create_generator_rene(path_generation, path_busgen, path_bus, path_solar_profile, path_wind_profile):
+        """
+        adapts the generation files
+
+        :param path_generation:
+        :param path_busgenerator:
+        :param path_bus:
+        :return: the net with the generators added
+        """
+
+        df_generation = pd.read_csv(path_generation)
+        df_busgen = pd.read_csv(path_busgen)
+        df_bus = pd.read_csv(path_bus)
+        # df_solar_prof = pd.read_csv(path_solar_profile)
+        # df_wind_prof = pd.read_csv(path_wind_profile)
+
+        # create basic generator dataframe
+        # find the bus index of each gen
+        gen_indx = []
+        for _, gen in df_busgen.iterrows():
+            bus_gen = pp.get_element_index(net, "bus", gen.bus)
+            gen_indx.append(bus_gen)
+
+        gen_indx = pd.DataFrame(gen_indx)
+        gen_indx = gen_indx.rename(columns={0: "bus"})
+
+        # load name and peak power
+        gen_name = df_busgen['bus']
+        gen_pmw = df_busgen['p_mw']
+        gen_vpu = df_busgen['vm_pu']
+
+        # merge in a full dataframe
+        headers = ["name", "bus", "p_mw", "vm_pu"]
+        df_gen = pd.concat([gen_name, gen_indx, gen_pmw, gen_vpu], axis=1)
+        df_gen.columns.values[0] = "name"
+
+
+        # create time series from the basic load df
+        Nt = len(df_generation)
+        Ng = len(df_gen)
+
+
+        pmw_ts = np.zeros((Nt, Ng), dtype=float)
+        for gg in range(Ng):
+            for i in range(Nt):  # number of time periods
+                # pmw_ts[i,gg] = df_gen['p_mw'][gg] * df_generation['norm'][i]
+                pmw_ts[i,gg] = df_gen['p_mw'][gg] * df_generation.iloc[i,gg+1]
+            
+            pp.create_gen(net, bus=gen_indx['bus'][gg], p_mw=pmw_ts[0, gg], vm_pu=gen_vpu[gg], name=gen_name[gg], index=int(gg))  # take t=0
+
+            # gen structure for 1 t
+            # for ll in range(len(df_busgen)):
+                # pp.create_gen(net, bus=gen_indx['bus'][ll], p_mw=pmw_ts[0, ll], vm_pu=gen_vpu[ll], name=gen_name[ll], index=int(ll))
+
+
+        # timeseries
+        df_gen_ts = pd.DataFrame(pmw_ts, index=list(range(Nt)), columns=net.gen.index)
+        ds_gen_ts = DFData(df_gen_ts)
+        const_gen = control.ConstControl(net, element='gen', element_index=net.gen.index, variable='p_mw', data_source=ds_gen_ts, profile_name=net.gen.index)
+
+        return net
+
+
     def create_intercon(path_bus):
         """
         defines the interconnection (slack bus)
@@ -274,7 +338,10 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     net = create_load(path_demand, path_busload, path_bus)
 
     # gens
-    net = create_generator(path_generation, path_busgen, path_bus)
+    if rene is False:
+        net = create_generator(path_generation, path_busgen, path_bus)
+    else:
+        net = create_generator_rene(path_generation, path_busgen, path_bus, path_solar_prof, path_wind_prof)
 
     # interconnection
     net = create_intercon(path_bus)
@@ -653,52 +720,68 @@ if __name__ == "__main__":
     # path_busgen = 'Datafiles/phII/bus_gen1.csv'
     # path_trafo = 'Datafiles/phII/trafo1.csv'
 
-    path_bus = 'Datafiles/phII_380kV/bus1.csv'
-    path_geodata = 'Datafiles/phII_380kV/geodata1.csv'
-    path_line = 'Datafiles/phII_380kV/line2.csv'
-    path_demand = 'Datafiles/phII_380kV/demand1.csv'
-    path_busload = 'Datafiles/phII_380kV/bus_load1.csv'
-    path_generation = 'Datafiles/phII_380kV/generation1.csv'
-    path_busgen = 'Datafiles/phII_380kV/bus_gen1.csv'
-    path_trafo = 'Datafiles/phII_380kV/trafo1.csv'
+    # rising voltage level
+    # path_bus = 'Datafiles/phII_380kV/bus1.csv'
+    # path_geodata = 'Datafiles/phII_380kV/geodata1.csv'
+    # path_line = 'Datafiles/phII_380kV/line2.csv'
+    # path_demand = 'Datafiles/phII_380kV/demand1.csv'
+    # path_busload = 'Datafiles/phII_380kV/bus_load1.csv'
+    # path_generation = 'Datafiles/phII_380kV/generation1.csv'
+    # path_busgen = 'Datafiles/phII_380kV/bus_gen1.csv'
+    # path_trafo = 'Datafiles/phII_380kV/trafo1.csv'
+
+    # phase with rene
+    path_bus = 'Datafiles/phIII/bus1.csv'
+    path_geodata = 'Datafiles/phIII/geodata1.csv'
+    path_line = 'Datafiles/phIII/line1.csv'
+    path_demand = 'Datafiles/phIII/demand1.csv'
+    path_busload = 'Datafiles/phIII/bus_load1.csv'
+    # path_generation = 'Datafiles/phIII/generation1.csv'
+    path_generation = 'Datafiles/phIII/generation_all.csv'
+    # path_generation = 'Datafiles/phIII/generation_prof_solar.csv'
+    # path_generation = 'Datafiles/phIII/generation_prof_wind.csv'
+    path_busgen = 'Datafiles/phIII/bus_gen1.csv'
+    path_trafo = 'Datafiles/phIII/trafo1.csv'
 
 
     # ------------- Running -------------
     # define net
-    net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
+    # net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo)
+    net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, rene=True)
 
     # run and store timeseries data, for only 1 case
-    # run_store_timeseries(net, '000')
+    run_store_timeseries(net, '000')
+    print(net.gen)
 
-    # run contingencies
-    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
+    # # run contingencies
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=1)
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
+    # process_contingencies(n_lines, n_extra_lines, n_cases)
 
-    process_contingencies(n_lines, n_extra_lines, n_cases)
 
+    # # ------------- Processing -------------
+    # # store
+    # nxx = n_cases * (n_lines - n_extra_lines)
+    # path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
+    # path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+    # path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
+    # path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
+    # path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
+    # path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
+    # path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-    # ------------- Processing -------------
-    # store
-    nxx = n_cases * (n_lines - n_extra_lines)
-    path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
-    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-    path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
-    path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
-    path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
-    path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
-    path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
+    # find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
-    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
+    # path_configs = 'Results/OK_configs.xlsx'
+    # path_lineN = 'Results/All_line_1536.xlsx'
+    # path_line_ini = 'Datafiles/phII_380kV/line2.csv'
+    # # n_cases = 256
+    # # n_lines = 14
+    # # n_extra_lines = 8
+    # select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
 
-    path_configs = 'Results/OK_configs.xlsx'
-    path_lineN = 'Results/All_line_1536.xlsx'
-    path_line_ini = 'Datafiles/phII_380kV/line2.csv'
-    # n_cases = 256
-    # n_lines = 14
-    # n_extra_lines = 8
-    select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
-
-    end_time = time.time()
-    print(end_time - time_start, 's')
+    # end_time = time.time()
+    # print(end_time - time_start, 's')
 
 
 

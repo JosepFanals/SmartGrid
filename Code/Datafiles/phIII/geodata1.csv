@@ -15,4 +15,4 @@ dm,3.0,3.0,None
 solar_l,1.0,5.0,None
 solar_h,1.1,5.1,None
 wind_l,0.0,1.0,None
-wind_h,0,1,1.1,None
+wind_h,0.1,1.1,None
