@@ -532,7 +532,7 @@ def process_contingencies(n_lines, n_extra_lines, n_cases):
 
 
 
-def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases):
+def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases, exclude_lines):
     """
     Find the optimal configuration of lines considering convergence, losses, voltages, and costs
 
@@ -559,7 +559,7 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
     on_off_all_lines = []
     vec_config = []
     for name, sheet in diag.items():
-        if len(sheet) == 0:  # if no diagnostic errors
+        if len(sheet) == 0 or name[0] not in exclude_lines:  # if no diagnostic errors
         # if True:
             on_off_lines = line[name]['in_service']
             on_off_all_lines.append(on_off_lines)
@@ -595,8 +595,8 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
                 if eff < 0.98:
                     ok_losses = False
                 kk += 1
-                print('Losses: Pload, Ploss, Pgen, eff: ')
-                print(P_load_all, P_loss_all, P_gen_all, eff)
+                # print('Losses: Pload, Ploss, Pgen, eff: ')
+                # print(P_load_all, P_loss_all, P_gen_all, eff)
 
             # if ok_losses is True, we are good
 
@@ -605,8 +605,8 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
                 print(name)
                 vec_config.append(name)
 
-            print('Condition: load, vpu1, vpu2, loss: ')
-            print(conditional_loading, conditional_vpu1, conditional_vpu2, ok_losses)
+            # print('Condition: load, vpu1, vpu2, loss: ')
+            # print(conditional_loading, conditional_vpu1, conditional_vpu2, ok_losses)
 
     df_configs = pd.DataFrame(vec_config)
     df_configs.to_excel("./Results/OK_configs.xlsx")
@@ -733,15 +733,21 @@ if __name__ == "__main__":
     # phase with rene
     path_bus = 'Datafiles/phIII/bus1.csv'
     path_geodata = 'Datafiles/phIII/geodata1.csv'
-    path_line = 'Datafiles/phIII/line1.csv'
+    # path_line = 'Datafiles/phIII/line1.csv'
+    path_line = 'Datafiles/phIII/line1reduced.csv'
     path_demand = 'Datafiles/phIII/demand1.csv'
     path_busload = 'Datafiles/phIII/bus_load1.csv'
-    # path_generation = 'Datafiles/phIII/generation1.csv'
-    path_generation = 'Datafiles/phIII/generation_all.csv'
-    # path_generation = 'Datafiles/phIII/generation_prof_solar.csv'
-    # path_generation = 'Datafiles/phIII/generation_prof_wind.csv'
-    path_busgen = 'Datafiles/phIII/bus_gen1.csv'
     path_trafo = 'Datafiles/phIII/trafo1.csv'
+
+    # rene
+    path_generation = 'Datafiles/phIII/generation_all.csv'
+    path_busgen = 'Datafiles/phIII/bus_gen1.csv'
+
+    # no rene
+    # path_generation = 'Datafiles/phIII/generation1.csv'
+    # path_busgen = 'Datafiles/phIII/bus_gen1_norene.csv'
+
+
 
 
     # ------------- Running -------------
@@ -750,12 +756,17 @@ if __name__ == "__main__":
     net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, rene=True)
 
     # run and store timeseries data, for only 1 case
-    # run_store_timeseries(net, '000')
+    # run_store_timeseries(net, '_00norene')
 
-    # # run contingencies
-    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=1)
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
-    process_contingencies(n_lines, n_extra_lines, n_cases)
+    # run contingencies
+    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    # process_contingencies(n_lines, n_extra_lines, n_cases)
+
+    n_lines = 16
+    n_extra_lines = 6
+    n_cases = 64
+
+    print(n_lines, n_extra_lines, n_cases)
 
 
     # ------------- Processing -------------
@@ -769,12 +780,13 @@ if __name__ == "__main__":
     path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
     path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
+    exclude_lines = [6,7]
+
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases, exclude_lines)
 
     path_configs = 'Results/OK_configs.xlsx'
-    # path_lineN = 'Results/All_line_30.xlsx'
     path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-    path_line_ini = 'Datafiles/phIII/line1.csv'
+    path_line_ini = 'Datafiles/phIII/line1reduced.csv'
 
     select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
 
