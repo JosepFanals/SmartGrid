@@ -210,7 +210,7 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
         return net
 
 
-    def create_generator_rene(path_generation, path_busgen, path_bus, path_solar_profile, path_wind_profile):
+    def create_generator_rene(path_generation, path_busgen, path_bus):
         """
         adapts the generation files
 
@@ -338,10 +338,10 @@ def initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload,
     net = create_load(path_demand, path_busload, path_bus)
 
     # gens
-    if rene is False:
-        net = create_generator(path_generation, path_busgen, path_bus)
-    else:
-        net = create_generator_rene(path_generation, path_busgen, path_bus, path_solar_prof, path_wind_prof)
+    # if rene is False:
+        # net = create_generator(path_generation, path_busgen, path_bus)
+    # else:
+    net = create_generator_rene(path_generation, path_busgen, path_bus)
 
     # interconnection
     net = create_intercon(path_bus)
@@ -750,38 +750,36 @@ if __name__ == "__main__":
     net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, rene=True)
 
     # run and store timeseries data, for only 1 case
-    run_store_timeseries(net, '000')
-    print(net.gen)
+    # run_store_timeseries(net, '000')
 
     # # run contingencies
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=1)
+    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=1)
     # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=8)
-    # process_contingencies(n_lines, n_extra_lines, n_cases)
+    process_contingencies(n_lines, n_extra_lines, n_cases)
 
 
-    # # ------------- Processing -------------
-    # # store
-    # nxx = n_cases * (n_lines - n_extra_lines)
-    # path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
-    # path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-    # path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
-    # path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
-    # path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
-    # path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
-    # path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
+    # ------------- Processing -------------
+    # store
+    nxx = n_cases * (n_lines - n_extra_lines)
+    path_diagN = 'Results/All_diag_' + str(nxx) + '.xlsx'
+    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+    path_loadN = 'Results/All_load_' + str(nxx) + '.xlsx'
+    path_plN = 'Results/All_pl_' + str(nxx) + '.xlsx'
+    path_vpuN = 'Results/All_vpu_' + str(nxx) + '.xlsx'
+    path_parallelN = 'Results/All_parallel_' + str(nxx) + '.xlsx'
+    path_pmwN = 'Results/All_pmw_' + str(nxx) + '.xlsx'
 
-    # find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases)
 
-    # path_configs = 'Results/OK_configs.xlsx'
-    # path_lineN = 'Results/All_line_1536.xlsx'
-    # path_line_ini = 'Datafiles/phII_380kV/line2.csv'
-    # # n_cases = 256
-    # # n_lines = 14
-    # # n_extra_lines = 8
-    # select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
+    path_configs = 'Results/OK_configs.xlsx'
+    # path_lineN = 'Results/All_line_30.xlsx'
+    path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
+    path_line_ini = 'Datafiles/phIII/line1.csv'
 
-    # end_time = time.time()
-    # print(end_time - time_start, 's')
+    select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
+
+    end_time = time.time()
+    print(end_time - time_start, 's')
 
 
 
