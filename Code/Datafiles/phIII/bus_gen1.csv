@@ -1,0 +1,5 @@
+bus,p_mw,vm_pu
+nuclear,500,1.05
+solar,91.51,1.03
+wind,7.08,1.02
+
