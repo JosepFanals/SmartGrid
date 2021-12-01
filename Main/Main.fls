@@ -775,6 +775,8 @@ INPUT /usr/share/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman7-bold.luc
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmroman10-italic.luc
+INPUT ./Chapters/Phase3.tex
+INPUT ./Chapters/Phase3.tex
 INPUT ./Chapters/Code.tex
 INPUT ./Chapters/Code.tex
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc
