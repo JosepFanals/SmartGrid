@@ -786,6 +786,7 @@ INPUT ./Main.aux
 INPUT ./Main.out
 INPUT ./Main.run.xml
 OUTPUT Main.run.xml
+INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb

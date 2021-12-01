@@ -27,6 +27,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {4}Phase 3}{15}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Code}{16}{chapter.5}%
+\contentsline {section}{\numberline {4.1}Overview}{15}{section.4.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{24}{chapter*.17}%
+\contentsline {section}{\numberline {4.2}Renewable's integration}{15}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Results}{15}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Code}{18}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{26}{chapter*.21}%

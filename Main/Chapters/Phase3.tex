@@ -1,4 +1,6 @@
 
+
+\section{Overview}
 \begin{figure}[!htb]\centering
 
   \begin{circuitikz}[/tikz/circuitikz/bipoles/length=1cm, line width=0.8pt]
@@ -106,7 +108,7 @@
     % proposed new lines
     \draw[dashed, draw=red] (8, 4.4) to [short] (3.5,4.4);
     \draw[dashed, draw=red] (3.5,4.4) to [short] (3.5,4.8);
-    \draw[dashed, draw=red] (8,4.4) to [short] (3.5,3.2);
+    % \draw[dashed, draw=red] (8,4.4) to [short] (3.5,3.2);
     \draw[dashed, draw=red] (4.5,6.4) to [short] (0,6.4);
     \draw[dashed, draw=red] (3,0) to [short] (3,4.8);
     \draw[dashed, draw=red] (3,3.2) to [short] (0,6.2);
@@ -137,7 +139,7 @@
     \draw[draw=red] (5.3,1.6) to [short] (5.0,1.9);
     \draw[draw=red] (5.4,1.7) to [short] (5.1,2.0);
 
-    % lines for rene
+    % lines for rene and solid interconnection
     \draw (0,6.7) to [short] (0.3,6.7);
     \draw (0,6.8) to [short] (0.3,6.8);
     \draw (0.3,6.7) to [short] (1.65,7.7);
@@ -147,9 +149,17 @@
 
     \draw (0,1.55) to [short] (2.85,1.55);
     \draw (0,1.65) to [short] (2.75,1.65);
-
     \draw (2.85,1.55) to [short] (2.85,3.2);
     \draw (2.75,1.65) to [short] (2.75,3.2);
+
+    \draw (8,4.9) to [short] (4.9, 4.9);
+    \draw (8,5.0) to [short] (4.8, 5.0);
+    \draw (4.9,4.9) to [short] (4.9,4.8);
+    \draw (4.8,5.0) to [short] (4.8,4.8);
+
+    \draw (8.0,4.4) to [short] (7.7,4.4);
+    \draw (7.7,4.4) to [short] (3.5,3.5);
+    \draw (3.5,3.5) to [short] (3.5,3.2);
 
     % legend
     \draw[-{Triangle[length=5mm, width=2mm]}, draw=blue!60!white, fill=blue!60!white] (3.0,8.4) -- (4.0,8.4);
@@ -199,8 +209,15 @@
     \node at (0.0, 7.1) {12};
     \node at (-1.2, 6.7) {5};
     \node at (5.2, 4.6) {13};
-    \node at (5.3, 3.8) {7};
+    \node at (5.3, 3.7) {7};
     \node at (7.8, 4.6) {6}; 
+
+    \node at (0.9, 8.0) {15};
+    \node at (1.1, 9.0) {14};
+
+    \node at (0.0, 0.9) {16};
+    \node at (-1.0, 1.1) {17};
+    % \node at (1.3, 8.0) {14};
 
   \end{circuitikz}
 
@@ -208,26 +225,157 @@
   \label{fig:netrene}
 \end{figure}
 
+
+
+\section{Renewable's integration}
+
+- Put some equations to calculate the power from solar or wind
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{ccc}
+    \hline
+    \textbf{Magnitude} & \textbf{Value} & \textbf{Units}\\
+    \hline
+    Location & (40.8N; 0.48E) & -\\
+    Total area & 60 & ha \\
+    System efficiency & 20.7 & \% \\
+    % Panel model & 405W Deep Blue 3.0 JA Solar Mono & - \\
+    Cell type & Monocrystalline & - \\
+    Panel peak power & 405 & Wp \\
+    Panel area & 1.95 & m$^2$ \\
+    Open circuit voltage & 37.23 & V \\
+    Short circuit current & 13.87 & A \\
+    \hline
+  \end{tabular}
+  \caption{Technical characteristics of the PV plant with its panels 405W Deep Blue 3.0 JA Solar Mono \cite{autosolar}}
+  \label{tab:pv}
+\end{table}
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{ccc}
+    \hline
+    \textbf{Magnitude} & \textbf{Value} & \textbf{Units}\\
+    \hline
+    Location & (42.28N; 3.16E) & -\\
+    Total area & 80 & ha \\
+    Nominal power & 5.0 & MW\\
+    Cut-in wind speed & 1.5 & m/s\\
+    Rated wind speed & 13.0 & m/s\\
+    Cut-out wind speed & 27.0 & m/s\\
+    Swept area & 13685 & m$^2$\\
+    \hline
+  \end{tabular}
+  \caption{Technical characteristics of the wind power plant with its turbines Gamesa G132-5.0MW \cite{gamesa}}
+  \label{tab:wind}
+\end{table}
+
+
+\begin{table}[!htb]
+    \centering
+    \begin{tabular}{rrrr}
+    \hline
+    \textbf{Hour} & \textbf{Irradiance} & \textbf{Plant power} & \textbf{Normalized power} \\
+                  & \textbf{(W/m$\bm{^2}$)} & \textbf{(MW)} & - \\ \hline
+                  0 & 0 & 0.000 & 0.000 \\
+        1 & 0 & 0.000 & 0.000 \\
+        2 & 0 & 0.000 & 0.000 \\
+        3 & 0 & 0.000 & 0.000 \\
+        4 & 0 & 0.000 & 0.000 \\
+        5 & 0 & 0.000 & 0.000 \\
+        6 & 0 & 0.000 & 0.000 \\
+        7 & 0 & 0.000 & 0.000 \\ 
+        8 & 24.12 & 2.996 & 0.033 \\
+        9 & 241.21 & 29.958 & 0.327 \\
+        10 & 422.09 & 52.424 & 0.573 \\
+        11 & 592.51 & 73.590 & 0.804 \\
+        12 & 709.99 & 88.181 & 0.964 \\
+        13 & 736.78 & 91.508 & 1.000 \\
+        14 & 709.14 & 88.075 & 0.962 \\
+        15 & 620.74 & 77.096 & 0.843 \\
+        16 & 470.47 & 58.432 & 0.639 \\
+        17 & 284.9 & 35.385 & 0.387 \\
+        18 & 19.15 & 2.378 & 0.026 \\
+        19 & 0 & 0.000 & 0.000 \\
+        20 & 0 & 0.000 & 0.000 \\
+        21 & 0 & 0.000 & 0.000 \\
+        22 & 0 & 0.000 & 0.000 \\
+        23 & 0 & 0.000 & 0.000 \\
+        \hline
+    \end{tabular}
+    \caption{Solar resources for the 15th of February. Data from \cite{pvgis}.}
+  \label{tab:wind_res}
+\end{table}
+
+
+
+
+
+    \begin{table}[!htb]
+    \centering
+    \begin{tabular}{rrrrr}
+    \hline
+    \textbf{Hour} & \textbf{Wind speed} & \textbf{Turbine power} & \textbf{Wind plant power} & \textbf{Normalized power} \\
+                  & \textbf{(m/s)} & \textbf{(kW)} & \textbf{(MW)} & - \\ \hline
+        0 & 7.96 & 2.010 & 4.019 & 0.516 \\
+        1 & 7.87 & 1.948 & 3.897 & 0.500 \\
+        2 & 7.90 & 1.969 & 3.938 & 0.505 \\
+        3 & 8.12 & 2.134 & 4.267 & 0.547 \\
+        4 & 8.37 & 2.335 & 4.670 & 0.599 \\
+        5 & 8.49 & 2.432 & 4.864 & 0.624 \\
+        6 & 8.62 & 2.537 & 5.073 & 0.651 \\
+        7 & 8.53 & 2.464 & 4.928 & 0.632 \\
+        8 & 9.01 & 2.851 & 5.702 & 0.732 \\
+        9 & 9.93 & 3.609 & 7.219 & 0.926 \\
+        10 & 9.93 & 3.609 & 7.219 & 0.926 \\
+        11 & 9.86 & 3.552 & 7.103 & 0.911 \\
+        12 & 9.90 & 3.585 & 7.169 & 0.920 \\
+        13 & 10.08 & 3.721 & 7.441 & 0.955 \\
+        14 & 10.19 & 3.794 & 7.589 & 0.973 \\
+        15 & 10.28 & 3.855 & 7.709 & 0.989 \\
+        16 & 9.90 & 3.585 & 7.169 & 0.920 \\
+        17 & 9.63 & 3.733 & 7.466 & 0.958 \\
+        18 & 9.42 & 3.824 & 7.647 & 0.981 \\
+        19 & 9.34 & 3.898 & 7.795 & 1.000 \\
+        20 & 9.25 & 3.585 & 7.169 & 0.920 \\
+        21 & 9.15 & 3.362 & 6.724 & 0.863 \\
+        22 & 9.20 & 3.189 & 6.378 & 0.818 \\
+        23 & 9.19 & 3.123 & 6.246 & 0.801 \\
+        \hline
+    \end{tabular}
+    \caption{Wind resources for the 15th of February. Data from \cite{nasa}.}
+  \label{tab:wind_res}
+\end{table}
+
+
+
+
+\section{Results}
+
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
     \hline
     \textbf{Identifier} & \textbf{New lines} & \textbf{Infraestructure cost (M\texteuro)}\\
     \hline
-    19 & [6-13, 6-10, 8-9, 10-12] &  359.50 \\
-    214 & [6-13, 6-10, 11-12, 8-9] & 362.99 \\
-    77 & [6-13, 8-9, 10-12, 9-6] & 375.04 \\
-    49 & [6-13, 11-12, 8-9, 9-6] & 378.54 \\
-    80 & [6-13, 6-10, 11-12, 8-9, 10-12] & 420.63 \\
-    189 & [6-13, 6-10, 8-9, 10-12, 9-6] & 420.63 \\
-    45 & [6-13, 6-10, 8-9, 10-12, 8-12] & 423.96 \\
-    70 & [6-13, 8-9, 10-12, 9-6] & 424.12 \\
-    157 & [6-13, 6-10, 11-12, 8-9, 8-12] & 427.46 \\
-    250 & [6-13, 11-12, 8-9, 10-12, 9-6] & 436.17 \\
+    24 & [8-9, 10-12] & 402.71 \\
+    12 & [8-9, 9-6] & 406.21 \\
+    46 & [11-12, 8-9] & 406.21 \\
+    8 & [8-9, 8-12] & 409.54 \\
+    0 & [11-12, 8-9, 10-12] & 463.84 \\
+    4 & [8-9, 10-12, 9-6] & 463.84 \\
+    37 & [11-12, 10-12, 9-6] & 463.84 \\
+    63 & [8-9, 10-12, 8-12] & 467.18 \\
+    20 & [11-12, 8-9, 9-6] & 467.34 \\
+    38 & [11-12, 8-9, 8-12] & 470.67 \\
     \hline
   \end{tabular}
   \caption{Best configurations with the additional lines}
   \label{tab:top10_rene}
 \end{table}
 
-Mention operation cost is practically zero if we are able to ensure the $N-1$ criteria.
+- Mention operation cost is practically zero if we are able to ensure the $N-1$ criteria.
 
+- Say that we still have to add extra lines. Otherwise, the improvement due to renewables is not enough to meet the requirements.
+
+- Maybe analyze a particular configuration and mention what are the main issues (check voltages, losses, loading of lines) and relate it to the effect of renewables
+
+% only 6 extra lines, but why the cost is higher?

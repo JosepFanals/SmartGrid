@@ -300,6 +300,86 @@
       \field{labeltitlesource}{title}
       \field{title}{UIC Report - Electricity Infraestructure. 2015.}
     \endentry
+    \entry{autosolar}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=70d9085331291b6c4eac4254c81d5710}{%
+           family={{Autosolar}},
+           familyi={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{70d9085331291b6c4eac4254c81d5710}
+      \strng{fullhash}{70d9085331291b6c4eac4254c81d5710}
+      \strng{bibnamehash}{70d9085331291b6c4eac4254c81d5710}
+      \strng{authorbibnamehash}{70d9085331291b6c4eac4254c81d5710}
+      \strng{authornamehash}{70d9085331291b6c4eac4254c81d5710}
+      \strng{authorfullhash}{70d9085331291b6c4eac4254c81d5710}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://autosolar.es/panel-solar-24-voltios/pallet-paneles-405w-deep-blue-30-ja-solar-mono}}
+      \field{note}{Accessed: 2021-12-01}
+      \field{title}{Pallet Paneles 405W Deep Blue 3.0 JA Solar Mono}
+    \endentry
+    \entry{gamesa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=07e92cada5bf573e04091eb2c9489d79}{%
+           family={{Wind Turbine Models}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{fullhash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{bibnamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authorbibnamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authornamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authorfullhash}{07e92cada5bf573e04091eb2c9489d79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wind-turbine-models.com/turbines/768-gamesa-g132-5.0mw}}
+      \field{note}{Accessed: 2021-12-01}
+      \field{title}{Gamesa G132-5.0MW}
+    \endentry
+    \entry{pvgis}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=516d1743b3db5136e2551ce1b0fbad49}{%
+           family={{European Comission}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{fullhash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{bibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authorbibnamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authornamehash}{516d1743b3db5136e2551ce1b0fbad49}
+      \strng{authorfullhash}{516d1743b3db5136e2551ce1b0fbad49}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ec.europa.eu/jrc/en/pvgis}}
+      \field{note}{Accessed: 2021-12-01}
+      \field{title}{Photovoltaic Geographical Information System (PVGIS)}
+    \endentry
+    \entry{nasa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=72ea5ae088b6cda1e642b41a57264c0e}{%
+           family={{NASA Prediction of Worldwide Energy Resources}},
+           familyi={N\bibinitperiod}}}%
+      }
+      \strng{namehash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \strng{fullhash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \strng{bibnamehash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \strng{authorbibnamehash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \strng{authornamehash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \strng{authorfullhash}{72ea5ae088b6cda1e642b41a57264c0e}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://power.larc.nasa.gov/}}
+      \field{note}{Accessed: 2021-12-01}
+      \field{title}{The POWER Project}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

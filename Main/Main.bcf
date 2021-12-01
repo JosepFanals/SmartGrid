@@ -2359,6 +2359,14 @@
     <bcf:citekey order="7">acer</bcf:citekey>
     <bcf:citekey order="8">acer</bcf:citekey>
     <bcf:citekey order="9">acer</bcf:citekey>
+    <bcf:citekey order="10">autosolar</bcf:citekey>
+    <bcf:citekey order="11">autosolar</bcf:citekey>
+    <bcf:citekey order="12">gamesa</bcf:citekey>
+    <bcf:citekey order="13">gamesa</bcf:citekey>
+    <bcf:citekey order="14">pvgis</bcf:citekey>
+    <bcf:citekey order="15">pvgis</bcf:citekey>
+    <bcf:citekey order="16">nasa</bcf:citekey>
+    <bcf:citekey order="17">nasa</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
