@@ -501,6 +501,26 @@
       \field{note}{Accessed: 2021-12-01}
       \field{title}{The POWER Project}
     \endentry
+    \entry{carbon}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=3ba5906c43ffde7fc50626c0dd79d562}{%
+           family={{Investing}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \strng{fullhash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \strng{bibnamehash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \strng{authorbibnamehash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \strng{authornamehash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \strng{authorfullhash}{3ba5906c43ffde7fc50626c0dd79d562}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.investing.com/commodities/carbon-emissions}}
+      \field{note}{Accessed: 2021-12-07}
+      \field{title}{Carbon Emissions Futures Overview}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

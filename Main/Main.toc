@@ -37,8 +37,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Base case analysis}{18}{section.4.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Contingency analysis}{18}{section.4.4}%
+\contentsline {section}{\numberline {4.4}Contingency analysis}{19}{section.4.4}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {5}Code}{20}{chapter.5}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{28}{chapter*.21}%
+\contentsline {chapter}{Bibliography}{28}{chapter*.22}%

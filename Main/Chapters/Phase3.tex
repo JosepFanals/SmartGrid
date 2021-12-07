@@ -318,12 +318,12 @@ With this, Figure \ref{fig:windx} shows the evolution of the wind speed and the 
 
 \begin{figure}[!htb]\centering
 \begin{tikzpicture}
-    \begin{axis}[xlabel={Hour}, ylabel={$v_w$ (m/s)}, axis y line*=right, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 2, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax=12, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+    \begin{axis}[xlabel={Hour}, ylabel={$v_w$ (m/s)}, axis y line*=right, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 1, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax=12, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
         \addplot[color=orange] table[col sep=comma, x=x, y=y] {Data/phase3/vw.csv};
         \legend{$v_w$};
 \end{axis}
 
-    \begin{axis}[xlabel={Hour}, hide x axis, ylabel={$P$ (MW)}, axis y line*=left,  xtick distance = 2, ytick distance = 2, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax = 10, very thick, legend style={at={(0.8,0.25)},anchor=south west}]
+    \begin{axis}[xlabel={Hour}, hide x axis, ylabel={$P$ (MW)}, axis y line*=left,  xtick distance = 2, ytick distance = 1, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax = 10, very thick, legend style={at={(0.8,0.25)},anchor=south west}]
         \addplot[color=red] table[col sep=comma, x=x, y=y] {Data/phase3/Pwind.csv};
         \legend{$P$};
 \end{axis}
@@ -336,9 +336,36 @@ Notice the cubic relationship between the wind speed and the power. Small increa
 \section{Base case analysis}
 This base case analysis refers to the assessment of the influence the installation of renewables has on the results. It is compared to the system analzed before with lines 6-10 and 6-13 permanently added. The goal is not to deduce if the grid meets the $N-1$ criteria (most likely some other lines would have to be added), but rather compare if the voltages, the loadings of the lines and the losses suffer a certain improvement.  
 
-To perform the comparison, the most extreme values have been gathered. They are shown in Table XX for both cases (with and without renewables). 
+To perform the comparison, the most extreme values have been gathered. They are shown in Table \ref{tab:compare} for both cases (with and without renewables). 
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{lrr}
+    \hline
+    \textbf{Attributes} & \textbf{Without renewables} & \textbf{With renewables}\\
+    \hline
+    $V_{min}$ (p.u.) & 0.962 & 0.968 \\
+    $V_{max}$ (p.u.) & 1.050 & 1.050 \\
+    Max. load (\%) & 41.65 & 40.76 \\
+    Max. losses (MW) & 14.54 & 14.43 \\
+    Correct operation? & Yes & Yes \\
+    \hline
+  \end{tabular}
+  \caption{Main results to compare between the grid with and without renewables}
+  \label{tab:compare}
+\end{table}
+The results suggest that generally speaking there is little difference in installing or not renewables. The inclusion of the wind farm and the PV power plant cause the minimum voltage to rise a bit, the maximum loading of the lines to decrease about 1\% (although without contingencies it is already low) and the maximum power losses experience a tiny reduction. In the two scenarios, the maximum voltage remains 1.05, which indicates there are no overvoltages. Since all magnitudes are inside the allowed limits, the system is operating correctly in both cases.
+
+Adding renewables to the system comes at a cost. First, there has to be an investment of capital for deploying the wind turbines and the PV panels, apart from power electronics equipment and ancilliary components. Then, a couple of new power lines are added to interconnect them to the system. The slight improvement on the electrical magnitudes will most probably fail at justifying this investment. 
+
+However, it is important to note that the major advantage of installing renewables is in its environmental impact. If the power from the interconnection is assumed to come from coal and gas power plants, then installing renewables could become a sensible option. This is specially true when taking into account the actual costs of carbon emissions. Currently at 81.65~\texteuro/tonne, they have increased by a factor of 3 during the last year \cite{carbon}. 
+
+
+
 
 \section{Contingency analysis}
+A different story would be the operation with contingencies. Here it is valuable to find out if the presence of distributed renewable generators can help at having to install less extra lines. Hence, the cost could be reduced. 
+
+The contingency analysis has been performed similarly to the ones in Tables \ref{tab:top10_1}, \ref{tab:cost_trafos2}. We take a set of lines that can be potentially installed, and a set of initially powered lines. Contingencies are caused in this latter set to study which new lines have to be connected to meet the requirements. Then, the topologies that ensure the correct operation of the system in spite of which line fails, are selected and their associated costs are calculated. The top 10 most convenient configurations are presented in Table \ref{tab:top10_rene}.
 
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
@@ -360,11 +387,9 @@ To perform the comparison, the most extreme values have been gathered. They are 
   \caption{Best configurations with the additional lines}
   \label{tab:top10_rene}
 \end{table}
+Again, the optimal configuration is the one where apart from lines 6-10 and 6-13, lines 8-9 and 10-12 are added. This coincides with the conclusion we reached in Table \ref{tab:top10_1}. Nevertheless, the costs are now higher due to the addition of two new lines to connect the wind and the solar power plants to the system as such. Introducing renewables is not enough to avoid installing the same lines.
 
-- Mention operation cost is practically zero if we are able to ensure the $N-1$ criteria.
+In case lines 8-9 and 10-12 are added, the operational costs would be practically zero because we would be meeting the $N-1$ criteria. To summarize, installing renewables implies an additional cost for the system operator. With time, this could be compensated with the savings in carbon emissions. 
 
-- Say that we still have to add extra lines. Otherwise, the improvement due to renewables is not enough to meet the requirements.
+%TODO: could trafos fail and then the operational cost would not be null!??!?
 
-- Maybe analyze a particular configuration and mention what are the main issues (check voltages, losses, loading of lines) and relate it to the effect of renewables
-
-% only 6 extra lines, but why the cost is higher?
