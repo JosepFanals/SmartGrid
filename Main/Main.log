@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  7 DEC 2021 00:14
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.9.21)  7 DEC 2021 00:31
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1766,16 +1766,16 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 76259 strings out of 478531
+ 76217 strings out of 478531
  1456039,2848258 words of node,token memory allocated
- 1626 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 127 attribute, 88 glue_spec, 101 attribute_list, 2 write, 24 pdf_literal, 5 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:12,2:34562,3:8894,4:32778,5:32754,6:149,7:39917,8:137,9:82296,10:58,11:3155
- 93337 multiletter control sequences out of 65536+600000
+ 1620 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 125 attribute, 88 glue_spec, 100 attribute_list, 2 write, 24 pdf_literal, 5 pdf_action, 24 pdf_colorstack nodes
+   avail lists: 1:12,2:34565,3:8894,4:32778,5:32754,6:149,7:39917,8:137,9:82296,10:58,11:3155
+ 93295 multiletter control sequences out of 65536+600000
  80 fonts using 7147863 bytes
  112i,19n,117p,1192b,2290s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (29 pages, 385708 bytes).
+Output written on Main.pdf (29 pages, 386184 bytes).
 
 PDF statistics: 1053 PDF objects out of 1200 (max. 8388607)
  931 compressed objects within 10 object streams
