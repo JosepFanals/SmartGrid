@@ -1,6 +1,10 @@
+This chapter covers the inclusion of renewables into the initial grid. It has been verified that the system, as it is configured in a beginning, lacks resiliency. One of its major issues is the presence of only two generation units placed far from the loads. This causes some lines to exceed their loading capacity, while voltages' absolute value may be well below 0.9 p.u.. Adding new lines is a possibility, or rather, a must in order to meet the $N-1$ criteria. However, it is hypothetized that the performance of the system can still improve with the installation of a wind farm and a PV power plant.
 
+To verify the above-presented hypothesis, the chapter first presents a general overview of the system, along with the sizing of the renewable power plants. Then, the optimal configuration found in the previous chapter is analyzed with the inclusion of renewables to verify the improvement. Finally, a contingency analysis takes place to assess the $N-1$ criteria. 
 
 \section{Overview}
+Figure \ref{fig:netrene} presents the general scheme of the system with the solar and wind plants connected through two parallel lines to nearby buses. Again, new lines that could become suitable for ensuring the robustness of the system are drawn. 
+
 \begin{figure}[!htb]\centering
 
   \begin{circuitikz}[/tikz/circuitikz/bipoles/length=1cm, line width=0.8pt]
@@ -224,12 +228,17 @@
   \caption{Overview of the network with renewables and the potential addition of lines}
   \label{fig:netrene}
 \end{figure}
+The optimal configuration with no renewables, as shown in Table \ref{tab:top10_1}, requires the installation of four additional lines: 6-13, 6-10, 8-9, 10-12. The first two are pretty much found in every other topology, as they represent a link with the interconnection. Since the interconnection can theoretically provide any power, it is a good idea to increase the number of associated lines to it. Consequently, lines 6-13 and 6-10 are not considered as potentially attractive new lines, but as already connected lines.
 
 
 
 \section{Renewable's integration}
+In this project, the integration of renewables takes place in the form of solar and wind. The characteristics of each one are particularly detailed. The goal is to characterize their hourly variation of power in relation to the availability of the natural resources. Despite the parcial unpredictability that renewables suffer, a representative day in terms of solar irradiance and wind speed has been selected. 
 
-- Put some equations to calculate the power from solar or wind
+\subsection{Solar PV}
+First, the PV panels cover an area of 60~ha. This, and some other relevant information is captured in Table \ref{tab:pv}. 
+
+% - Put some equations to calculate the power from solar or wind
 
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
@@ -250,6 +259,35 @@
   \caption{Technical characteristics of the PV plant with its panels 405W Deep Blue 3.0 JA Solar Mono \cite{autosolar}}
   \label{tab:pv}
 \end{table}
+The location has a certain importance to determine the incident irradiation, which is extracted from PVGIS' database \cite{pvgis}. In reality, the of the solar power plant would be located in Tortosa, Catalunya, Spain, according to the given coordinates. The chosen PV panels are of monocrystalline type. Monocrystalline cells generally offer larger efficiencies than polycrystalline cells \cite{kumar2015comparative}, and although they become more expensive, no cost limitations have been set. 
+
+Let $n_p$ denote the total number of panels, $G$ the irradiance, $\eta$ the efficiency and $S_p$ the area of a single panel. Then, the total generated power follows:
+ \begin{equation}
+   P_{PV} = n_p G \eta S_p.
+   \label{eq:pvx}
+\end{equation}
+It has to be noted that the irradiance $G$ is varying along the day, and it generally has a peak around noon. The data have been selected for the 15th of February. There are a total of $n_p=63692$~panels as it has been assumed that the 60~ha surface is the useful one. Figure \ref{fig:pvpx} shows the hourly irrandiance and power of the PV plant. Clearly, they are proportional, just like it has been already shown in Equation \ref{eq:pvx}.
+
+\begin{figure}[!htb]\centering
+\begin{tikzpicture}
+    \begin{axis}[xlabel={Hour}, ylabel={$G$ (W/m$^2$)}, axis y line*=right, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 100, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax=900, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+        \addplot[color=orange] table[col sep=comma, x=x, y=y] {Data/phase3/G.csv};
+        \legend{$G$}
+\end{axis}
+
+    \begin{axis}[xlabel={Hour}, hide x axis, ylabel={$P$ (MW)}, axis y line*=left,  xtick distance = 2, ytick distance = 10, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax = 96, very thick, legend style={at={(0.8,0.25)},anchor=south west}]
+        \addplot[color=red] table[col sep=comma, x=x, y=y] {Data/phase3/Ppv.csv};
+        \legend{$P$}
+\end{axis}
+
+\end{tikzpicture}
+\caption{Irradiance and power from the PV plant along a representative day. Data from \cite{pvgis}.}
+    \label{fig:pvpx}
+  \end{figure}
+The peak in power takes place at hour 13, more or less as expected, and the curves follow a profile that resembles a Gaussian bell. The maximum power generated by the PV plant is 91.5~MW. Although this is a respectable amount, it is roughly one tenth of the load peak. As a consequence, results are not expected to change signficantly. Most likely we will observe slight improvements.
+
+\subsection{Wind}
+On the other hand, wind power is proposed as the second renewable alternative. The chosen wind turbines are the Siemens-Gamesa G132-5.0MW. They are rather voluminous turbines, with a rotor diameter of 132~m. Table \ref{tab:wind} shows their most notorious technical characteristics.
 
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
@@ -268,88 +306,37 @@
   \caption{Technical characteristics of the wind power plant with its turbines Gamesa G132-5.0MW \cite{gamesa}}
   \label{tab:wind}
 \end{table}
+The power provided by a wind turbine is given by:
+\begin{equation}
+  P_{wt} = \frac{1}{2}\rho A C_p v^3,
+\end{equation}
+where  $\rho$ is the air density of approximately 1.225~kg/m$^3$, $A$ stands for the swept area, $C_p$ is the power coefficient limited to $16/27$ (known as Betz's limit \cite{ragheb2014wind}), and $v$ represents the wind speed. If the power $P_{wt}$ exceeds the nominal power of the turbine, some power will be curtailed so as not to surpass the machine's ratings. In normal operation, the power coefficient is likely to take values around 0.4.
 
+The available area to install the wind turbines is 80~ha. Nonetheless, wind turbines have to be generously separated one from the others. It has been decided that wind turbines should be separated by a minimum of 5 diameters. Similar separations are adopted in the literature \cite{bartl2012wake}. Thus, a total of two wind turbines are installed. The nominal power of the wind farm becomes 10~MW, which is significantly lower than PV. Despite that, this should not come as a surprise since wind power has a relatively low power density \cite{smil2015power}.  
 
-\begin{table}[!htb]
-    \centering
-    \begin{tabular}{rrrr}
-    \hline
-    \textbf{Hour} & \textbf{Irradiance} & \textbf{Plant power} & \textbf{Normalized power} \\
-                  & \textbf{(W/m$\bm{^2}$)} & \textbf{(MW)} & - \\ \hline
-                  0 & 0 & 0.000 & 0.000 \\
-        1 & 0 & 0.000 & 0.000 \\
-        2 & 0 & 0.000 & 0.000 \\
-        3 & 0 & 0.000 & 0.000 \\
-        4 & 0 & 0.000 & 0.000 \\
-        5 & 0 & 0.000 & 0.000 \\
-        6 & 0 & 0.000 & 0.000 \\
-        7 & 0 & 0.000 & 0.000 \\ 
-        8 & 24.12 & 2.996 & 0.033 \\
-        9 & 241.21 & 29.958 & 0.327 \\
-        10 & 422.09 & 52.424 & 0.573 \\
-        11 & 592.51 & 73.590 & 0.804 \\
-        12 & 709.99 & 88.181 & 0.964 \\
-        13 & 736.78 & 91.508 & 1.000 \\
-        14 & 709.14 & 88.075 & 0.962 \\
-        15 & 620.74 & 77.096 & 0.843 \\
-        16 & 470.47 & 58.432 & 0.639 \\
-        17 & 284.9 & 35.385 & 0.387 \\
-        18 & 19.15 & 2.378 & 0.026 \\
-        19 & 0 & 0.000 & 0.000 \\
-        20 & 0 & 0.000 & 0.000 \\
-        21 & 0 & 0.000 & 0.000 \\
-        22 & 0 & 0.000 & 0.000 \\
-        23 & 0 & 0.000 & 0.000 \\
-        \hline
-    \end{tabular}
-    \caption{Solar resources for the 15th of February. Data from \cite{pvgis}.}
-  \label{tab:wind_res}
-\end{table}
+With this, Figure \ref{fig:windx} shows the evolution of the wind speed and the total generated power by the wind farm in an orientative day. 
 
+\begin{figure}[!htb]\centering
+\begin{tikzpicture}
+    \begin{axis}[xlabel={Hour}, ylabel={$v_w$ (m/s)}, axis y line*=right, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 2, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax=12, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+        \addplot[color=orange] table[col sep=comma, x=x, y=y] {Data/phase3/vw.csv};
+        \legend{$v_w$};
+\end{axis}
 
+    \begin{axis}[xlabel={Hour}, hide x axis, ylabel={$P$ (MW)}, axis y line*=left,  xtick distance = 2, ytick distance = 2, width=12cm, height=6cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=0.0, ymax = 10, very thick, legend style={at={(0.8,0.25)},anchor=south west}]
+        \addplot[color=red] table[col sep=comma, x=x, y=y] {Data/phase3/Pwind.csv};
+        \legend{$P$};
+\end{axis}
+\end{tikzpicture}
+\caption{Wind speed and output power from the wind farm. Data from \cite{nasa}.}
+    \label{fig:windx}
+  \end{figure}
+Notice the cubic relationship between the wind speed and the power. Small increases in wind speed provoke large variations in the otuput power. 
 
+\section{Base case analysis}
+This base case analysis refers to the assessment of the influence the installation of renewables has on the results. It is compared to the system analzed before with lines 6-10 and 6-13 permanently added. 
 
-
-    \begin{table}[!htb]
-    \centering
-    \begin{tabular}{rrrrr}
-    \hline
-    \textbf{Hour} & \textbf{Wind speed} & \textbf{Turbine power} & \textbf{Wind plant power} & \textbf{Normalized power} \\
-                  & \textbf{(m/s)} & \textbf{(kW)} & \textbf{(MW)} & - \\ \hline
-        0 & 7.96 & 2.010 & 4.019 & 0.516 \\
-        1 & 7.87 & 1.948 & 3.897 & 0.500 \\
-        2 & 7.90 & 1.969 & 3.938 & 0.505 \\
-        3 & 8.12 & 2.134 & 4.267 & 0.547 \\
-        4 & 8.37 & 2.335 & 4.670 & 0.599 \\
-        5 & 8.49 & 2.432 & 4.864 & 0.624 \\
-        6 & 8.62 & 2.537 & 5.073 & 0.651 \\
-        7 & 8.53 & 2.464 & 4.928 & 0.632 \\
-        8 & 9.01 & 2.851 & 5.702 & 0.732 \\
-        9 & 9.93 & 3.609 & 7.219 & 0.926 \\
-        10 & 9.93 & 3.609 & 7.219 & 0.926 \\
-        11 & 9.86 & 3.552 & 7.103 & 0.911 \\
-        12 & 9.90 & 3.585 & 7.169 & 0.920 \\
-        13 & 10.08 & 3.721 & 7.441 & 0.955 \\
-        14 & 10.19 & 3.794 & 7.589 & 0.973 \\
-        15 & 10.28 & 3.855 & 7.709 & 0.989 \\
-        16 & 9.90 & 3.585 & 7.169 & 0.920 \\
-        17 & 9.63 & 3.733 & 7.466 & 0.958 \\
-        18 & 9.42 & 3.824 & 7.647 & 0.981 \\
-        19 & 9.34 & 3.898 & 7.795 & 1.000 \\
-        20 & 9.25 & 3.585 & 7.169 & 0.920 \\
-        21 & 9.15 & 3.362 & 6.724 & 0.863 \\
-        22 & 9.20 & 3.189 & 6.378 & 0.818 \\
-        23 & 9.19 & 3.123 & 6.246 & 0.801 \\
-        \hline
-    \end{tabular}
-    \caption{Wind resources for the 15th of February. Data from \cite{nasa}.}
-  \label{tab:wind_res}
-\end{table}
-
-
-
-
-\section{Results}
+\section{Contingency analysis}
 
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}

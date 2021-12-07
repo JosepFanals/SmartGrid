@@ -320,26 +320,6 @@
       \field{note}{Accessed: 2021-12-01}
       \field{title}{Pallet Paneles 405W Deep Blue 3.0 JA Solar Mono}
     \endentry
-    \entry{gamesa}{misc}{}
-      \name{author}{1}{}{%
-        {{hash=07e92cada5bf573e04091eb2c9489d79}{%
-           family={{Wind Turbine Models}},
-           familyi={W\bibinitperiod}}}%
-      }
-      \strng{namehash}{07e92cada5bf573e04091eb2c9489d79}
-      \strng{fullhash}{07e92cada5bf573e04091eb2c9489d79}
-      \strng{bibnamehash}{07e92cada5bf573e04091eb2c9489d79}
-      \strng{authorbibnamehash}{07e92cada5bf573e04091eb2c9489d79}
-      \strng{authornamehash}{07e92cada5bf573e04091eb2c9489d79}
-      \strng{authorfullhash}{07e92cada5bf573e04091eb2c9489d79}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{howpublished}{\url{https://en.wind-turbine-models.com/turbines/768-gamesa-g132-5.0mw}}
-      \field{note}{Accessed: 2021-12-01}
-      \field{title}{Gamesa G132-5.0MW}
-    \endentry
     \entry{pvgis}{misc}{}
       \name{author}{1}{}{%
         {{hash=516d1743b3db5136e2551ce1b0fbad49}{%
@@ -360,6 +340,147 @@
       \field{note}{Accessed: 2021-12-01}
       \field{title}{Photovoltaic Geographical Information System (PVGIS)}
     \endentry
+    \entry{kumar2015comparative}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{hash=86706b38a384113e6f7913ae8702ba09}{%
+           family={Kumar},
+           familyi={K\bibinitperiod},
+           given={Nitin},
+           giveni={N\bibinitperiod}}}%
+        {{hash=69bbb77e232642c23a7241988c27be7d}{%
+           family={Yadav},
+           familyi={Y\bibinitperiod},
+           given={Priya},
+           giveni={P\bibinitperiod}}}%
+        {{hash=b7e43dce678e69543aa32c01bb66ef0c}{%
+           family={Chandel},
+           familyi={C\bibinitperiod},
+           given={SS},
+           giveni={S\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \strng{fullhash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \strng{bibnamehash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \strng{authorbibnamehash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \strng{authornamehash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \strng{authorfullhash}{d5f88b54411dbd4f555329c70d9ec9f9}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 International Conference on Energy Economics and Environment (ICEEE)}
+      \field{title}{Comparative analysis of four different solar photovoltaic technologies}
+      \field{year}{2015}
+      \field{pages}{1\bibrangedash 6}
+      \range{pages}{6}
+    \endentry
+    \entry{gamesa}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=07e92cada5bf573e04091eb2c9489d79}{%
+           family={{Wind Turbine Models}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{fullhash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{bibnamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authorbibnamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authornamehash}{07e92cada5bf573e04091eb2c9489d79}
+      \strng{authorfullhash}{07e92cada5bf573e04091eb2c9489d79}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://en.wind-turbine-models.com/turbines/768-gamesa-g132-5.0mw}}
+      \field{note}{Accessed: 2021-12-01}
+      \field{title}{Gamesa G132-5.0MW}
+    \endentry
+    \entry{ragheb2014wind}{article}{}
+      \name{author}{1}{}{%
+        {{hash=3278dc57e3b86acbec54027c827ab9b3}{%
+           family={Ragheb},
+           familyi={R\bibinitperiod},
+           given={M},
+           giveni={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{3278dc57e3b86acbec54027c827ab9b3}
+      \strng{fullhash}{3278dc57e3b86acbec54027c827ab9b3}
+      \strng{bibnamehash}{3278dc57e3b86acbec54027c827ab9b3}
+      \strng{authorbibnamehash}{3278dc57e3b86acbec54027c827ab9b3}
+      \strng{authornamehash}{3278dc57e3b86acbec54027c827ab9b3}
+      \strng{authorfullhash}{3278dc57e3b86acbec54027c827ab9b3}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Wind Energie}
+      \field{title}{Wind energy conversion theory, betz equation}
+      \field{year}{2014}
+    \endentry
+    \entry{bartl2012wake}{article}{}
+      \name{author}{3}{}{%
+        {{hash=e9cbc7814e3188f8d496124ddfa29550}{%
+           family={Bartl},
+           familyi={B\bibinitperiod},
+           given={Jan},
+           giveni={J\bibinitperiod}}}%
+        {{hash=4e0f58bebb36e2ed460c5ae098a83afc}{%
+           family={Pierella},
+           familyi={P\bibinitperiod},
+           given={F},
+           giveni={F\bibinitperiod}}}%
+        {{hash=6feb4580d8a0de562a4605f8c018d194}{%
+           family={S{æ}trana},
+           familyi={S\bibinitperiod},
+           given={L},
+           giveni={L\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{29f29d0725a53018ec6dd27c222538f7}
+      \strng{fullhash}{29f29d0725a53018ec6dd27c222538f7}
+      \strng{bibnamehash}{29f29d0725a53018ec6dd27c222538f7}
+      \strng{authorbibnamehash}{29f29d0725a53018ec6dd27c222538f7}
+      \strng{authornamehash}{29f29d0725a53018ec6dd27c222538f7}
+      \strng{authorfullhash}{29f29d0725a53018ec6dd27c222538f7}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energy Procedia}
+      \field{title}{Wake measurements behind an array of two model wind turbines}
+      \field{volume}{24}
+      \field{year}{2012}
+      \field{pages}{305\bibrangedash 312}
+      \range{pages}{8}
+    \endentry
+    \entry{smil2015power}{book}{}
+      \name{author}{1}{}{%
+        {{hash=3dd166942d6fcd162609ab7d5705e8a9}{%
+           family={Smil},
+           familyi={S\bibinitperiod},
+           given={Vaclav},
+           giveni={V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {MIT press}%
+      }
+      \strng{namehash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \strng{fullhash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \strng{bibnamehash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \strng{authorbibnamehash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \strng{authornamehash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \strng{authorfullhash}{3dd166942d6fcd162609ab7d5705e8a9}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Power density: a key to understanding energy sources and uses}
+      \field{year}{2015}
+    \endentry
     \entry{nasa}{misc}{}
       \name{author}{1}{}{%
         {{hash=72ea5ae088b6cda1e642b41a57264c0e}{%
@@ -372,8 +493,8 @@
       \strng{authorbibnamehash}{72ea5ae088b6cda1e642b41a57264c0e}
       \strng{authornamehash}{72ea5ae088b6cda1e642b41a57264c0e}
       \strng{authorfullhash}{72ea5ae088b6cda1e642b41a57264c0e}
-      \field{sortinit}{1}
-      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://power.larc.nasa.gov/}}

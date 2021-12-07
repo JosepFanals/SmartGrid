@@ -2361,12 +2361,17 @@
     <bcf:citekey order="9">acer</bcf:citekey>
     <bcf:citekey order="10">autosolar</bcf:citekey>
     <bcf:citekey order="11">autosolar</bcf:citekey>
-    <bcf:citekey order="12">gamesa</bcf:citekey>
-    <bcf:citekey order="13">gamesa</bcf:citekey>
+    <bcf:citekey order="12">pvgis</bcf:citekey>
+    <bcf:citekey order="13">kumar2015comparative</bcf:citekey>
     <bcf:citekey order="14">pvgis</bcf:citekey>
     <bcf:citekey order="15">pvgis</bcf:citekey>
-    <bcf:citekey order="16">nasa</bcf:citekey>
-    <bcf:citekey order="17">nasa</bcf:citekey>
+    <bcf:citekey order="16">gamesa</bcf:citekey>
+    <bcf:citekey order="17">gamesa</bcf:citekey>
+    <bcf:citekey order="18">ragheb2014wind</bcf:citekey>
+    <bcf:citekey order="19">bartl2012wake</bcf:citekey>
+    <bcf:citekey order="20">smil2015power</bcf:citekey>
+    <bcf:citekey order="21">nasa</bcf:citekey>
+    <bcf:citekey order="22">nasa</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">
