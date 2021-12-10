@@ -13,18 +13,42 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {3}Phase 2}{9}{chapter.3}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Phase 3}{10}{chapter.4}%
+\contentsline {section}{\numberline {3.1}Addition of lines}{9}{section.3.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Phase 4}{11}{chapter.5}%
+\contentsline {subsection}{\numberline {3.1.1}Formulation}{9}{subsection.3.1.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Storage}{11}{section.5.1}%
+\contentsline {subsection}{\numberline {3.1.2}Results}{11}{subsection.3.1.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Dismantled plant}{13}{section.5.2}%
+\contentsline {section}{\numberline {3.2}Rising the voltage level}{12}{section.3.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Base case results}{13}{section.5.3}%
+\contentsline {subsection}{\numberline {3.2.1}Description}{12}{subsection.3.2.1}%
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Contingency analysis}{13}{section.5.4}%
+\contentsline {subsection}{\numberline {3.2.2}Results}{13}{subsection.3.2.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Code}{14}{chapter.6}%
+\contentsline {chapter}{\numberline {4}Phase 3}{15}{chapter.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{15}{chapter*.12}%
+\contentsline {section}{\numberline {4.1}Overview}{15}{section.4.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.2}Renewable's integration}{16}{section.4.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.1}Solar PV}{16}{subsection.4.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {4.2.2}Wind}{17}{subsection.4.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.3}Base case analysis}{18}{section.4.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {4.4}Contingency analysis}{19}{section.4.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {5}Phase 4}{20}{chapter.5}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.1}Storage}{20}{section.5.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.2}Dismantled plant}{22}{section.5.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.3}Base case results}{23}{section.5.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {5.4}Contingency analysis}{23}{section.5.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {6}Code}{24}{chapter.6}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{32}{chapter*.25}%

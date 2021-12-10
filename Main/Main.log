@@ -1,4 +1,4 @@
-This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2021.11.27)  10 DEC 2021 01:36
+This is LuaTeX, Version 1.10.0 (TeX Live 2019/Debian)  (format=lualatex 2021.11.27)  10 DEC 2021 02:32
  restricted system commands enabled.
  file:line:error style messages enabled.
 **/home/josep/Desktop/SmartGrid/Main/Main
@@ -1409,7 +1409,7 @@ Package: inputenc 2018/08/11 v1.3c Input encoding file
 \inpenc@prehook=\toks49
 \inpenc@posthook=\toks50
 )
-<Data/Logo.png, id=99, 640.3925pt x 170.6375pt>
+<Data/Logo.png, id=147, 640.3925pt x 170.6375pt>
 File: Data/Logo.png Graphic file (type png)
 <use Data/Logo.png>
 Package luatex.def Info: Data/Logo.png  used on input line 39.
@@ -1456,14 +1456,11 @@ warning  (pdf backend): ignoring duplicate destination with the name 'page.1'
 
 ]
 Chapter 1.
-[2
+(./Chapters/Introduction.tex) [2
 
 ]
 Chapter 2.
 (./Chapters/Phase1.tex
-
-LaTeX Warning: Citation 'esios' on page 3 undefined on input line 167.
-
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <8> on input line 209.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1484,7 +1481,7 @@ PGFPlots: reading {Data/phase1/ph1_line.csv}
 PGFPlots: reading {Data/phase1/ph1_line.csv}
 PGFPlots: reading {Data/phase1/ph1_line.csv}
 PGFPlots: reading {Data/phase1/ph1_line.csv}
-[3
+ [3
 
 ] [4
 Missing character: There is no . (U+002E) in font nullfont!
@@ -1574,20 +1571,53 @@ Missing character: There is no ; (U+003B) in font nullfont!
 
 ] [7]) [8]
 Chapter 3.
-[9
+(./Chapters/Phase2.tex [9
 
-]
+] [10] [11] [12] [13]) [14]
 Chapter 4.
-[10
+(./Chapters/Phase3.tex [15
 
 ]
+PGFPlots: reading {Data/phase3/G.csv}
+
+NOTE: coordinate (--,--,--) [--](was (24,--,--) [--]) has been dropped because of a coordinate filter.
+PGFPlots: reading {Data/phase3/Ppv.csv}
+NOTE: coordinate (--,--,--) [--](was (24,--,--) [--]) has been dropped because of a coordinate filter.
+[16] [17
+Missing character: There is no . (U+002E) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no . (U+002E) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+]
+PGFPlots: reading {Data/phase3/vw.csv}
+PGFPlots: reading {Data/phase3/Pwind.csv}
+ [18
+Missing character: There is no . (U+002E) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+Missing character: There is no . (U+002E) in font nullfont!
+Missing character: There is no 0 (U+0030) in font nullfont!
+Missing character: There is no 1 (U+0031) in font nullfont!
+Missing character: There is no p (U+0070) in font nullfont!
+Missing character: There is no t (U+0074) in font nullfont!
+Missing character: There is no ; (U+003B) in font nullfont!
+]) [19]
 Chapter 5.
-(./Chapters/Phase4.tex [11
+(./Chapters/Phase4.tex [20
 
 ]
 PGFPlots: reading {Data/phase4/battery.csv}
 PGFPlots: reading {Data/phase4/horiz.csv}
- [12
+ [21
 Missing character: There is no . (U+002E) in font nullfont!
 Missing character: There is no 0 (U+0030) in font nullfont!
 Missing character: There is no 1 (U+0031) in font nullfont!
@@ -1598,28 +1628,25 @@ Missing character: There is no 0 (U+0030) in font nullfont!
 Missing character: There is no 1 (U+0031) in font nullfont!
 Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
-]) [13]
+]) [22] [23]
 Chapter 6.
-[14
+(./Chapters/Code.tex
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
+ [24
 
-] [15
+] [25] [26] [27] [28] [29] [30]) [31] [32
 
-]
+] [33]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
  (./Main.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 179149D672C5026794181A580F0371AE;1579.
+(rerunfilecheck)             Checksum: 6AFA01E03BFA080F1F12E87547313EBD;3101.
 
 
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                Main
-(biblatex)                and rerun LaTeX afterwards.
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package logreq Info: Writing requests to 'Main.run.xml'.
 
@@ -1627,19 +1654,19 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 72064 strings out of 481365
- 244492,2848258 words of node,token memory allocated
- 1478 words of node memory still in use:
-   30 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 91 attribute, 87 glue_spec, 83 attribute_list, 2 write, 24 pdf_literal, 24 pdf_colorstack nodes
-   avail lists: 1:8,2:34383,3:5251,4:114,5:240,6:46,7:15778,8:41,9:2642,10:13,11:247
- 86970 multiletter control sequences out of 65536+600000
- 73 fonts using 6830515 bytes
+ 77559 strings out of 481365
+ 932794,2848258 words of node,token memory allocated
+ 1646 words of node memory still in use:
+   30 hlist, 2 vlist, 14 rule, 2 glue, 4 kern, 1 glyph, 131 attribute, 87 glue_spec, 103 attribute_list, 2 write, 24 pdf_literal, 8 pdf_action, 24 pdf_colorstack nodes
+   avail lists: 1:6,2:34346,3:5263,4:16582,5:16579,6:80,7:24575,8:177,9:41575,10:58,11:1593
+ 91841 multiletter control sequences out of 65536+600000
+ 82 fonts using 7759643 bytes
  81i,19n,131p,1223b,2278s stack positions out of 5000i,500n,10000p,200000b,100000s
-</usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (16 pages, 194682 bytes).
+</usr/share/texmf/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on Main.pdf (34 pages, 425985 bytes).
 
-PDF statistics: 326 PDF objects out of 1000 (max. 8388607)
- 247 compressed objects within 3 object streams
- 49 named destinations out of 1000 (max. 131072)
- 368 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1152 PDF objects out of 1200 (max. 8388607)
+ 1022 compressed objects within 11 object streams
+ 604 named destinations out of 1000 (max. 131072)
+ 464 words of extra memory for PDF output out of 10000 (max. 100000000)
 

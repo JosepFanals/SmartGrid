@@ -292,7 +292,18 @@ Since the daily demand profile amongst consecutive days do not experience signif
 
 
 \section{Dismantled plant}
-% mainly discuss carbon emissions of gas, coal... some equations and numbers to estimate, some references
+% mainly discuss carbon emissions of gas, coal... some equations and numbers to estimate, some references, some itemize
+Another possibility to contemplate in order to reduce the dependence on the interconnection consists of employing the once dismantled power plant placed in bus 7 as indicated in Figure \ref{fig:netstorage}. The hypothesis is that this dismantled plant is powered by some kind of fossil fuel: coal, diesel, gas, etc. Thus, even if it could have a positive impact on the electrical magnitudes, its associated environmental impact has to be kept in check. 
+
+We start by exploring the diverse energy sources that could power it to extract conclusions regarding costs, emissions, and geopolitical aspects:
+\begin{itemize}
+  \item Coal: it is the most polluting of the aforementioned fuels. Even though its emission factor largely depends on the type of coal (lignite, bituminous...), it is in the range of 300 to 360~g CO$_2$/kWh \cite{gencat}. Coal power plants are mostly used in countries with availability of natural resources, which is not the case of Spain.
+  \item Diesel: or more generally petroleum, these power plants are more a rarity than an actual common choice. They are suitable to be installed in microgrids or islanded systems thank to their flexibility and suitability for hybrid systems where they act as backup units \cite{ismail2013techno}. Since their chemical proportion between hydrogen and carbon is larger than in the case of coal, its emission factor becomes lower; it is around 270~g CO$_2$/kWh \cite{gencat}. 
+  \item Natural gas: the cleaner of the three options, with an emission factor of 180~g CO$_2$/kWh approximately \cite{gencat}. Power plants powered by natural gas usually take the form of the so-called combined cycle gas turbine (CCGT) power plant. During the previous decades, Spain promoted the installation of combined cycle power plants, which nowadays are unused for the most part \cite{aleasoft}. Probably the largest disadvantage of these power plants is the high cost of natural gas, which has fluctuated extensively during the last year \cite{gascost}. 
+\end{itemize}
+When it comes to the implementation of the program, it makes no difference to consider one technology or another, as only the output power is relevant. However, this chapter also focuses on the emissions. Therefore, the results section analyzes the results for coal, diesel and natural gas.
+
+% TODO: draw also a profile, probably exagerating the peak at night
 
 \section{Base case results}
 % such as in the net picture, compare with previous results (table with 3 columns, 1 for each case)
