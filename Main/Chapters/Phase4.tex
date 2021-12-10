@@ -231,7 +231,10 @@ Just as an overview, Figure \ref{fig:netstorage} displays the system with the ne
 
     \node at (0.0, 0.9) {16};
     \node at (-1.0, 1.1) {17};
-    % \node at (1.3, 8.0) {14};
+
+    % \node at (8.0, 1.8) {18};
+    \node at (8.0, 2.3) {19};
+    \node at (9, 2.1) {20};
 
   \end{circuitikz}
 
@@ -245,6 +248,48 @@ Just as an overview, Figure \ref{fig:netstorage} displays the system with the ne
 
 \section{Storage}
 % talk about the storage unit, the P profile we have decided, the technology like Liion, a bit about costs..
+Storage devices have been conceived as one of the cornerstone class of elements meant to provide flexibility to smart grids \cite{roberts2011role}. Perhaps in relation to this, electric vehicles (EVs) have been extensively promoted. Apart from the direct impact on decarbonizing mobility, they can act as a source/sink of energy, which also has an appealing influence on power systems \cite{monteiro2011impact}. One of the largest barriers towards adopting batteries has to do with its high investment cost. Although the cost of batteries has been steadily declining for the last two decades \cite{ziegler2021re}, there is still a long way to go. Part of the intention regarding this section is to analyze if storage exerts a positive effect on the power flow of the power system under study. 
+
+Energy storage options can take many forms. For instance, fast-response devices such as supercapacitors provide peaks of power, yet their accumulated energy is rather low. The same characteristics apply to flywheels, although they store the energy mechanically, not electrically. Another option, likely the most favorable one, are batteries. They store the energy chemically, can provide energy for a sustained period of time, and tend to be easily controlled with power converters. This project conceives the storage unit as a lithium-ion battery, since it offers an attractive trade-off between lifetime, power and energy denstiy, and flexibility of operation, despite its high cost.
+
+Table \ref{tab:battery} shows the most notorious characteristics of the chosen lithium-ion battery, along with the corresponding converter. 
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{lrr}
+    \hline
+    \textbf{Magnitude} & \textbf{Units} & \textbf{Value} \\
+    \hline
+    Capacity & MWh & 50\\
+    Peak power & MW & 10\\
+    Round-trip battery $\eta$ & \% & 92\\
+    Maximum DOD & \% & 80\\
+    Converter $\eta$ & \% & 96\\
+    Lifetime & cycles & 3000 \\
+    Working temperature & \textdegree{C} & -20/55 \\
+    Specific energy & Wh/kg & 133 \\
+    Orientative LCOE & \texteuro/kWh & 0.11/0.66 \\
+    \hline
+  \end{tabular}
+  \caption{Storage system characteristics. DOD: depth of discharge, LCOE: levelized cost of energy. Data from \cite{diaz2016energy, lo2021efficiency, rahman}.}
+  \label{tab:battery}
+\end{table}
+Having a lifetime of 3000 cycles means that it is not appropriate to charge and discharge the battery several times per day. If that were to be the case, the energy storage system would last for just a few years at most. On the contrary, if the battery is charged and discharged once per decade, its lifetime could approach a decade. For this reason, the proposed power profile to follow is represented in Figure \ref{fig:batt}.
+
+\begin{figure}[!htb]\centering
+\begin{tikzpicture}
+    \begin{axis}[xlabel={Hour}, ylabel={$P$ (MW)}, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 2, width=12cm, height=5cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=-9, ymax=6, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+        \addplot[color=black] table[col sep=comma, x=x, y=y] {Data/phase4/battery.csv};
+        \addplot[color=black, dashed] table[col sep=comma, x=x, y=y] {Data/phase4/horiz.csv};
+\end{axis}
+
+\end{tikzpicture}
+\caption{Daily charge and discharge profile for the battery system}
+    \label{fig:batt}
+  \end{figure}
+  This profile resembles the power demand of the loads. This dependence has been established intentionally. In previous analysis, it has been found that during peak hours (around 20:00 hours) the loading of lines is most extreme, and also, the voltages are closer to the lower limit of 0.9~p.u.. Therefore, in general terms, the battery should be discharged during the day and charged at night. According to the chosen sign criteria, positive powers indicate generation, while negative powers denote consumption.
+
+Since the daily demand profile amongst consecutive days do not experience significant differences, it is convenient to always start and finish the day with the same state of charge ($SOC$). To achieve this, the accumulated area under the curve (in Figure \ref{fig:batt}, between the solid line and the dashed line) is kept at $E \cdot DOD=40$~MWh. Besides, the sum of the positive and the negative area yields zero, as desired. 
+
 
 \section{Dismantled plant}
 % mainly discuss carbon emissions of gas, coal... some equations and numbers to estimate, some references
