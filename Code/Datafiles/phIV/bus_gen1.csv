@@ -1,0 +1,7 @@
+bus,p_mw,vm_pu
+nuclear,500,1.05
+solar_l,91.51,1.03
+wind_l,7.79,1.02
+dismant,50.0,1.02
+stor_l,10,1.02
+

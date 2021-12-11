@@ -2223,6 +2223,9 @@
     <bcf:citekey order="32">gencat</bcf:citekey>
     <bcf:citekey order="33">aleasoft</bcf:citekey>
     <bcf:citekey order="34">gascost</bcf:citekey>
+    <bcf:citekey order="35">ree_co2</bcf:citekey>
+    <bcf:citekey order="35">spork2015increasing</bcf:citekey>
+    <bcf:citekey order="36">co2iea</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="none">

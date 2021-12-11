@@ -277,7 +277,7 @@ Having a lifetime of 3000 cycles means that it is not appropriate to charge and 
 
 \begin{figure}[!htb]\centering
 \begin{tikzpicture}
-    \begin{axis}[xlabel={Hour}, ylabel={$P$ (MW)}, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 2, width=12cm, height=5cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=-9, ymax=6, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+    \begin{axis}[xlabel={Hour}, ylabel={$P_{sto}$ (MW)}, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 2, width=12cm, height=5cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=-9, ymax=6, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
         \addplot[color=black] table[col sep=comma, x=x, y=y] {Data/phase4/battery.csv};
         \addplot[color=black, dashed] table[col sep=comma, x=x, y=y] {Data/phase4/horiz.csv};
 \end{axis}
@@ -303,17 +303,110 @@ We start by exploring the diverse energy sources that could power it to extract 
 \end{itemize}
 When it comes to the implementation of the program, it makes no difference to consider one technology or another, as only the output power is relevant. However, this chapter also focuses on the emissions. Therefore, the results section analyzes the results for coal, diesel and natural gas.
 
-% TODO: draw also a profile, probably exagerating the peak at night
+The chosen power generation profile for the dismantled plant is depicted in Figure \ref{fig:dism}. Compared to storage or the demand, here the peaks are more exaggerated. The underlying idea is that the system the system is more in need of generation during peak hours. And if demand increases, generation should increase by preferably by a larger factor to keep the losses and loadings of the lines at satisfactory values. A peak power of 50~MW has been considered, which corresponds to the most critical hour of the day. The plant is supposed to stop operating at night, and its voltage is maintained at 1.02~p.u. since it acts as a PV node.
+
+
+
+\begin{figure}[!htb]\centering
+\begin{tikzpicture}
+    \begin{axis}[xlabel={Hour}, ylabel={$P_{dism}$ (MW)}, grid=both, grid style={line width=.1pt, draw=gray!10}, major grid style={line width=.2pt,draw=gray!50}, xtick distance = 2, ytick distance = 10, width=12cm, height=5cm, every plot/.append style={very thick}, xmin = 1, xmax = 24, ymin=-1, ymax=55, very thick, grid=both, grid style={line width=.4pt, draw=gray!10}, major grid style={line width=.8pt,draw=gray!50}, legend style={at={(0.8,0.1)},anchor=south west}]
+        \addplot[color=black] table[col sep=comma, x=x, y=y] {Data/phase4/dism.csv};
+\end{axis}
+\end{tikzpicture}
+\caption{Daily generation profile of the dismantled plant}
+    \label{fig:dism}
+  \end{figure}
+
+With storage and the generation of the dismantled plant defined, the simulation can be ran again. The next sections explore the results and draw conclusions from them.
+
 
 \section{Base case results}
-% such as in the net picture, compare with previous results (table with 3 columns, 1 for each case)
+% such as in the net picture, compare with previous results (table with 3 columns, 1 for each case). Copy the previous table, just add 1 column
+% also emissions for the 3 types of plants. 332 MWh daily from the dismantled, calculate the daily emissions also considering the slack
+The base cast considers the grid as shown in Figure \ref{fig:netstorage}, with the black lines representing actual connections. The red lines are only taken into account for the contingency analysis. In any case, it is expected that the presence of the battery and an additonal plant should contribute to improving the electrical magnitudes, at least slightly. Table \ref{tab:compare} shows this is precisely the case.
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{lrrr}
+    \hline
+    \textbf{Attributes} & \textbf{Phase 2} & \textbf{Phase 3} & \textbf{Phase 4}\\
+    \hline
+    $V_{min}$ (p.u.) & 0.962 & 0.968 & 0.971 \\
+    $V_{max}$ (p.u.) & 1.050 & 1.050 & 1.050 \\
+    Max. load (\%) & 41.65 & 40.76 & 39.63 \\
+    Max. losses (MW) & 14.54 & 14.43 & 13.89 \\
+    Correct operation? & Yes & Yes & Yes \\
+    \hline
+  \end{tabular}
+  \caption{Main results to compare between the grid without renewables, with renewables, and with storage and the dismantled plant}
+  \label{tab:compare2}
+\end{table}
+The results tend to be the ones we could already expect. The minimum voltage rises a bit thanks to the inclusion of more generation sources, which control the voltages at their respective buses and hence ensure the operation around nominal voltages. Similarly, the loadings of the lines are reduced a bit, being the most loaded line at only 39.63\%. There could be reasons to think that the system is oversized, because lines do not approach their limits of 80\%. While these claims would be full of validity, faults have to be taken into account as well. Redundant connections are a must if the criteria $N-1$ has to be met. 
+
+The maximum losses are again reduced. A clear pattern can be spotted from comparing the results in the three phases. Going from phase 2 to phase 4, results improve each time the grid becomes stronger and more decentralized. These are in essence some of the core characteristics of smart grids. Another central goal of smart grids has to do with decarbonizing the system, which is described below. 
+% expected emissions here, not in contingencies
+
+Regarding emissions, it is known beforehand that storage, renewables and nuclear do not emit CO$_2$ gases or equivalent during their operation. The only generation sources to account for emissions are the interconnection and the dismantled plant. In this base case, the dismantled plant produced 332~MWh, whereas the interconnection provided 4686~MWh. The interconnection can be assumed to have an emission factor of 190~kg CO$_2$-eq/MWh as in the case of Spain \cite{ree_co2, spork2015increasing}.
+
+With this, the total emissions for a full-day operation are gathered in Table \ref{tab:emit} depending on the technology of the dismantled power plant. 
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{lrrr}
+    \hline
+    \textbf{Fuel} & \textbf{Dismantled} & \textbf{Interconnection} & \textbf{Total} \\
+    & (tCO$_2$-eq) &  (tCO$_2$-eq)  &  (tCO$_2$-eq) \\
+    \hline
+    Coal & 108.56 & 890.34 & 998.90 \\
+    Diesel & 89.64 & 890.34 & 979.98 \\
+    Gas & 59.76 & 890.34 & 950.10 \\
+    \hline
+  \end{tabular}
+  \caption{Total daily emissions depending on the scenario}
+  \label{tab:emit}
+\end{table}
+The conclusion we reach is that even if there is a non-negligible difference in the emissions caused by the dismantled plant, its overall influence is not that relevant. The interconnection accounts for 90 to 95\% of the total CO$_2$ emissions. The only fix to that is the integration of nuclear and renewable power plants, which produce about 10.06~GWh daily. This is about twice the energy imported from the slack bus, so in proportion, about 2/3 of the total energy come from clean sources. This is equivalent to saying that the electricity emissions factor of the whole system is roughly 63~kg CO$_2$-eq/MWh. This is a more than acceptable value that most European countries do not reach (see \cite{co2iea}).
 
 \section{Contingency analysis}
-% similar as before
+% similar as before, top 10
+Just as in previous phases, a contingency analysis is performed to verify if new lines are required, and if so, which ones should be. The marked red lines shown in Figure \ref{fig:netstorage} are the potentially added lines, while the black ones are the alreay established ones. Table \ref{tab:top10_stor} presents the top 10 best configurations under faults. 
+
+\begin{table}[!htb]\centering
+  \begin{tabular}{ccc}
+    \hline
+    \textbf{Identifier} & \textbf{New lines} & \textbf{Infraestructure cost (M\texteuro)}\\
+    \hline
+    % 24 & [8-9, 10-12] & 402.71 \\
+    % 12 & [8-9, 9-6] & 406.21 \\
+    % 46 & [11-12, 8-9] & 406.21 \\
+    % 8 & [8-9, 8-12] & 409.54 \\
+    % 0 & [11-12, 8-9, 10-12] & 463.84 \\
+    % 4 & [8-9, 10-12, 9-6] & 463.84 \\
+    % 37 & [11-12, 10-12, 9-6] & 463.84 \\
+    % 63 & [8-9, 10-12, 8-12] & 467.18 \\
+    % 20 & [11-12, 8-9, 9-6] & 467.34 \\
+    % 38 & [11-12, 8-9, 8-12] & 470.67 \\
+    33 & [8-9] & 419.49 \\
+    24 & [8-9, 10-12] & 477.12 \\
+    12 & [8-9, 9-6] & 480.62 \\
+    46 & [11-12, 8-9] & 480.62 \\
+    8 & [8-9, 8-12] & 483.96 \\
+    57 & [8-9, 6-8] & 505.94 \\
+    0 & [8-9, 10-12] & 538.25 \\
+    4 & [8-9, 10-12, 9-6] & 538.25 \\
+    37 & [11-12, 10-12, 8-12] & 538.25 \\
+    63 & [8-9, 10-12, 8-12] & 541.59 \\
+    \hline
+  \end{tabular}
+  \caption{Best configurations with the additional lines with storage and a dismantled plant}
+  \label{tab:top10_stor}
+\end{table}
+The results indicate that, contrary to previous configurations, installing only the additional line from buses 8 to 9 is enough to meet the $N-1$ criteria. This is certainly a positive result, because in all other cases, at least two lines had to be added. Notice, however, that most configurations are the same as in Table \ref{tab:top10_rene}. This makes sense since the topology is basically identical, with just minor variations due to the having added storage and the dismantled plant.
+
+The total installation cost increases a bit respect to the case where only renewables were added. Of course, new lines have been included to connect the storage unit to the system. Yet, the conclusion has not changed. Moving towards a smart grid, which includes a larger penetration of renewables, batteries, and other elements, supposes a large investment cost. The question is if this invesment ends up being worth it. Multiple reasons could be added into the equation, but what is for sure is that there is a climate emergency to combat. 
 
 
+% only installing line 8-9 is enough! so only 1 more line needed!! good news
 
-% put somewhere like a pie chart of the energy provided by each source... in this chapter we should place to focus on the emissions, it would make the project more complete
+
 
 
 

@@ -559,7 +559,8 @@ def find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN,
     on_off_all_lines = []
     vec_config = []
     for name, sheet in diag.items():
-        if len(sheet) == 0 or name[0] not in exclude_lines:  # if no diagnostic errors
+        # if len(sheet) == 0 or name[0] not in exclude_lines:  # if no diagnostic errors
+        if True or name[0] not in exclude_lines:  # if no diagnostic errors
         # if True:
             on_off_lines = line[name]['in_service']
             on_off_all_lines.append(on_off_lines)
@@ -730,21 +731,35 @@ if __name__ == "__main__":
     # path_busgen = 'Datafiles/phII_380kV/bus_gen1.csv'
     # path_trafo = 'Datafiles/phII_380kV/trafo1.csv'
 
+    # --------------- phase 3 ---------------
     # phase with rene
-    path_bus = 'Datafiles/phIII/bus1.csv'
-    path_geodata = 'Datafiles/phIII/geodata1.csv'
-    path_line = 'Datafiles/phIII/line1reduced.csv'
-    path_demand = 'Datafiles/phIII/demand1.csv'
-    path_busload = 'Datafiles/phIII/bus_load1.csv'
-    path_trafo = 'Datafiles/phIII/trafo1.csv'
+    # path_bus = 'Datafiles/phIII/bus1.csv'
+    # path_geodata = 'Datafiles/phIII/geodata1.csv'
+    # path_line = 'Datafiles/phIII/line1reduced.csv'
+    # path_demand = 'Datafiles/phIII/demand1.csv'
+    # path_busload = 'Datafiles/phIII/bus_load1.csv'
+    # path_trafo = 'Datafiles/phIII/trafo1.csv'
 
     # rene
-    path_generation = 'Datafiles/phIII/generation_all.csv'
-    path_busgen = 'Datafiles/phIII/bus_gen1.csv'
+    # path_generation = 'Datafiles/phIII/generation_all.csv'
+    # path_busgen = 'Datafiles/phIII/bus_gen1.csv'
 
     # no rene
     # path_generation = 'Datafiles/phIII/generation1.csv'
     # path_busgen = 'Datafiles/phIII/bus_gen1_norene.csv'
+
+    # -------------- phase 4 --------------
+    path_bus = 'Datafiles/phIV/bus1.csv'
+    path_geodata = 'Datafiles/phIV/geodata1.csv'
+    path_line = 'Datafiles/phIV/line1reduced.csv'
+    path_demand = 'Datafiles/phIV/demand1.csv'
+    path_busload = 'Datafiles/phIV/bus_load1.csv'
+    path_trafo = 'Datafiles/phIV/trafo1.csv'
+    path_generation = 'Datafiles/phIV/generation_all.csv'
+    path_busgen = 'Datafiles/phIV/bus_gen1.csv'
+
+
+
 
 
 
@@ -755,15 +770,15 @@ if __name__ == "__main__":
     net = initialize_net(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, rene=True)
 
     # run and store timeseries data, for only 1 case
-    run_store_timeseries(net, '_00rene')
+    run_store_timeseries(net, '_00storage')
 
     # run contingencies
-    # n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
-    # process_contingencies(n_lines, n_extra_lines, n_cases)
+    n_lines, n_extra_lines, n_cases = run_contingencies_ts(path_bus, path_geodata, path_line, path_demand, path_busload, path_generation, path_busgen, path_trafo, n_extra_lines=6)
+    process_contingencies(n_lines, n_extra_lines, n_cases)
 
-    n_lines = 16
-    n_extra_lines = 6
-    n_cases = 64
+    # n_lines = 16
+    # n_extra_lines = 6
+    # n_cases = 64
 
     print(n_lines, n_extra_lines, n_cases)
 
@@ -781,13 +796,13 @@ if __name__ == "__main__":
 
     exclude_lines = [6,7]
 
-    # find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases, exclude_lines)
+    find_optimal_config(path_diagN, path_lineN, path_loadN, path_plN, path_vpuN, path_parallelN, path_pmwN, n_lines, n_extra_lines, n_cases, exclude_lines)
 
     path_configs = 'Results/OK_configs.xlsx'
     path_lineN = 'Results/All_line_' + str(nxx) + '.xlsx'
-    path_line_ini = 'Datafiles/phIII/line1reduced.csv'
+    path_line_ini = 'Datafiles/phIV/line1reduced.csv'
 
-    # select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
+    select_best(path_configs, path_lineN, path_line_ini, n_lines, n_extra_lines, n_cases)
 
     end_time = time.time()
     print(end_time - time_start, 's')

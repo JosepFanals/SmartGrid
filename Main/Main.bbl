@@ -31,6 +31,7 @@
       \strng{authorbibnamehash}{5e57bfb1162ad5b69a47e4228dcca810}
       \strng{authornamehash}{5e57bfb1162ad5b69a47e4228dcca810}
       \strng{authorfullhash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \field{extraname}{1}
       \field{sortinit}{1}
       \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
       \field{labelnamesource}{author}
@@ -842,6 +843,96 @@
       \field{howpublished}{\url{https://tradingeconomics.com/commodity/natural-gas}}
       \field{note}{Accessed: 2021-12-10}
       \field{title}{Natural Gas USD/MMBtu}
+    \endentry
+    \entry{ree_co2}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=5e57bfb1162ad5b69a47e4228dcca810}{%
+           family={{Red Eléctrica de España}},
+           familyi={R\bibinitperiod}}}%
+      }
+      \strng{namehash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \strng{fullhash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \strng{bibnamehash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \strng{authorbibnamehash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \strng{authornamehash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \strng{authorfullhash}{5e57bfb1162ad5b69a47e4228dcca810}
+      \field{extraname}{2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ree.es/en/press-office/news/featured-story/2020/06/emissions-spanish-electricity-system-have-fallen-30-million-tonnes-last-5-years}}
+      \field{note}{Accessed: 2021-12-11}
+      \field{title}{Emissions from the Spanish electricity system have fallen by 30 million tonnes in the last 5 years}
+    \endentry
+    \entry{spork2015increasing}{article}{}
+      \name{author}{5}{}{%
+        {{hash=04a713873100cd897c1faf1df500799f}{%
+           family={Spork},
+           familyi={S\bibinitperiod},
+           given={Charlie\bibnamedelima C},
+           giveni={C\bibinitperiod\bibinitdelim C\bibinitperiod}}}%
+        {{hash=a2f2423369b00a9c1daa818ad0113ae8}{%
+           family={Chavez},
+           familyi={C\bibinitperiod},
+           given={Abel},
+           giveni={A\bibinitperiod}}}%
+        {{hash=0f005bad202b14b40ed0a427cddeae28}{%
+           family={Gabarrell\bibnamedelima Durany},
+           familyi={G\bibinitperiod\bibinitdelim D\bibinitperiod},
+           given={Xavier},
+           giveni={X\bibinitperiod}}}%
+        {{hash=a9fa2972f035eb8114316af407c0c1ab}{%
+           family={Patel},
+           familyi={P\bibinitperiod},
+           given={Martin\bibnamedelima K},
+           giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
+        {{hash=981889dd2bda713c5b6e26facab08cfe}{%
+           family={Villalba\bibnamedelima M{é}ndez},
+           familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
+           given={Gara},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Wiley Online Library}%
+      }
+      \strng{namehash}{3ed1b09afc1347e4f2f6a0a45a043402}
+      \strng{fullhash}{5cc929c80324cea61e6648e3fc0502b2}
+      \strng{bibnamehash}{5cc929c80324cea61e6648e3fc0502b2}
+      \strng{authorbibnamehash}{5cc929c80324cea61e6648e3fc0502b2}
+      \strng{authornamehash}{3ed1b09afc1347e4f2f6a0a45a043402}
+      \strng{authorfullhash}{5cc929c80324cea61e6648e3fc0502b2}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Journal of Industrial Ecology}
+      \field{number}{3}
+      \field{title}{Increasing Precision in Greenhouse Gas Accounting Using Real-Time Emission Factors: A Case Study of Electricity in Spain}
+      \field{volume}{19}
+      \field{year}{2015}
+      \field{pages}{380\bibrangedash 390}
+      \range{pages}{11}
+    \endentry
+    \entry{co2iea}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=21247dd977704f3d510adb0308b15f30}{%
+           family={{European Environmental Agency}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{21247dd977704f3d510adb0308b15f30}
+      \strng{fullhash}{21247dd977704f3d510adb0308b15f30}
+      \strng{bibnamehash}{21247dd977704f3d510adb0308b15f30}
+      \strng{authorbibnamehash}{21247dd977704f3d510adb0308b15f30}
+      \strng{authornamehash}{21247dd977704f3d510adb0308b15f30}
+      \strng{authorfullhash}{21247dd977704f3d510adb0308b15f30}
+      \field{sortinit}{3}
+      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.eea.europa.eu/ims/greenhouse-gas-emission-intensity-of-1}}
+      \field{note}{Accessed: 2021-12-11}
+      \field{title}{Greenhouse gas emission intensity of electricity generation in Europe}
     \endentry
   \enddatalist
 \endrefsection
