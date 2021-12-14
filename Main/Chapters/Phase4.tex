@@ -286,24 +286,25 @@ Having a lifetime of 3000 cycles means that it is not appropriate to charge and 
 \caption{Daily charge and discharge profile for the battery system}
     \label{fig:batt}
   \end{figure}
-  This profile resembles the power demand of the loads. This dependence has been established intentionally. In previous analysis, it has been found that during peak hours (around 20:00 hours) the loading of lines is most extreme, and also, the voltages are closer to the lower limit of 0.9~p.u.. Therefore, in general terms, the battery should be discharged during the day and charged at night. According to the chosen sign criteria, positive powers indicate generation, while negative powers denote consumption.
+  This profile resembles the power demand of the loads. This dependence has been established intentionally. In previous analysis, it has been found that during peak hours (around 8 p.m.) the loading of lines is most extreme, and also, the voltages are closer to the lower limit of 0.9~p.u.. Therefore, in general terms, the battery should be discharged during the day and charged at night. According to the chosen sign criteria, positive powers indicate generation, while negative powers denote consumption.
 
 Since the daily demand profile amongst consecutive days do not experience significant differences, it is convenient to always start and finish the day with the same state of charge ($SOC$). To achieve this, the accumulated area under the curve (in Figure \ref{fig:batt}, between the solid line and the dashed line) is kept at $E \cdot DOD=40$~MWh. Besides, the sum of the positive and the negative area yields zero, as desired. 
 
 
 \section{Dismantled plant}
 % mainly discuss carbon emissions of gas, coal... some equations and numbers to estimate, some references, some itemize
-Another possibility to contemplate in order to reduce the dependence on the interconnection consists of employing the once dismantled power plant placed in bus 7 as indicated in Figure \ref{fig:netstorage}. The hypothesis is that this dismantled plant is powered by some kind of fossil fuel: coal, diesel, gas, etc. Thus, even if it could have a positive impact on the electrical magnitudes, its associated environmental impact has to be kept in check. 
+Another possibility to consider in order to reduce the dependence on the interconnection consists of employing the once dismantled power plant placed in bus 7 as indicated in Figure \ref{fig:netstorage}. The hypothesis is that this dismantled plant is powered by some kind of fossil fuel (coal, diesel, gas, etc.) or renewable source such as biomass. Thus, even if it could have a positive impact on the electrical magnitudes, its associated environmental impact has to be kept in check. 
 
 We start by exploring the diverse energy sources that could power it to extract conclusions regarding costs, emissions, and geopolitical aspects:
 \begin{itemize}
   \item Coal: it is the most polluting of the aforementioned fuels. Even though its emission factor largely depends on the type of coal (lignite, bituminous...), it is in the range of 300 to 360~g CO$_2$/kWh \cite{gencat}. Coal power plants are mostly used in countries with availability of natural resources, which is not the case of Spain.
   \item Diesel: or more generally petroleum, these power plants are more a rarity than an actual common choice. They are suitable to be installed in microgrids or islanded systems thank to their flexibility and suitability for hybrid systems where they act as backup units \cite{ismail2013techno}. Since their chemical proportion between hydrogen and carbon is larger than in the case of coal, its emission factor becomes lower; it is around 270~g CO$_2$/kWh \cite{gencat}. 
-  \item Natural gas: the cleaner of the three options, with an emission factor of 180~g CO$_2$/kWh approximately \cite{gencat}. Power plants powered by natural gas usually take the form of the so-called combined cycle gas turbine (CCGT) power plant. During the previous decades, Spain promoted the installation of combined cycle power plants, which nowadays are unused for the most part \cite{aleasoft}. Probably the largest disadvantage of these power plants is the high cost of natural gas, which has fluctuated extensively during the last year \cite{gascost}. 
+  \item Natural gas: it is cleaner than the two previous fuels, with an emission factor of 180~g CO$_2$/kWh approximately \cite{gencat}. Power plants powered by natural gas usually take the form of the so-called combined cycle gas turbine (CCGT) power plant. During the previous decades, Spain promoted the installation of combined cycle power plants, which nowadays are unused for the most part \cite{aleasoft}. Probably the largest disadvantage of these power plants is the high cost of natural gas, which has fluctuated extensively during the last year \cite{gascost}. 
+  \item Biomass: it is considered a renewable source with carbon neutral emissions \cite{gencat}, since the CO$_2$ emitted during combustion has previously been absorbed from the atmosphere. Then, the emission factor of biomass is 0~gCO$_2$/kWh. Nowadays, there are already some examples where the existing facilities have been converted from coal or natural gas to biomass \cite{grontmij}.
 \end{itemize}
 When it comes to the implementation of the program, it makes no difference to consider one technology or another, as only the output power is relevant. However, this chapter also focuses on the emissions. Therefore, the results section analyzes the results for coal, diesel and natural gas.
 
-The chosen power generation profile for the dismantled plant is depicted in Figure \ref{fig:dism}. Compared to storage or the demand, here the peaks are more exaggerated. The underlying idea is that the system the system is more in need of generation during peak hours. And if demand increases, generation should increase by preferably by a larger factor to keep the losses and loadings of the lines at satisfactory values. A peak power of 50~MW has been considered, which corresponds to the most critical hour of the day. The plant is supposed to stop operating at night, and its voltage is maintained at 1.02~p.u. since it acts as a PV node.
+The chosen power generation profile for the dismantled plant is depicted in Figure \ref{fig:dism}. Compared to storage or the demand, here the peaks are more exaggerated. The underlying idea is that the system is more in need of generation during peak hours. And if demand increases, generation should increase by a larger factor to keep the losses and loadings of the lines at satisfactory values. A peak power of 50~MW has been considered, which corresponds to the most critical hour of the day. The plant is supposed to stop operating at night, and its voltage is maintained at 1.02~p.u. since it acts as a PV node.
 
 
 
@@ -323,7 +324,7 @@ With storage and the generation of the dismantled plant defined, the simulation 
 \section{Base case results}
 % such as in the net picture, compare with previous results (table with 3 columns, 1 for each case). Copy the previous table, just add 1 column
 % also emissions for the 3 types of plants. 332 MWh daily from the dismantled, calculate the daily emissions also considering the slack
-The base cast considers the grid as shown in Figure \ref{fig:netstorage}, with the black lines representing actual connections. The red lines are only taken into account for the contingency analysis. In any case, it is expected that the presence of the battery and an additonal plant should contribute to improving the electrical magnitudes, at least slightly. Table \ref{tab:compare} shows this is precisely the case.
+The base case considers the grid as shown in Figure \ref{fig:netstorage}, with the black lines representing actual connections. The red lines are only taken into account for the contingency analysis. In any case, it is expected that the presence of the battery and an additonal plant should contribute to improving the electrical magnitudes, at least slightly. Table \ref{tab:compare} shows this is precisely the case.
 
 \begin{table}[!htb]\centering
   \begin{tabular}{lrrr}
@@ -358,12 +359,15 @@ With this, the total emissions for a full-day operation are gathered in Table \r
     Coal & 108.56 & 890.34 & 998.90 \\
     Diesel & 89.64 & 890.34 & 979.98 \\
     Gas & 59.76 & 890.34 & 950.10 \\
+    Biomass & 0.00 & 890.34 & 890.34 \\
     \hline
   \end{tabular}
   \caption{Total daily emissions depending on the scenario}
   \label{tab:emit}
 \end{table}
-The conclusion we reach is that even if there is a non-negligible difference in the emissions caused by the dismantled plant, its overall influence is not that relevant. The interconnection accounts for 90 to 95\% of the total CO$_2$ emissions. The only fix to that is the integration of nuclear and renewable power plants, which produce about 10.06~GWh daily. This is about twice the energy imported from the slack bus, so in proportion, about 2/3 of the total energy come from clean sources. This is equivalent to saying that the electricity emissions factor of the whole system is roughly 63~kg CO$_2$-eq/MWh. This is a more than acceptable value that most European countries do not reach (see \cite{co2iea}).
+The conclusion we reach is that even if there is a non-negligible difference in the emissions caused by the dismantled plant, its overall influence is not that relevant. The interconnection accounts for 90 to 95\% of the total CO$_2$ emissions. The only counteract to that is the integration of nuclear and renewable power plants, which produce about 10.06~GWh daily. This is about twice the energy imported from the slack bus, so in proportion, about 2/3 of the total energy come from clean sources. This is equivalent to saying that the electricity emissions factor of the whole system is roughly 63~kg CO$_2$-eq/MWh. This is a more than acceptable value that most European countries do not reach (see \cite{co2iea}).
+
+Finally, an economic comparison can be performed according to the related costs of each energy source. These costs include the net present value of the unit-cost of electricity over the lifetime of a system, known as Levelized Cost of Electricity (LCOE), and the CO$_2$ emission costs. Considering the LCOE of each energy source \cite{irena, roussanaly2020techno, freeing, lazard} and the current CO$_2$ price \cite{ember}, the biomass power plant is the cheapest option since it has no CO$_2$ emission costs associated. It is 16.32\% cheaper than natural gas, followed by coal with 35.97\%, and diesel with 65.21\%.
 
 \section{Contingency analysis}
 % similar as before, top 10
@@ -399,7 +403,7 @@ Just as in previous phases, a contingency analysis is performed to verify if new
   \caption{Best configurations with the additional lines with storage and a dismantled plant}
   \label{tab:top10_stor}
 \end{table}
-The results indicate that, contrary to previous configurations, installing only the additional line from buses 8 to 9 is enough to meet the $N-1$ criteria. This is certainly a positive result, because in all other cases, at least two lines had to be added. Notice, however, that most configurations are the same as in Table \ref{tab:top10_rene}. This makes sense since the topology is basically identical, with just minor variations due to the having added storage and the dismantled plant.
+The results indicate that, contrary to previous configurations, installing only the additional line from buses 8 to 9 is enough to meet the $N-1$ criteria. This is certainly a positive result, because in all other cases, at least two lines had to be added. Notice, however, that most configurations are the same as in Table \ref{tab:top10_rene}. This makes sense since the topology is basically identical, with just minor variations due to the added storage and the dismantled plant.
 
 The total installation cost increases a bit respect to the case where only renewables were added. Of course, new lines have been included to connect the storage unit to the system. Yet, the conclusion has not changed. Moving towards a smart grid, which includes a larger penetration of renewables, batteries, and other elements, supposes a large investment cost. The question is if this invesment ends up being worth it. Multiple reasons could be added into the equation, but what is for sure is that there is a climate emergency to combat. 
 

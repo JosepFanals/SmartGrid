@@ -164,7 +164,7 @@ A system such as the one displayed in Figure \ref{fig:net1} is analyzed. The net
 \end{figure}
 
 
-The first step to analyze the system is to know the demand and the generation profile. In order to model them, the hourly demand and generation data of Spain have been collected \cite{esios}. To obtain a typical working day, a statistical analysis has been performed taking into account only the days from the 1st of January to the 31st of March, from Tuesday to Thursday and removing the national holidays. The result then has been normalized. analyze the system is This way, the consumption profile is obtained by from the product of the normalized demand and the peak power consumption of 375~MW for load type I and 140~MW for type II. For the generation profile, for simplicity, it has been assumed that the nuclear power plant follows the demand curve, i.e., it is not acting as a constant generator.
+The first step to analyze the system is to know the demand and the generation profile. In order to model them, the hourly demand and generation data of Spain have been collected \cite{esios}. To obtain a typical working day, a statistical analysis has been performed taking into account only the days from the 1st of January to the 31st of March, from Tuesday to Thursday and removing the national holidays. The result then has been normalized. This way, the consumption profile is obtained from the product of the normalized demand and the peak power consumption of 375~MW for load type I and 140~MW for type II. For the generation profile, for simplicity, it has been assumed that the nuclear power plant follows the demand curve, i.e., it is not acting as a constant generator.
 
 
 
@@ -357,7 +357,7 @@ The first step to analyze the system is to know the demand and the generation pr
 % estimate operating costs
 
 \section{Operating costs}
-Regarding the operating costs, some estimations are made in order to asses the influence of importing energy and the impact of faults on lines and transformers. 
+Regarding the operating costs, some estimations are made in order to assess the influence of importing energy and the impact of faults on lines and transformers. 
 
 First, the cost of importing energy depends on the time zone: valley, flat or peak. The analysis that follows considers a working day, which is precisely the date for which the voltages and loading profiles have been shown in Figures \ref{fig:vpu_ph1} and \ref{fig:lines_ph1} respectively. The cost of importing the energy is mathematically expressed as:
 \begin{equation}
@@ -366,7 +366,7 @@ First, the cost of importing energy depends on the time zone: valley, flat or pe
 \end{equation}
 where $C_{imp}$ stands for the cost of importing energy for a full day, $k$ denotes the index of a given hour, $n$ the total number of hours in a day, $P_{s,k}$ the energy provided by the slack bus (interconnection point) in MWh at hour $k$, and $c(k)$ the cost at a certain hour in \texteuro/MWh. This last term is equal to 45~\texteuro/MWh from 0 to 8 hours, 65~\texteuro/MWh from 8 to 10, 14 to 18 and 22 to 24 hours, and 90~\texteuro/MWh from 10 to 14 and 18 to 22 hours. 
 
-Equation \ref{eq:cimp} can be treated as a weighting sum. With the generation data obtained from the timeseries power flow, the total importing cost of importing energy becomes 418753.03~\texteuro/day, or about 152.84~M\texteuro \ in a full year. It is important to note that the study related to the cost of importing energy is decoupled from the fault analysis. This is not a hundred percent realistic, because it could be that a switch trips and hence a line or a transformer are disconnected. Then, it could happen that the interconnection has to provide more power. However, since the probabilities are extremely low, they are discarded when computing this cost. 
+Equation \ref{eq:cimp} can be treated as a weighting sum. With the generation data obtained from the timeseries power flow, the total importing cost of importing energy becomes 418753.03~\texteuro/day, or about 152.84~M\texteuro \ for a full year. It is important to note that the study related to the cost of importing energy is decoupled from the fault analysis. This is not a hundred percent realistic, because it could be that a switch trips and hence a line or a transformer is disconnected. Then, it could happen that the interconnection has to provide more power. However, since the probabilities are extremely low, they are discarded when computing this cost. 
 
 On the other hand, there are the costs due to faults in transformers or lines. About 0.05~failures per km and year are expected in lines, while transformers are meant to fail 0.15~times a year. The penalty for not providing energy is 180 \texteuro/MWh. Given that the length of the lines has an impact on its probability of failure, Table \ref{tab:ll1} shows the length and the subsequent failures per year.
 
@@ -389,7 +389,7 @@ Figure \ref{fig:lines_ph1} shows that the line connected to the interconnection 
  
 % TODO: check if is 2 or 2.5 hours for lines!!!!
 
-In the case of line failures, there is a total disconnection time of 2.5 hours; instead, for transformers it is 8 hours. The expected time that an element will be disconnected in a year is found by multiplying the aforementioned disconnection time by the number of failures that take place during a year. Table \ref{tab:lt1} displays the yearly disconnection time and explains the consequences spotted by running the power flow. This will allow to estimate the penalties due disconnection. 
+In the case of line failures, there is a total disconnection time of 2.5 hours, while for transformers it is 8 hours. The expected time that an element will be disconnected in a year is found by multiplying the aforementioned disconnection time by the number of failures that take place during a year. Table \ref{tab:lt1} displays the yearly disconnection time and explains the consequences spotted by running the power flow. This will allow to estimate the penalties due to disconnection. 
 
 \begin{table}[!htb]\centering
   \begin{tabular}[]{ccc}
@@ -416,7 +416,7 @@ Once the unserved loads and the associated disconnection times are known, the ne
   C_{discon} \approx \sum_{i=1}^{10} \overline{P}_{uns,i} t_{discon,i} C_p,
   \label{eq:discon}
 \end{equation}
-where $C_{discon}$ is the total disconnection cost, $i$ represents the index of the line or transformer with a total of 10 elements prone to be disconnected (see Table \ref{tab:lt1}), $\overline{P}_{uns,i}$ is the mean unserved power, $t_{discon,i}$ the disconnection time, and $C_p$ the penalty cost to apply. Equation \ref{eq:discon} is an approximation in the sense that the unserved power varies according to the time of the day. To not overcomplicate the problem, it has been decided to pick a representative value such as the average. 
+where $C_{discon}$ is the total disconnection cost, $i$ represents the index of the line or transformer with a total of 10 elements proned to be disconnected (see Table \ref{tab:lt1}), $\overline{P}_{uns,i}$ is the mean unserved power, $t_{discon,i}$ the disconnection time, and $C_p$ the penalty cost to apply. Equation \ref{eq:discon} is an approximation in the sense that the unserved power varies according to the time of the day. To not overcomplicate the problem, it has been decided to pick a representative value such as the average. 
 
 The application of Equation \ref{eq:discon} yields a total yearly penalty cost of 4.99 M\texteuro. For the most part, it is due to the disconnection of lines. Meshing more the system would decrease this cost, but on the other side, it would increase the investment cost. Hence, there is a trade-off between cost and reliability.
 
@@ -425,7 +425,7 @@ All the calculations related to costs have not set an inferior limit to the volt
 \section{Problem identification}
 The network modeled presents some serious issues. First, in case of fault, the demand cannot be covered. The network is a ramified line but does not have any interconnection within the system. If a fault occurs, the two branches are not connected and have to support the demand of the remaining part on its own. In the case of the nuclear power plant, it cannot produce enough energy to fulfill all the demand and in the case of the interconnection, if it was to cover all, it would be overloaded. 
 
-This leads to the second problem the network faces, there is a risk of overloading. This may happen in case or fault or if the the nuclear power plant shuts down because there is no other source of generation. This could lead to burning hence security and material damage issue. A third drawback is the high impact of the interruptions. As many line are single lines and there are no multiple connections, only ramifications, a fault has a high chance to directly disconnect the network. Finally, the voltage cannot be kept constant enough. It is usually accepted to fluctuate 10\% around the nominal 1~p.u. while in the current transmission network, the voltage reaches almost 0.8~p.u..
+This leads to the second problem the network faces, there is a risk of overloading. This may happen in case of fault or if the the nuclear power plant shuts down because there is no other source of generation. This could lead to burning hence security and material damage issues. A third drawback is the high impact of the interruptions. As many line are single lines and there are no multiple connections, only ramifications, a fault has a high chance to directly disconnect the network. Finally, the voltage cannot be kept constant enough. It is usually accepted to fluctuate 10\% around the nominal 1~p.u. while in the current transmission network, the voltage reaches almost 0.8~p.u..
 
 \section{Solution suggestion}
 As some of the lines present some overloading and demand coverage problems, we suggest improving lines to better ones which are able to transport more power. In order to do so, the critical lines could be changed from single to double lines and/or even change the conductors to thicker cables which allow a larger amount of power flow. Another approach would be to add more lines to the grid to overcome the demand coverage but we must also be aware that when adding new lines to the system we are also increasing the possibility of line failures which may affect interruptibility and cause economic losses to the system.

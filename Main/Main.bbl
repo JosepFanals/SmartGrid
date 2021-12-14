@@ -19,6 +19,217 @@
 
 \refsection{0}
   \datalist[entry]{none/global//global/global}
+    \entry{councileu}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=c8a77f2c835b8eb8f39721edf7c21da4}{%
+           family={{Council of European Energy Resources}},
+           familyi={C\bibinitperiod}}}%
+      }
+      \strng{namehash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \strng{fullhash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \strng{bibnamehash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \strng{authorbibnamehash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \strng{authornamehash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \strng{authorfullhash}{c8a77f2c835b8eb8f39721edf7c21da4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.ceer.eu/documents/104400/-/-/09ecee88-e877-3305-6767-e75404637087}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Report on Power Losses}
+      \field{year}{2017}
+    \endentry
+    \entry{ahat2013smart}{article}{}
+      \name{author}{6}{}{%
+        {{hash=53e88d580f56866bf6281d1e5e808656}{%
+           family={Ahat},
+           familyi={A\bibinitperiod},
+           given={Murat},
+           giveni={M\bibinitperiod}}}%
+        {{hash=367761d741a88a722a2c35d355076e2b}{%
+           family={Amor},
+           familyi={A\bibinitperiod},
+           given={Soufian\bibnamedelima Ben},
+           giveni={S\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=9c0c20f1fc9b4895051169f8a890f696}{%
+           family={Bui},
+           familyi={B\bibinitperiod},
+           given={Marc},
+           giveni={M\bibinitperiod}}}%
+        {{hash=e5ff1489eb9c5e58b436d8a0e703ce5a}{%
+           family={Bui},
+           familyi={B\bibinitperiod},
+           given={Alain},
+           giveni={A\bibinitperiod}}}%
+        {{hash=06da43b543fe76cdf1fe10447365260c}{%
+           family={Guérard},
+           familyi={G\bibinitperiod},
+           given={Guillaume},
+           giveni={G\bibinitperiod}}}%
+        {{hash=a3fc2d99254c090d20f98074bc98889a}{%
+           family={Petermann},
+           familyi={P\bibinitperiod},
+           given={Coralie},
+           giveni={C\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Scientific Research Publishing}%
+      }
+      \strng{namehash}{003db3a72fb38c9d577b1df2c8bf3b6c}
+      \strng{fullhash}{52619167ba2d2ffc0d694b1907344411}
+      \strng{bibnamehash}{52619167ba2d2ffc0d694b1907344411}
+      \strng{authorbibnamehash}{52619167ba2d2ffc0d694b1907344411}
+      \strng{authornamehash}{003db3a72fb38c9d577b1df2c8bf3b6c}
+      \strng{authorfullhash}{52619167ba2d2ffc0d694b1907344411}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Smart grid and optimization}
+      \field{year}{2013}
+    \endentry
+    \entry{vakulenko2021systematic}{inproceedings}{}
+      \name{author}{4}{}{%
+        {{hash=f761fc231c32bbf29fefea4ed0348d0d}{%
+           family={Vakulenko},
+           familyi={V\bibinitperiod},
+           given={Ihor},
+           giveni={I\bibinitperiod}}}%
+        {{hash=335343c551c153f13072e463fd868b2d}{%
+           family={Saher},
+           familyi={S\bibinitperiod},
+           given={Liudmyla},
+           giveni={L\bibinitperiod}}}%
+        {{hash=6f93e9d9390b37cb6afd8270e8116edf}{%
+           family={Lyulyov},
+           familyi={L\bibinitperiod},
+           given={Oleksii},
+           giveni={O\bibinitperiod}}}%
+        {{hash=e1dd9057516b53a59a19ec837c88882a}{%
+           family={Pimonenko},
+           familyi={P\bibinitperiod},
+           given={Tetyana},
+           giveni={T\bibinitperiod}}}%
+      }
+      \list{organization}{1}{%
+        {EDP Sciences}%
+      }
+      \strng{namehash}{b879f4982adf6514b58d801c67fa6af0}
+      \strng{fullhash}{b64affd763c4518b3e2734ffe157f8d6}
+      \strng{bibnamehash}{b64affd763c4518b3e2734ffe157f8d6}
+      \strng{authorbibnamehash}{b64affd763c4518b3e2734ffe157f8d6}
+      \strng{authornamehash}{b879f4982adf6514b58d801c67fa6af0}
+      \strng{authorfullhash}{b64affd763c4518b3e2734ffe157f8d6}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{E3S Web of Conferences}
+      \field{title}{A systematic literature review of smart grids}
+      \field{volume}{250}
+      \field{year}{2021}
+      \field{pages}{08006}
+      \range{pages}{1}
+    \endentry
+    \entry{alotaibi2020comprehensive}{article}{}
+      \name{author}{4}{}{%
+        {{hash=2946aeabf10240af86e7444549791428}{%
+           family={Alotaibi},
+           familyi={A\bibinitperiod},
+           given={Ibrahim},
+           giveni={I\bibinitperiod}}}%
+        {{hash=c55307d7f2322e96b0c4f678fe3666f0}{%
+           family={Abido},
+           familyi={A\bibinitperiod},
+           given={Mohammed\bibnamedelima A},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=fd6d1f92814a2ec374b40d5f45a05bdb}{%
+           family={Khalid},
+           familyi={K\bibinitperiod},
+           given={Muhammad},
+           giveni={M\bibinitperiod}}}%
+        {{hash=c6a5eb91ef23c39cd3d78540276eb4a6}{%
+           family={Savkin},
+           familyi={S\bibinitperiod},
+           given={Andrey\bibnamedelima V},
+           giveni={A\bibinitperiod\bibinitdelim V\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{250d8cf980dbd2f690fa515240ba78d0}
+      \strng{fullhash}{295eaff517f352e716b3a71ef658b21e}
+      \strng{bibnamehash}{295eaff517f352e716b3a71ef658b21e}
+      \strng{authorbibnamehash}{295eaff517f352e716b3a71ef658b21e}
+      \strng{authornamehash}{250d8cf980dbd2f690fa515240ba78d0}
+      \strng{authorfullhash}{295eaff517f352e716b3a71ef658b21e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energies}
+      \field{number}{23}
+      \field{title}{A comprehensive review of recent advances in smart grids: A sustainable future with renewable energy resources}
+      \field{volume}{13}
+      \field{year}{2020}
+      \field{pages}{6269}
+      \range{pages}{1}
+    \endentry
+    \entry{gao2021review}{article}{}
+      \name{author}{6}{}{%
+        {{hash=7b9f19f832714ecc1a700417498507c9}{%
+           family={Gao},
+           familyi={G\bibinitperiod},
+           given={Kaiye},
+           giveni={K\bibinitperiod}}}%
+        {{hash=a957ec920fdcbeb994bb31f90ea3b62d}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Tianshi},
+           giveni={T\bibinitperiod}}}%
+        {{hash=d0baa5ea54c548f8bf5148b0b7d7721a}{%
+           family={Han},
+           familyi={H\bibinitperiod},
+           given={Chenjing},
+           giveni={C\bibinitperiod}}}%
+        {{hash=1dd70d361f9d6fd589631fc9e525cf13}{%
+           family={Xie},
+           familyi={X\bibinitperiod},
+           given={Jinhao},
+           giveni={J\bibinitperiod}}}%
+        {{hash=e0fb89689172cce98608c2e76b64f3d1}{%
+           family={Ma},
+           familyi={M\bibinitperiod},
+           given={Ye},
+           giveni={Y\bibinitperiod}}}%
+        {{hash=14141104db1dbc904a2ba44ed9c5e45f}{%
+           family={Peng},
+           familyi={P\bibinitperiod},
+           given={Rui},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Multidisciplinary Digital Publishing Institute}%
+      }
+      \strng{namehash}{460f9525ef2807c932108184bbdbf8b0}
+      \strng{fullhash}{d535f975186543f4b585001469984e00}
+      \strng{bibnamehash}{d535f975186543f4b585001469984e00}
+      \strng{authorbibnamehash}{d535f975186543f4b585001469984e00}
+      \strng{authornamehash}{460f9525ef2807c932108184bbdbf8b0}
+      \strng{authorfullhash}{d535f975186543f4b585001469984e00}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Energies}
+      \field{number}{10}
+      \field{title}{A Review of Optimization of Microgrid Operation}
+      \field{volume}{14}
+      \field{year}{2021}
+      \field{pages}{2842}
+      \range{pages}{1}
+    \endentry
     \entry{esios}{misc}{}
       \name{author}{1}{}{%
         {{hash=5e57bfb1162ad5b69a47e4228dcca810}{%
@@ -32,8 +243,8 @@
       \strng{authornamehash}{5e57bfb1162ad5b69a47e4228dcca810}
       \strng{authorfullhash}{5e57bfb1162ad5b69a47e4228dcca810}
       \field{extraname}{1}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{7}
+      \field{sortinithash}{108d0be1b1bee9773a1173443802c0a3}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.esios.ree.es/es?locale=en}}
@@ -62,8 +273,8 @@
       \strng{authorbibnamehash}{b559269b114e473cd2a004d5829b46c0}
       \strng{authornamehash}{b559269b114e473cd2a004d5829b46c0}
       \strng{authorfullhash}{b559269b114e473cd2a004d5829b46c0}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Power Systems}
@@ -106,8 +317,8 @@
       \strng{authorbibnamehash}{08d60ce30e9b06cb033cda6a49e2d604}
       \strng{authornamehash}{8b96bb2abd3d2fb07c75bb036d5fe24f}
       \strng{authorfullhash}{08d60ce30e9b06cb033cda6a49e2d604}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{8}
+      \field{sortinithash}{a231b008ebf0ecbe0b4d96dcc159445f}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Mathematical Methods of Operations Research}
@@ -131,7 +342,7 @@
            given={Jorge},
            giveni={J\bibinitperiod}}}%
         {{hash=d4107d7b3923b9ce0bfc2a75518bb04a}{%
-           family={Alsa{ç}},
+           family={Alsaç},
            familyi={A\bibinitperiod},
            given={Ongun},
            giveni={O\bibinitperiod}}}%
@@ -145,8 +356,8 @@
       \strng{authorbibnamehash}{642039ebd2c129b562edde6b1bc293ae}
       \strng{authornamehash}{642039ebd2c129b562edde6b1bc293ae}
       \strng{authorfullhash}{642039ebd2c129b562edde6b1bc293ae}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{IEEE Transactions on Power Systems}
@@ -204,8 +415,8 @@
       \strng{authorbibnamehash}{cf870ecafe1ab986ad5c9e5b13d15047}
       \strng{authornamehash}{a81ffd724781f5966f87686d14b757f1}
       \strng{authorfullhash}{cf870ecafe1ab986ad5c9e5b13d15047}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Electric Power Systems Research}
@@ -265,8 +476,8 @@
       \strng{authorbibnamehash}{0e25169a8afe9b4f41361c4207356b50}
       \strng{authornamehash}{f5dd5773003895039b0924d8cd7f3473}
       \strng{authorfullhash}{0e25169a8afe9b4f41361c4207356b50}
-      \field{sortinit}{4}
-      \field{sortinithash}{e071e0bcb44634fab398d68ad04e69f4}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0885-8950}
@@ -295,8 +506,8 @@
       \strng{authorbibnamehash}{29dfabe6590cb5f89305b35b3cbfd23f}
       \strng{authornamehash}{29dfabe6590cb5f89305b35b3cbfd23f}
       \strng{authorfullhash}{29dfabe6590cb5f89305b35b3cbfd23f}
-      \field{sortinit}{5}
-      \field{sortinithash}{5dd416adbafacc8226114bc0202d5fdd}
+      \field{sortinit}{1}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{UIC Report - Electricity Infraestructure. 2015.}
@@ -314,7 +525,7 @@
       \strng{authornamehash}{70d9085331291b6c4eac4254c81d5710}
       \strng{authorfullhash}{70d9085331291b6c4eac4254c81d5710}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://autosolar.es/panel-solar-24-voltios/pallet-paneles-405w-deep-blue-30-ja-solar-mono}}
@@ -334,7 +545,7 @@
       \strng{authornamehash}{516d1743b3db5136e2551ce1b0fbad49}
       \strng{authorfullhash}{516d1743b3db5136e2551ce1b0fbad49}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://ec.europa.eu/jrc/en/pvgis}}
@@ -369,7 +580,7 @@
       \strng{authornamehash}{d5f88b54411dbd4f555329c70d9ec9f9}
       \strng{authorfullhash}{d5f88b54411dbd4f555329c70d9ec9f9}
       \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinithash}{4f6aaa89bab872aa0999fec09ff8e98a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{2015 International Conference on Energy Economics and Environment (ICEEE)}
@@ -390,8 +601,8 @@
       \strng{authorbibnamehash}{07e92cada5bf573e04091eb2c9489d79}
       \strng{authornamehash}{07e92cada5bf573e04091eb2c9489d79}
       \strng{authorfullhash}{07e92cada5bf573e04091eb2c9489d79}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://en.wind-turbine-models.com/turbines/768-gamesa-g132-5.0mw}}
@@ -412,8 +623,8 @@
       \strng{authorbibnamehash}{3278dc57e3b86acbec54027c827ab9b3}
       \strng{authornamehash}{3278dc57e3b86acbec54027c827ab9b3}
       \strng{authorfullhash}{3278dc57e3b86acbec54027c827ab9b3}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Wind Energie}
@@ -447,8 +658,8 @@
       \strng{authorbibnamehash}{29f29d0725a53018ec6dd27c222538f7}
       \strng{authornamehash}{29f29d0725a53018ec6dd27c222538f7}
       \strng{authorfullhash}{29f29d0725a53018ec6dd27c222538f7}
-      \field{sortinit}{1}
-      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Energy Procedia}
@@ -476,7 +687,7 @@
       \strng{authornamehash}{3dd166942d6fcd162609ab7d5705e8a9}
       \strng{authorfullhash}{3dd166942d6fcd162609ab7d5705e8a9}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Power density: a key to understanding energy sources and uses}
@@ -495,7 +706,7 @@
       \strng{authornamehash}{72ea5ae088b6cda1e642b41a57264c0e}
       \strng{authorfullhash}{72ea5ae088b6cda1e642b41a57264c0e}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://power.larc.nasa.gov/}}
@@ -515,7 +726,7 @@
       \strng{authornamehash}{3ba5906c43ffde7fc50626c0dd79d562}
       \strng{authorfullhash}{3ba5906c43ffde7fc50626c0dd79d562}
       \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.investing.com/commodities/carbon-emissions}}
@@ -544,8 +755,8 @@
       \strng{authorbibnamehash}{b78e0537fbf65182699913e81127bb34}
       \strng{authornamehash}{b78e0537fbf65182699913e81127bb34}
       \strng{authorfullhash}{b78e0537fbf65182699913e81127bb34}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Proceedings of the IEEE}
@@ -561,17 +772,17 @@
         {{hash=2c380f82abbbdce356031a8473f0dace}{%
            family={Monteiro},
            familyi={M\bibinitperiod},
-           given={V{ı́}tor},
+           given={Vı́tor},
            giveni={V\bibinitperiod}}}%
         {{hash=b880ce100ee74e575f44a438bf31a759}{%
-           family={Gon{ç}alves},
+           family={Gonçalves},
            familyi={G\bibinitperiod},
            given={Henrique},
            giveni={H\bibinitperiod}}}%
         {{hash=dac82144ddce0efde76247fed7e2ebcf}{%
            family={Afonso},
            familyi={A\bibinitperiod},
-           given={Jo{ã}o\bibnamedelima L},
+           given={João\bibnamedelima L},
            giveni={J\bibinitperiod\bibinitdelim L\bibinitperiod}}}%
       }
       \list{organization}{1}{%
@@ -583,8 +794,8 @@
       \strng{authorbibnamehash}{b495ec2ae754c0ac0f57a2a9bcdfb630}
       \strng{authornamehash}{b495ec2ae754c0ac0f57a2a9bcdfb630}
       \strng{authorfullhash}{b495ec2ae754c0ac0f57a2a9bcdfb630}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{booktitle}{11th International Conference on Electrical Power Quality and Utilisation}
@@ -615,8 +826,8 @@
       \strng{authorbibnamehash}{21b5faa17e1fff16b47a3f60b0bdd55e}
       \strng{authornamehash}{21b5faa17e1fff16b47a3f60b0bdd55e}
       \strng{authorfullhash}{21b5faa17e1fff16b47a3f60b0bdd55e}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Energy \& Environmental Science}
@@ -630,8 +841,8 @@
     \entry{diaz2016energy}{book}{}
       \name{author}{3}{}{%
         {{hash=a3da4e77b3125bf4692a6c779d74f07a}{%
-           family={D{ı́}az-Gonz{á}lez},
-           familyi={D\bibinitperiod},
+           family={Dı́az-González},
+           familyi={D\bibinithyphendelim G\bibinitperiod},
            given={Francisco},
            giveni={F\bibinitperiod}}}%
         {{hash=27668fba48288480c6d71aeeb129dc51}{%
@@ -654,8 +865,8 @@
       \strng{authorbibnamehash}{e909ad7220cb57c44d28f0cb40d8dc4b}
       \strng{authornamehash}{e909ad7220cb57c44d28f0cb40d8dc4b}
       \strng{authorfullhash}{e909ad7220cb57c44d28f0cb40d8dc4b}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Energy storage in power systems}
@@ -693,8 +904,8 @@
       \strng{authorbibnamehash}{7af1e1b1302a7554e18783562ff91ee8}
       \strng{authornamehash}{3d28a87b3503cf6aa0e8fd3dcaa1f7f2}
       \strng{authorfullhash}{7af1e1b1302a7554e18783562ff91ee8}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Energies}
@@ -734,8 +945,8 @@
       \strng{authorbibnamehash}{02c116d84704f15bb2a33f5fc003876b}
       \strng{authornamehash}{dc418bb05c770fb771b8240f23b234aa}
       \strng{authorfullhash}{02c116d84704f15bb2a33f5fc003876b}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{issn}{0196-8904}
@@ -758,8 +969,8 @@
       \strng{authorbibnamehash}{f9752539c611708f9f771c054cf4fe91}
       \strng{authornamehash}{f9752539c611708f9f771c054cf4fe91}
       \strng{authorfullhash}{f9752539c611708f9f771c054cf4fe91}
-      \field{sortinit}{2}
-      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{sortinit}{3}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://canviclimatic.gencat.cat/web/.content/04_ACTUA/Com_calcular_emissions_GEH/guia_de_calcul_demissions_de_co2/190301_Practical-guide-calculating-GHG-emissions_OCCC.pdf}}
@@ -794,7 +1005,7 @@
       \strng{authornamehash}{15738ce20ab4cbd5b706fbbbe585abac}
       \strng{authorfullhash}{15738ce20ab4cbd5b706fbbbe585abac}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Energy conversion and management}
@@ -817,7 +1028,7 @@
       \strng{authornamehash}{f5721680099f83f4855bbfc9a03f5415}
       \strng{authorfullhash}{f5721680099f83f4855bbfc9a03f5415}
       \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinithash}{ad6fe7482ffbd7b9f99c9e8b5dccd3d7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://aleasoft.com/combined-cycle-gas-turbines-wind-energy-spanish-electricity-mix/}}
@@ -836,13 +1047,33 @@
       \strng{authorbibnamehash}{7f88cc5bac21fe2afa75c98c42f7f712}
       \strng{authornamehash}{7f88cc5bac21fe2afa75c98c42f7f712}
       \strng{authorfullhash}{7f88cc5bac21fe2afa75c98c42f7f712}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://tradingeconomics.com/commodity/natural-gas}}
       \field{note}{Accessed: 2021-12-10}
       \field{title}{Natural Gas USD/MMBtu}
+    \endentry
+    \entry{grontmij}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=d705fe3b27e2d9228f3079f720b5c3dc}{%
+           family={{Biomass Magazine}},
+           familyi={B\bibinitperiod}}}%
+      }
+      \strng{namehash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \strng{fullhash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \strng{bibnamehash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \strng{authorbibnamehash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \strng{authornamehash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \strng{authorfullhash}{d705fe3b27e2d9228f3079f720b5c3dc}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{http://biomassmagazine.com/articles/12122/grontmij-converts-power-plant-from-natural-gas-to-biomass}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Grontmij converts power plant from natural gas to biomass}
     \endentry
     \entry{ree_co2}{misc}{}
       \name{author}{1}{}{%
@@ -857,8 +1088,8 @@
       \strng{authornamehash}{5e57bfb1162ad5b69a47e4228dcca810}
       \strng{authorfullhash}{5e57bfb1162ad5b69a47e4228dcca810}
       \field{extraname}{2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.ree.es/en/press-office/news/featured-story/2020/06/emissions-spanish-electricity-system-have-fallen-30-million-tonnes-last-5-years}}
@@ -888,7 +1119,7 @@
            given={Martin\bibnamedelima K},
            giveni={M\bibinitperiod\bibinitdelim K\bibinitperiod}}}%
         {{hash=981889dd2bda713c5b6e26facab08cfe}{%
-           family={Villalba\bibnamedelima M{é}ndez},
+           family={Villalba\bibnamedelima Méndez},
            familyi={V\bibinitperiod\bibinitdelim M\bibinitperiod},
            given={Gara},
            giveni={G\bibinitperiod}}}%
@@ -902,8 +1133,8 @@
       \strng{authorbibnamehash}{5cc929c80324cea61e6648e3fc0502b2}
       \strng{authornamehash}{3ed1b09afc1347e4f2f6a0a45a043402}
       \strng{authorfullhash}{5cc929c80324cea61e6648e3fc0502b2}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{journaltitle}{Journal of Industrial Ecology}
@@ -926,13 +1157,157 @@
       \strng{authorbibnamehash}{21247dd977704f3d510adb0308b15f30}
       \strng{authornamehash}{21247dd977704f3d510adb0308b15f30}
       \strng{authorfullhash}{21247dd977704f3d510adb0308b15f30}
-      \field{sortinit}{3}
-      \field{sortinithash}{a37a8ef248a93c322189792c34fc68c9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{howpublished}{\url{https://www.eea.europa.eu/ims/greenhouse-gas-emission-intensity-of-1}}
       \field{note}{Accessed: 2021-12-11}
       \field{title}{Greenhouse gas emission intensity of electricity generation in Europe}
+    \endentry
+    \entry{irena}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b4f3a3711fe4df2b64d17bf2d72d90c0}{%
+           family={{IRENA}},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \strng{fullhash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \strng{bibnamehash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \strng{authorbibnamehash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \strng{authornamehash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \strng{authorfullhash}{b4f3a3711fe4df2b64d17bf2d72d90c0}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.irena.org/publications/2021/Jun/Renewable-Power-Costs-in-2020}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Renewable Power Generation Costs in 2020}
+    \endentry
+    \entry{roussanaly2020techno}{article}{}
+      \name{author}{8}{}{%
+        {{hash=46a1f0937b4b004eaf17340fc9e39d2c}{%
+           family={Roussanaly},
+           familyi={R\bibinitperiod},
+           given={Simon},
+           giveni={S\bibinitperiod}}}%
+        {{hash=5f9023fe978cf19d151d8e8293eeb153}{%
+           family={Vitvarova},
+           familyi={V\bibinitperiod},
+           given={Monika},
+           giveni={M\bibinitperiod}}}%
+        {{hash=56005c26e038e9681d8f3fb5f6be6d40}{%
+           family={Anantharaman},
+           familyi={A\bibinitperiod},
+           given={Rahul},
+           giveni={R\bibinitperiod}}}%
+        {{hash=a44defde97d11a32d58c7c20bb81b731}{%
+           family={Berstad},
+           familyi={B\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod}}}%
+        {{hash=d2a81ff2215996cc67b0bdaa1b46d6bf}{%
+           family={Hagen},
+           familyi={H\bibinitperiod},
+           given={Brede},
+           giveni={B\bibinitperiod}}}%
+        {{hash=7ef1cfa012f2f77674dc9fd2f35d7e44}{%
+           family={Jakobsen},
+           familyi={J\bibinitperiod},
+           given={Jana},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fdf022f5cd4a71aa0c8bd2356817389d}{%
+           family={Novotny},
+           familyi={N\bibinitperiod},
+           given={Vaclav},
+           giveni={V\bibinitperiod}}}%
+        {{hash=83617c6654ff9f2d7fd252cbc2782596}{%
+           family={Skaugen},
+           familyi={S\bibinitperiod},
+           given={Geir},
+           giveni={G\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{4a8db9e27235ddae2ab3da6939bf3ee9}
+      \strng{fullhash}{68f8555d8bb9f79c72ae57742f7eede9}
+      \strng{bibnamehash}{68f8555d8bb9f79c72ae57742f7eede9}
+      \strng{authorbibnamehash}{68f8555d8bb9f79c72ae57742f7eede9}
+      \strng{authornamehash}{4a8db9e27235ddae2ab3da6939bf3ee9}
+      \strng{authorfullhash}{68f8555d8bb9f79c72ae57742f7eede9}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Frontiers of Chemical Science and Engineering}
+      \field{number}{3}
+      \field{title}{Techno-economic comparison of three technologies for pre-combustion CO 2 capture from a lignite-fired IGCC}
+      \field{volume}{14}
+      \field{year}{2020}
+      \field{pages}{436\bibrangedash 452}
+      \range{pages}{17}
+    \endentry
+    \entry{freeing}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b631f1cb4023f11884b28558dc0c0a11}{%
+           family={{Freeing Energy}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b631f1cb4023f11884b28558dc0c0a11}
+      \strng{fullhash}{b631f1cb4023f11884b28558dc0c0a11}
+      \strng{bibnamehash}{b631f1cb4023f11884b28558dc0c0a11}
+      \strng{authorbibnamehash}{b631f1cb4023f11884b28558dc0c0a11}
+      \strng{authornamehash}{b631f1cb4023f11884b28558dc0c0a11}
+      \strng{authorfullhash}{b631f1cb4023f11884b28558dc0c0a11}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.freeingenergy.com/facts/lcoe-cost-comparison-solar-nuclear-wind-g108/}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Energy Fact – Solar, wind, and nat gas are, by far, the cheapest ways to generate electricity}
+    \endentry
+    \entry{lazard}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fee441f5a8224161f0bcff864cb7cf50}{%
+           family={{Lazard}},
+           familyi={L\bibinitperiod}}}%
+      }
+      \strng{namehash}{fee441f5a8224161f0bcff864cb7cf50}
+      \strng{fullhash}{fee441f5a8224161f0bcff864cb7cf50}
+      \strng{bibnamehash}{fee441f5a8224161f0bcff864cb7cf50}
+      \strng{authorbibnamehash}{fee441f5a8224161f0bcff864cb7cf50}
+      \strng{authornamehash}{fee441f5a8224161f0bcff864cb7cf50}
+      \strng{authorfullhash}{fee441f5a8224161f0bcff864cb7cf50}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://www.lazard.com/perspective/levelized-cost-of-energy-2017/}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Lazard's Levelized Cost of Energy Analysis}
+    \endentry
+    \entry{ember}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=fcb94b14624bcdf327d65d191cd85035}{%
+           family={{Ember}},
+           familyi={E\bibinitperiod}}}%
+      }
+      \strng{namehash}{fcb94b14624bcdf327d65d191cd85035}
+      \strng{fullhash}{fcb94b14624bcdf327d65d191cd85035}
+      \strng{bibnamehash}{fcb94b14624bcdf327d65d191cd85035}
+      \strng{authorbibnamehash}{fcb94b14624bcdf327d65d191cd85035}
+      \strng{authornamehash}{fcb94b14624bcdf327d65d191cd85035}
+      \strng{authorfullhash}{fcb94b14624bcdf327d65d191cd85035}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://ember-climate.org/data/carbon-price-viewer/}}
+      \field{note}{Accessed: 2021-12-14}
+      \field{title}{Daily Carbon Prices}
     \endentry
   \enddatalist
 \endrefsection

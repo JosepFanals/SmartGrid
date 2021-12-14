@@ -1,9 +1,9 @@
-This chapter considers upgrading the system by means of installing additional lines. In the previous analysis, it was visible that the disconnection of specific lines resulted in an unsolvable problem. Often, no solution was obtained as a result of an exceedingly high demand compared to the available generation. The criteria $N-1$ was therefore not met, yet it is usually treated as a requirement by control center operators \cite{wang2013risk, gourtani2016robust}. 
+This chapter considers upgrading the system by installing additional lines. In the previous analysis, it was visible that the disconnection of specific lines resulted in an unsolvable problem. Often, no solution was obtained as a result of an exceedingly high demand compared to the available generation. The criteria $N-1$ was therefore not met, yet it is usually treated as a requirement by control center operators \cite{wang2013risk, gourtani2016robust}. 
 
-The central aim of this chapter is reaching a robust grid, where a single failure does not compromise the full system. Several solutions were proposed, such as meshing the network, rising the voltage level, etc. This chapter is devoted to exploring the implications of such proposals. First, a more theoretical explanation describing the formulation is presented, and then, the analysis of results takes place. These results include electrical magnitudes as well as economic data. An optimal configuration is finally provided.
+The central aim of this chapter is to reach a robust grid, where a single failure does not compromise the full system. Several solutions were proposed, such as meshing the network, rising the voltage level, etc. This chapter is devoted to exploring the implications of such proposals. First, a more theoretical explanation describing the formulation is presented, and then, the analysis of results takes place. These results include electrical magnitudes as well as economic data. An optimal configuration is finally provided.
 
 \section{Addition of lines}
-Recall that the original system depicted in Figure \ref{fig:net1} was for the most part a radial system, in the sense that there was no redundancy in the connection of lines. The operating costs are non-negligible since a significant amount of energy cannot be delivered during faults. To combat this issue, the installation of various new lines (in red) is contemplated, as shown in Figure \ref{fig:net2}.
+Recall that the original system depicted in Figure \ref{fig:net1} was for the most part a radial system, in the sense that there was no redundancy in the connection of lines. The operating costs are non-negligible since a significant amount of energy cannot be delivered during faults. To combat this issue, the installation of various new lines (in red) is examined, as shown in Figure \ref{fig:net2}.
 
 
 \begin{figure}[!htb]\centering
@@ -199,7 +199,7 @@ Recall that the original system depicted in Figure \ref{fig:net1} was for the mo
 \end{figure}
 
 
-By installing new lines, an additional installation cost has to be considered, but a reduction on the operating costs is expected. It is worth worth mentioning that not all contemplated new lines ought to be installed. Rather, by adding one or two of them, the system could already be operating under the desired conditions. There is a cost-benefit tradeoff, so only a few specific new lines will be selected. 
+By installing new lines, an additional installation cost has to be considered, but a reduction on the operating costs is expected. It is worth mentioning that not all proposed new lines ought to be installed. Rather, by adding one or two of them, the system could already be operating under the desired conditions. There is a cost-benefit tradeoff, so only a few specific new lines will be selected. 
 
 \subsection{Formulation}
 The formulation of the topology deserves special attention. Mathematically, it is defined as:
@@ -215,7 +215,7 @@ Note that the whole set $\mathcal{P}$ can be further divided into the set compos
   \mathcal{B} = \{\mathbf{1}_{\sigma_{j+1}}, \mathbf{1}_{\sigma_{j+2}},..., \mathbf{1}_{\sigma_{n}}\}. \\
 \end{cases}
 \end{equation}
-To perform the contingency analysis, we consider that one of the original lines if faulted. For instance, if line $i$ ends up disconnected, $\sigma_i\gets$ \texttt{false} while the rest of original lines $\sigma_r\gets$ \texttt{true} for $r=\{1,2,...,i-1,i+1,...,j\}$.
+To perform the contingency analysis, we consider that one of the original lines suffers a fault. For instance, if line $i$ ends up disconnected, $\sigma_i\gets$ \texttt{false} while the rest of original lines $\sigma_r\gets$ \texttt{true} for $r=\{1,2,...,i-1,i+1,...,j\}$.
 
 On the other hand, in the subset $\mathcal{B}$ it is not straightforward to estimate which lines should be connected or disconnected. Perhaps installing a single additional line is enough to meet the $N-1$ criteria, or maybe more lines are required. Hence, it has been decided that all permutations have to be analyzed. Since $\sigma$ are boolean variables, the total number $k$ of contingencies to simulate are:
 \begin{equation}
@@ -223,7 +223,7 @@ On the other hand, in the subset $\mathcal{B}$ it is not straightforward to esti
 \end{equation}
 so if $j=6$ and $n-j=8$, this results in $k=1536$ different topologies. Thus, a total of $1536$ timeseries power flows are computed. 
 
-Security analysis in power systems has been traditionaly based on the usage of the DC power flow \cite{stott2009dc, capitanescu2011state}. It offers the advantage of being non-iterative (and consequently, fast), and allows to determine the influence of faults with the usage of transmission factors. However, its solution is just an approximation. Since the amount of situations remains reasonable, it has been decided to solve them with the typical Newton-Raphson up to the default precision of $1\cdot 10^{-8}$~MVA \cite{pandapower2018}. 
+Security analysis in power systems has been traditionaly based on the usage of the DC power flow \cite{stott2009dc, capitanescu2011state}. It offers the advantage of being non-iterative (and consequently, fast), and allows to determine the influence of faults with the usage of transmission factors. However, its solution is just an approximation. Since the amount of situations remains reasonable, it has been decided to solve them with the typical Newton-Raphson with the default precision of $1\cdot 10^{-8}$~MVA \cite{pandapower2018}. 
 
 The general procedure to perform the contingency analysis is shown in Algorithm \ref{alg:1}.
 
@@ -264,7 +264,7 @@ Out of all results extracted, an analysis procedure is required in order to dete
     \vspace{-0.5cm}
     \item The voltages have to be between a range of $\pm$10\%.
       \vspace{-0.5cm}
-    \item All lines have to remain below 80\% its maximum capacity.
+    \item All lines have to remain below 80\% of its maximum capacity.
 \end{itemize}
 Apart from these requirements, an additional criteria has to do with the costs. These will be critical when choosing the best configuration out of all possible ones. Table \ref{tab:net_cost} displays the costs for the lines, depending on their representative voltage level and the number of circuits.
 
@@ -279,7 +279,7 @@ Apart from these requirements, an additional criteria has to do with the costs. 
     220-225~kV, 1 circuits & 288289 & 157926 - 298247 & 218738 \\
     \hline
   \end{tabular}
-  \caption{Network infraestructure costs for the lines. Data from \cite{acer}.}
+  \caption{Network infrastructure costs for the lines. Data from \cite{acer}.}
   \label{tab:net_cost}
 \end{table}
 
@@ -309,7 +309,7 @@ Out of all results extracted, an analysis procedure is required in order to dete
   \caption{Best configurations with the additional lines}
   \label{tab:top10_1}
 \end{table}
-The results indicate that the differences in the infraestructure costs are rather minimal. However, installing only four additional lines tends to be the best option. Line 6-13 has been found necessary to ensure a proper operating state of the system under all near-optimal configurations. This makes sense considering that the interconnection usually provides most of the power. Hence, a strong connection to the network is convenient. In fact, the best topology includes two lines connecting the slack bus to the rest of the system are present. 
+The results indicate that the differences in the infrastructure costs are rather minimal. However, installing only four additional lines tends to be the best option. Line 6-13 has been found necessary to ensure a proper operating state of the system under all near-optimal configurations. This makes sense considering that the interconnection usually provides most of the power. Hence, a strong connection to the network is convenient. In fact, the best topology includes two lines connecting the slack bus to the rest of the system are present. 
 
 By ensuring that the $N-1$ criteria is met, we guarantee that all power will be provided independently of which element fails. In reality, this matter may be a bit more complex as two lines could fail simultaneously. Nevertheless, the associated cross-probability is extremely low, and hence, neglected. This implies that no operating costs have to be calculated; it is known beforehand that they will be null as all power is provided for the optimal configuration.
 
@@ -339,7 +339,7 @@ Regarding the costs, representative values in \texteuro/km are gathered in Table
     AIS with 1-4 bays & 33192 & 20276 - 48319 & 26628 \\
     \hline
   \end{tabular}
-  \caption{Network infraestructure costs for the substation. Data from \cite{acer}.}
+  \caption{Network infrastructure costs for the substation. Data from \cite{acer}.}
   \label{tab:sub_cost}
 \end{table}
 
@@ -349,7 +349,7 @@ Regarding the costs, representative values in \texteuro/km are gathered in Table
 
 
 \subsection{Results}
-The same amount of contingencies as before are computed. Out of the 1536, this time more permutations have become feasible (52 in total). Of course, raising the voltage has a positive effect in this regard, as previously hypothesized. In any case there is a trade-off situation: while the kilometers of new lines may decrease, there is an additional cost due to the new substations. It has to be assessed if the saving due to raising the voltage outweights the cost of installing new substations. Table \ref{tab:cost_trafos2} shows such results for the 10 cheapest options, where the cost of the substations are independent on the topology.
+The same amount of contingencies as before are computed. Out of the 1536, this time more permutations have become feasible (52 in total). Of course, raising the voltage has a positive effect in this regard, as previously hypothesized. In any case there is a trade-off situation: while the kilometers of new lines may decrease, there is an additional cost due to the new substations. It has to be assessed if the saving due to raising the voltage outweights the cost of installing new substations. Table \ref{tab:cost_trafos2} shows such results for the 10 cheapest options, where the cost of the substations are independent of the topology.
 
 \begin{table}[!htb]
     \centering

@@ -1,4 +1,4 @@
-This chapter covers the inclusion of renewables into the initial grid. It has been verified that the system, as it is configured in a beginning, lacks resiliency. One of its major issues is the presence of only two generation units placed far from the loads. This causes some lines to exceed their loading capacity, while voltages' absolute value may be well below 0.9 p.u.. Adding new lines is a possibility, or rather, a must in order to meet the $N-1$ criteria. However, it is hypothetized that the performance of the system can still improve with the installation of a wind farm and a PV power plant.
+This chapter covers the inclusion of renewables into the initial grid. It has been verified that the system, as it is configured in the beginning, lacks resiliency. One of its major issues is the presence of only two generation units placed far from the loads. This causes some lines to exceed their loading capacity, while voltages' absolute value may be well below 0.9 p.u.. Adding new lines is a possibility, or rather, a must in order to meet the $N-1$ criteria. However, it is hypothetized that the performance of the system can still improve with the installation of a wind farm and a PV power plant.
 
 To verify the above-presented hypothesis, the chapter first presents a general overview of the system, along with the sizing of the renewable power plants. Then, the optimal configuration found in the previous chapter is analyzed with the inclusion of renewables to verify the improvement. Finally, a contingency analysis takes place to assess the $N-1$ criteria. 
 
@@ -233,8 +233,8 @@ The optimal configuration with no renewables, as shown in Table \ref{tab:top10_1
 
 
 
-\section{Renewable's integration}
-In this project, the integration of renewables takes place in the form of solar and wind. The characteristics of each one are particularly detailed. The goal is to characterize their hourly variation of power in relation to the availability of the natural resources. Despite the parcial unpredictability that renewables suffer, a representative day in terms of solar irradiance and wind speed has been selected. 
+\section{Renewable integration}
+In this project, the integration of renewables takes place in the form of solar and wind. The characteristics of each one are particularly detailed. The goal is to characterize their hourly variation of power in relation to the availability of the natural resources. Despite the partial unpredictability that renewables suffer, a representative day in terms of solar irradiance and wind speed has been selected. 
 
 \subsection{Solar PV}
 First, the PV panels cover an area of 60~ha. This, and some other relevant information is captured in Table \ref{tab:pv}. 
@@ -260,7 +260,7 @@ First, the PV panels cover an area of 60~ha. This, and some other relevant infor
   \caption{Technical characteristics of the PV plant with its panels 405W Deep Blue 3.0 JA Solar Mono \cite{autosolar}}
   \label{tab:pv}
 \end{table}
-The location has a certain importance to determine the incident irradiation, which is extracted from PVGIS' database \cite{pvgis}. In reality, the of the solar power plant would be located in Tortosa, Catalunya, Spain, according to the given coordinates. The chosen PV panels are of monocrystalline type. Monocrystalline cells generally offer larger efficiencies than polycrystalline cells \cite{kumar2015comparative}, and although they become more expensive, no cost limitations have been set. 
+The location has a certain importance to determine the incident irradiation, which is extracted from PVGIS database \cite{pvgis}. In reality, the solar power plant would be located in Tortosa, Catalunya, Spain, according to the given coordinates. The chosen PV panels are of monocrystalline type. Monocrystalline cells generally offer larger efficiencies than polycrystalline cells \cite{kumar2015comparative}, and although they become more expensive, no cost limitations have been set. 
 
 Let $n_p$ denote the total number of panels, $G$ the irradiance, $\eta$ the efficiency and $S_p$ the area of a single panel. Then, the total generated power follows:
  \begin{equation}
@@ -358,7 +358,7 @@ The results suggest that generally speaking there is little difference in instal
 
 Adding renewables to the system comes at a cost. First, there has to be an investment of capital for deploying the wind turbines and the PV panels, apart from power electronics equipment and ancilliary components. Then, a couple of new power lines are added to interconnect them to the system. The slight improvement on the electrical magnitudes will most probably fail at justifying this investment. 
 
-However, it is important to note that the major advantage of installing renewables is in its environmental impact. If the power from the interconnection is assumed to come from coal and gas power plants, then installing renewables could become a sensible option. This is specially true when taking into account the actual costs of carbon emissions. Currently at 81.65~\texteuro/tonne, they have increased by a factor of 3 during the last year \cite{carbon}. 
+However, it is important to note that the major advantage of installing renewables is in its environmental impact. If the power from the interconnection is assumed to come from coal and gas power plants, then installing renewables could become a sensible option. This is especially true when taking into account the actual costs of carbon emissions. Currently at 81.65~\texteuro/tonne, they have increased by a factor of 3 during the last year \cite{carbon}. 
 
 
 
