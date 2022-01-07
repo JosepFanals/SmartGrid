@@ -203,6 +203,7 @@ The first step to analyze the system is to know the demand and the generation pr
 %     \label{tab:volt1}
 % \end{table}
 
+Running this primary system, we obtain information of interest. First, Table \ref{tab:volt1} gathers the per unit voltage for each hour of the normalized day, for each bus while Figure \ref{fig:vpu_ph1} illustrates it. Voltage fluctuations are to be avoided in order to maintain power quality. It is generally accepted that the voltage fluctuates 10\% around the nominal per unit voltage \cite{tsili2009review}, i.e. from 0.9 p.u. to 1.1 p.u.. None of the bus faces an excessive increase in voltage but bus 2, 5 and 12 do drop under the limit. Bus 1 and bus 6 are constant because they directly come from the power plant or the interconnection, they are setting the voltage. It is also visible that the voltage drops more the further the bus is from generation units. 
 
 \begin{table}[!htb]\footnotesize
     \centering
@@ -262,6 +263,8 @@ The first step to analyze the system is to know the demand and the generation pr
     \label{fig:vpu_ph1}
   \end{figure}
 
+
+  Secondly, the loading of the different lines is gathered in Table \ref{tab:loadx} and illustrated in Figure \ref{fig:lines_ph1}. The data show the percentage of the used capacity of the line. It is considered overloaded when the load exceeds 80\% of the line capacity. Here, only the line 6-11, coming from the interconnection, is overloaded. The 3 lines least loaded are the double lines. Finally, it is interesting to notice that Figures \ref{fig:vpu_ph1} and \ref{fig:lines_ph1} work as mirrors. When the load decreases, the voltage increases and vice versa.
 
 
 
@@ -332,6 +335,7 @@ The first step to analyze the system is to know the demand and the generation pr
 \hline
     \end{tabular}
     \caption{Percentual loading of the lines for a full day operation}
+    \label{tab:loadx}
 \end{table}
 
 

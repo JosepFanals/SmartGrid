@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  14 DEC 2021 19:55
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  7 JAN 2022 22:50
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1599,30 +1599,30 @@ Chapter 1.
 
 ]) [3]
 Chapter 2.
-(./Chapters/Phase1.tex
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 209.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 209.
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-PGFPlots: reading {Data/phase1/ph1_line.csv}
-PGFPlots: reading {Data/phase1/ph1_line.csv}
-PGFPlots: reading {Data/phase1/ph1_line.csv}
-PGFPlots: reading {Data/phase1/ph1_line.csv}
-PGFPlots: reading {Data/phase1/ph1_line.csv}
- [4
+(./Chapters/Phase1.tex [4
 
-] [5
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 210.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 210.
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+PGFPlots: reading {Data/phase1/ph1_line.csv}
+PGFPlots: reading {Data/phase1/ph1_line.csv}
+PGFPlots: reading {Data/phase1/ph1_line.csv}
+PGFPlots: reading {Data/phase1/ph1_line.csv}
+PGFPlots: reading {Data/phase1/ph1_line.csv}
+ [5
 Missing character: There is no . (U+002E) in font nullfont!
 Missing character: There is no 0 (U+0030) in font nullfont!
 Missing character: There is no 1 (U+0031) in font nullfont!
@@ -1797,19 +1797,19 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 79423 strings out of 478531
- 1820100,3417909 words of node,token memory allocated
+ 79428 strings out of 478531
+ 1820119,3417909 words of node,token memory allocated
  1734 words of node memory still in use:
    30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 145 attribute, 88 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 14 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:24,2:34552,3:9204,4:32809,5:32814,6:148,7:48611,8:184,9:82373,10:58,11:3156
- 95923 multiletter control sequences out of 65536+600000
+   avail lists: 1:23,2:29576,3:9206,4:32808,5:32814,6:150,7:48613,8:185,9:82373,10:58,11:3156
+ 95927 multiletter control sequences out of 65536+600000
  80 fonts using 7147863 bytes
  112i,19n,117p,1734b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (45 pages, 503581 bytes).
+Output written on Main.pdf (45 pages, 505634 bytes).
 
-PDF statistics: 1780 PDF objects out of 2073 (max. 8388607)
- 1633 compressed objects within 17 object streams
- 1130 named destinations out of 1200 (max. 131072)
+PDF statistics: 1789 PDF objects out of 2073 (max. 8388607)
+ 1642 compressed objects within 17 object streams
+ 1131 named destinations out of 1200 (max. 131072)
  464 words of extra memory for PDF output out of 10000 (max. 100000000)
 
