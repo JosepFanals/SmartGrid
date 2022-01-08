@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  8 JAN 2022 16:06
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  8 JAN 2022 16:08
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1874,14 +1874,14 @@ Chapter 9.
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
  [36
 
-] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49]) [50] [51
+] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49] [50]) [51] [52
 
-] [52]
+] [53]
 Overfull \hbox (16.07753pt too wide) in paragraph at lines 80--80
 \TU/lmr/m/n/10 Novotny, and G. Skau-gen, “  Techno-economic com-par-i-son of three tech-nolo-gies for pre-combustion
  []
 
-[53] (./Main.aux)
+[54] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
 (rerunfilecheck)             Checksum: 54BA288FD40DB5027003162EEACB1E80;3604.
 Package logreq Info: Writing requests to 'Main.run.xml'.
@@ -1890,19 +1890,19 @@ Package logreq Info: Writing requests to 'Main.run.xml'.
 )
 
 Here is how much of LuaTeX's memory you used:
- 79773 strings out of 478531
+ 79728 strings out of 478531
  1820112,3417909 words of node,token memory allocated
  1734 words of node memory still in use:
    30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 145 attribute, 88 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 14 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:18,2:29578,3:9207,4:32808,5:32814,6:150,7:48614,8:185,9:82373,10:58,11:3156
- 96135 multiletter control sequences out of 65536+600000
+   avail lists: 1:18,2:29578,3:9207,4:32938,5:32927,6:150,7:48759,8:185,9:82698,10:58,11:3169
+ 96072 multiletter control sequences out of 65536+600000
  80 fonts using 7147863 bytes
  112i,19n,117p,1734b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (55 pages, 1173205 bytes).
+Output written on Main.pdf (56 pages, 1175577 bytes).
 
-PDF statistics: 1897 PDF objects out of 2073 (max. 8388607)
- 1727 compressed objects within 18 object streams
- 1160 named destinations out of 1200 (max. 131072)
+PDF statistics: 1918 PDF objects out of 2073 (max. 8388607)
+ 1747 compressed objects within 18 object streams
+ 1178 named destinations out of 1200 (max. 131072)
  504 words of extra memory for PDF output out of 10000 (max. 100000000)
 
