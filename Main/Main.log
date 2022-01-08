@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  7 JAN 2022 22:50
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  8 JAN 2022 00:11
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1406,6 +1406,15 @@ Package: relsize 2013/03/29 ver 4.1
 \c@algocf=\count477
 \algocf@algoframe=\box113
 \algocf@algobox=\box114
+) (/usr/share/texmf-dist/tex/latex/tools/tabularx.sty
+Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
+\TX@col@width=\dimen355
+\TX@old@table=\dimen356
+\TX@old@col=\dimen357
+\TX@target=\dimen358
+\TX@delta=\dimen359
+\TX@cols=\count478
+\TX@ftn=\toks48
 ))
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
@@ -1475,17 +1484,17 @@ LaTeX Font Info:    ... okay on input line 7.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count478
-\scratchdimen=\dimen355
+\scratchcounter=\count479
+\scratchdimen=\dimen360
 \scratchbox=\box115
-\nofMPsegments=\count479
-\nofMParguments=\count480
-\everyMPshowfont=\toks48
-\MPscratchCnt=\count481
-\MPscratchDim=\dimen356
-\MPnumerator=\count482
-\makeMPintoPDFobject=\count483
-\everyMPtoPDFconversion=\toks49
+\nofMPsegments=\count480
+\nofMParguments=\count481
+\everyMPshowfont=\toks49
+\MPscratchCnt=\count482
+\MPscratchDim=\dimen361
+\MPnumerator=\count483
+\makeMPintoPDFobject=\count484
+\everyMPtoPDFconversion=\toks50
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
@@ -1504,7 +1513,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count484
+\c@section@level=\count485
 )
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
@@ -1520,7 +1529,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 )
-\c@lstlisting=\count485
+\c@lstlisting=\count486
 
 Package pgfplots notification 'compat/show suggested version=true': you might benefit from \pgfplotsset{compat=1.17} (current compat level: 1.16).
 
@@ -1548,7 +1557,7 @@ Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
 Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
-<Data/Logo.png, id=147, 640.3925pt x 170.6375pt>
+<Data/Logo.png, id=179, 640.3925pt x 170.6375pt>
 File: Data/Logo.png Graphic file (type png)
 <use Data/Logo.png>
 Package luatex.def Info: Data/Logo.png  used on input line 39.
@@ -1777,39 +1786,117 @@ Missing character: There is no p (U+0070) in font nullfont!
 Missing character: There is no t (U+0074) in font nullfont!
 ] [25]) [26]
 Chapter 6.
+(./Chapters/SGAM.tex [27
+
+]
+<Data/components.png, id=575, 495.35063pt x 502.12593pt>
+File: Data/components.png Graphic file (type png)
+<use Data/components.png>
+Package luatex.def Info: Data/components.png  used on input line 65.
+(luatex.def)             Requested size: 270.30118pt x 273.99416pt.
+<Data/legends.png, id=576, 255.20343pt x 548.0475pt>
+File: Data/legends.png Graphic file (type png)
+<use Data/legends.png>
+Package luatex.def Info: Data/legends.png  used on input line 67.
+(luatex.def)             Requested size: 125.19194pt x 268.85503pt.
+ [28<./Data/components.png><./Data/legends.png>]
+<Data/business.png, id=587, 491.58656pt x 502.87875pt>
+File: Data/business.png Graphic file (type png)
+<use Data/business.png>
+Package luatex.def Info: Data/business.png  used on input line 76.
+(luatex.def)             Requested size: 227.62204pt x 232.85402pt.
+<Data/function.png, id=588, 489.32813pt x 490.83376pt>
+File: Data/function.png Graphic file (type png)
+<use Data/function.png>
+Package luatex.def Info: Data/function.png  used on input line 83.
+(luatex.def)             Requested size: 227.62204pt x 228.32521pt.
+ [29<./Data/business.png><./Data/function.png>]
+<Data/i1.png, id=597, 517.935pt x 560.0925pt>
+File: Data/i1.png Graphic file (type png)
+<use Data/i1.png>
+Package luatex.def Info: Data/i1.png  used on input line 94.
+(luatex.def)             Requested size: 256.0748pt x 276.92615pt.
+<Data/c1.png, id=598, 497.60907pt x 524.71031pt>
+File: Data/c1.png Graphic file (type png)
+<use Data/c1.png>
+Package luatex.def Info: Data/c1.png  used on input line 101.
+(luatex.def)             Requested size: 256.0748pt x 270.02466pt.
+<Data/i2.png, id=599, 494.59781pt x 502.12593pt>
+File: Data/i2.png Graphic file (type png)
+<use Data/i2.png>
+Package luatex.def Info: Data/i2.png  used on input line 115.
+(luatex.def)             Requested size: 256.0748pt x 259.97304pt.
+ [30<./Data/i1.png><./Data/c1.png>]
+<Data/c2.png, id=608, 490.83376pt x 499.8675pt>
+File: Data/c2.png Graphic file (type png)
+<use Data/c2.png>
+Package luatex.def Info: Data/c2.png  used on input line 122.
+(luatex.def)             Requested size: 256.0748pt x 260.79448pt.
+ [31<./Data/i2.png><./Data/c2.png>]
+<Data/i3.png, id=615, 509.65407pt x 502.87875pt>
+File: Data/i3.png Graphic file (type png)
+<use Data/i3.png>
+Package luatex.def Info: Data/i3.png  used on input line 135.
+(luatex.def)             Requested size: 256.0748pt x 252.68182pt.
+<Data/c3.png, id=616, 496.85625pt x 500.62032pt>
+File: Data/c3.png Graphic file (type png)
+<use Data/c3.png>
+Package luatex.def Info: Data/c3.png  used on input line 142.
+(luatex.def)             Requested size: 256.0748pt x 258.01714pt.
+ [32
+
+<./Data/i3.png><./Data/c3.png>]
+<Data/i4.png, id=623, 492.33937pt x 519.44063pt>
+File: Data/i4.png Graphic file (type png)
+<use Data/i4.png>
+Package luatex.def Info: Data/i4.png  used on input line 156.
+(luatex.def)             Requested size: 270.30118pt x 285.1939pt.
+<Data/c4.png, id=624, 491.58656pt x 496.85625pt>
+File: Data/c4.png Graphic file (type png)
+<use Data/c4.png>
+Package luatex.def Info: Data/c4.png  used on input line 163.
+(luatex.def)             Requested size: 270.30118pt x 273.21112pt.
+) [33
+
+<./Data/i4.png><./Data/c4.png>]
+Chapter 7.
+(./Chapters/Conclusions.tex) [34
+
+]
+Chapter 8.
 (./Chapters/Code.tex
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on input line 1.
- [27
+ [35
 
-] [28] [29] [30] [31] [32] [33] [34] [35] [36] [37] [38] [39] [40]) [41] [42
+] [36] [37] [38] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48]) [49] [50
 
-] [43]
-Overfull \hbox (16.07753pt too wide) in paragraph at lines 69--69
+] [51]
+Overfull \hbox (16.07753pt too wide) in paragraph at lines 74--74
 \TU/lmr/m/n/10 Novotny, and G. Skau-gen, “  Techno-economic com-par-i-son of three tech-nolo-gies for pre-combustion
  []
 
-[44] (./Main.aux)
+[52] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: F374CBEC8CC0E0868AD0105703C778D1;3091.
+(rerunfilecheck)             Checksum: 2A3F3589640EA4E81FEA38F0D1747C53;4585.
 Package logreq Info: Writing requests to 'Main.run.xml'.
 
 \openout1 = Main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 79428 strings out of 478531
- 1820119,3417909 words of node,token memory allocated
+ 79681 strings out of 478531
+ 1820120,3417909 words of node,token memory allocated
  1734 words of node memory still in use:
    30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 145 attribute, 88 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 14 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:23,2:29576,3:9206,4:32808,5:32814,6:150,7:48613,8:185,9:82373,10:58,11:3156
- 95927 multiletter control sequences out of 65536+600000
+   avail lists: 1:23,2:29577,3:9204,4:32808,5:32815,6:150,7:48613,8:185,9:82373,10:58,11:3156
+ 96051 multiletter control sequences out of 65536+600000
  80 fonts using 7147863 bytes
  112i,19n,117p,1734b,2476s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (45 pages, 505634 bytes).
+Output written on Main.pdf (53 pages, 1165636 bytes).
 
-PDF statistics: 1789 PDF objects out of 2073 (max. 8388607)
- 1642 compressed objects within 17 object streams
- 1131 named destinations out of 1200 (max. 131072)
- 464 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1901 PDF objects out of 2073 (max. 8388607)
+ 1733 compressed objects within 18 object streams
+ 1161 named destinations out of 1200 (max. 131072)
+ 528 words of extra memory for PDF output out of 10000 (max. 100000000)
 

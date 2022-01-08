@@ -1343,6 +1343,65 @@
       \field{note}{Accessed: 2021-12-14}
       \field{title}{Daily Carbon Prices}
     \endentry
+    \entry{melendez2019resolvd}{article}{}
+      \name{author}{8}{}{%
+        {{hash=84406594c338271429133c36080cb0a9}{%
+           family={Melendez\bibnamedelima Frigola},
+           familyi={M\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Joaquim},
+           giveni={J\bibinitperiod}}}%
+        {{hash=fe32220ccb421205450b8f2517f17af0}{%
+           family={Kokos},
+           familyi={K\bibinitperiod},
+           given={Isidoros},
+           giveni={I\bibinitperiod}}}%
+        {{hash=5d019b8aad73628ce0fb53d4af4fca3b}{%
+           family={Tuiskula},
+           familyi={T\bibinitperiod},
+           given={Heidi},
+           giveni={H\bibinitperiod}}}%
+        {{hash=c4be2dce72d29f088e9684da9ef0ec53}{%
+           family={Marksteiner},
+           familyi={M\bibinitperiod},
+           given={Stefan},
+           giveni={S\bibinitperiod}}}%
+        {{hash=27668fba48288480c6d71aeeb129dc51}{%
+           family={Sumper},
+           familyi={S\bibinitperiod},
+           given={Andreas},
+           giveni={A\bibinitperiod}}}%
+        {{hash=eec1fa66e9f348f94cdb7e0e2e00fbdd}{%
+           family={Gallart},
+           familyi={G\bibinitperiod},
+           given={Ramon},
+           giveni={R\bibinitperiod}}}%
+        {{hash=917979795522e8f637a3a20fcdfad5b3}{%
+           family={Smolnikar},
+           familyi={S\bibinitperiod},
+           given={Miha},
+           giveni={M\bibinitperiod}}}%
+        {{hash=dafd7d28e47d0ad126c85a4595001fcb}{%
+           family={Torrent\bibnamedelima Fontbona},
+           familyi={T\bibinitperiod\bibinitdelim F\bibinitperiod},
+           given={Ferran},
+           giveni={F\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {AIM}%
+      }
+      \strng{namehash}{4f44a501b1e7946c9b05ac577733b608}
+      \strng{fullhash}{77bd9825ce40f0e56cc89eb6a3fdcf0e}
+      \strng{bibnamehash}{77bd9825ce40f0e56cc89eb6a3fdcf0e}
+      \strng{authorbibnamehash}{77bd9825ce40f0e56cc89eb6a3fdcf0e}
+      \strng{authornamehash}{4f44a501b1e7946c9b05ac577733b608}
+      \strng{authorfullhash}{77bd9825ce40f0e56cc89eb6a3fdcf0e}
+      \field{sortinit}{4}
+      \field{sortinithash}{9381316451d1b9788675a07e972a12a7}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{RESOLVD-Renewable penetration levered by efficient Low Voltage Distribution grids. Specifications and use case analysis.}
+      \field{year}{2019}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput

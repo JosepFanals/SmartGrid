@@ -49,6 +49,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Contingency analysis}{26}{section.5.4}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Code}{27}{chapter.6}%
+\contentsline {chapter}{\numberline {6}SGAM}{27}{chapter.6}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{42}{chapter*.29}%
+\contentsline {section}{\numberline {6.1}Scope and objectives}{27}{section.6.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {section}{\numberline {6.2}Mapping}{28}{section.6.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.1}PUC 01: Demand and generation forecasting}{30}{subsection.6.2.1}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.2}PUC 02: Grid Operation Scheduling}{31}{subsection.6.2.2}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.3}PUC 03: Grid ovservability and monitoring}{32}{subsection.6.2.3}%
+\defcounter {refsection}{0}\relax 
+\contentsline {subsection}{\numberline {6.2.4}PUC 04: Fault detection and localization}{33}{subsection.6.2.4}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {7}Conclusions}{34}{chapter.7}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{\numberline {8}Code}{35}{chapter.8}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{50}{chapter*.42}%
