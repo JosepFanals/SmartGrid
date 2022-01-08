@@ -293,7 +293,7 @@ Since the daily demand profile amongst consecutive days do not experience signif
 
 \section{Dismantled plant}
 % mainly discuss carbon emissions of gas, coal... some equations and numbers to estimate, some references, some itemize
-Another possibility to consider in order to reduce the dependence on the interconnection consists of employing the once dismantled power plant placed in bus 7 as indicated in Figure \ref{fig:netstorage}. The hypothesis is that this dismantled plant is powered by some kind of fossil fuel (coal, diesel, gas, etc.) or renewable source such as biomass. Thus, even if it could have a positive impact on the electrical magnitudes, its associated environmental impact has to be kept in check. 
+Another possibility to consider in order to reduce the dependence on the interconnection consists of employing the once dismantled power plant placed in bus 7 as indicated in Figure \ref{fig:netstorage}. The hypothesis is that this dismantled plant (now rehabilitated) is powered by some kind of fossil fuel (coal, diesel, gas, etc.) or renewable source such as biomass. Thus, even if it could have a positive impact on the electrical magnitudes, its associated environmental impact has to be kept in check. 
 
 We start by exploring the diverse energy sources that could power it to extract conclusions regarding costs, emissions, and geopolitical aspects:
 \begin{itemize}
@@ -304,7 +304,7 @@ We start by exploring the diverse energy sources that could power it to extract 
 \end{itemize}
 When it comes to the implementation of the program, it makes no difference to consider one technology or another, as only the output power is relevant. However, this chapter also focuses on the emissions. Therefore, the results section analyzes the results for coal, diesel and natural gas.
 
-The chosen power generation profile for the dismantled plant is depicted in Figure \ref{fig:dism}. Compared to storage or the demand, here the peaks are more exaggerated. The underlying idea is that the system is more in need of generation during peak hours. And if demand increases, generation should increase by a larger factor to keep the losses and loadings of the lines at satisfactory values. A peak power of 50~MW has been considered, which corresponds to the most critical hour of the day. The plant is supposed to stop operating at night, and its voltage is maintained at 1.02~p.u. since it acts as a PV node.
+The chosen power generation profile for the rehabilitated plant is depicted in Figure \ref{fig:dism}. Compared to storage or the demand, here the peaks are more exaggerated. The underlying idea is that the system is more in need of generation during peak hours. And if demand increases, generation should increase by a larger factor to keep the losses and loadings of the lines at satisfactory values. A peak power of 50~MW has been considered, which corresponds to the most critical hour of the day. The plant is supposed to stop operating at night, and its voltage is maintained at 1.02~p.u. since it acts as a PV node.
 
 
 
@@ -314,11 +314,11 @@ The chosen power generation profile for the dismantled plant is depicted in Figu
         \addplot[color=black] table[col sep=comma, x=x, y=y] {Data/phase4/dism.csv};
 \end{axis}
 \end{tikzpicture}
-\caption{Daily generation profile of the dismantled plant}
+\caption{Daily generation profile of the rehabilitated plant}
     \label{fig:dism}
   \end{figure}
 
-With storage and the generation of the dismantled plant defined, the simulation can be ran again. The next sections explore the results and draw conclusions from them.
+With the storage and the generation of the rehabilitated plant defined, the simulation can be ran again. The next sections explore the results and draw conclusions from them.
 
 
 \section{Base case results}
@@ -338,17 +338,15 @@ The base case considers the grid as shown in Figure \ref{fig:netstorage}, with t
     Correct operation? & Yes & Yes & Yes \\
     \hline
   \end{tabular}
-  \caption{Main results to compare between the grid without renewables, with renewables, and with storage and the dismantled plant}
+  \caption{Main results to compare between the grid without renewables, with renewables, and with storage and the rehabilitated plant}
   \label{tab:compare2}
 \end{table}
-The results tend to be the ones we could already expect. The minimum voltage rises a bit thanks to the inclusion of more generation sources, which control the voltages at their respective buses and hence ensure the operation around nominal voltages. Similarly, the loadings of the lines are reduced a bit, being the most loaded line at only 39.63\%. There could be reasons to think that the system is oversized, because lines do not approach their limits of 80\%. While these claims would be full of validity, faults have to be taken into account as well. Redundant connections are a must if the criteria $N-1$ has to be met. 
+The results tend to be the ones we could have expected. The minimum voltage rises a bit thanks to the inclusion of more generation sources, which control the voltages at their respective buses and hence ensure the operation around nominal voltages. Similarly, the loadings of the lines are reduced a bit, being the most loaded line at only 39.63\%. There could be reasons to think that the system is oversized, because lines do not approach their limits of 80\%. While these claims would be full of validity, faults have to be taken into account as well. Redundant connections are a must if the criteria $N-1$ has to be met. 
 
-The maximum losses are again reduced. A clear pattern can be spotted from comparing the results in the three phases. Going from phase 2 to phase 4, results improve each time the grid becomes stronger and more decentralized. These are in essence some of the core characteristics of smart grids. Another central goal of smart grids has to do with decarbonizing the system, which is described below. 
+The maximum losses are again reduced. When the results from the three phases are compared, a clear pattern emerges. Going from phase 2 to phase 4, results improve each time the grid becomes stronger and more decentralized. These are in essence some of the core characteristics of smart grids. Another central goal of smart grids has to do with decarbonizing the system, which is described below. 
 % expected emissions here, not in contingencies
 
-Regarding emissions, it is known beforehand that storage, renewables and nuclear do not emit CO$_2$ gases or equivalent during their operation. The only generation sources to account for emissions are the interconnection and the dismantled plant. In this base case, the dismantled plant produced 332~MWh, whereas the interconnection provided 4686~MWh. The interconnection can be assumed to have an emission factor of 190~kg CO$_2$-eq/MWh as in the case of Spain \cite{ree_co2, spork2015increasing}.
-
-With this, the total emissions for a full-day operation are gathered in Table \ref{tab:emit} depending on the technology of the dismantled power plant. 
+Regarding emissions, it is known beforehand that storage, renewables and nuclear do not emit CO$_2$ gases or equivalent during their operation. The only generation sources to account for emissions are the interconnection and the dismantled plant. In this base case, the dismantled plant produced 332~MWh, whereas the interconnection provided 4686~MWh. The interconnection can be assumed to have an emission factor of 190~kg CO$_2$-eq/MWh, which is the average for Spain \cite{ree_co2, spork2015increasing}. With this, the total emissions for a full-day operation are gathered in Table \ref{tab:emit} depending on the technology of the dismantled power plant. 
 
 \begin{table}[!htb]\centering
   \begin{tabular}{lrrr}
@@ -371,7 +369,7 @@ Finally, an economic comparison can be performed according to the related costs 
 
 \section{Contingency analysis}
 % similar as before, top 10
-Just as in previous phases, a contingency analysis is performed to verify if new lines are required, and if so, which ones should be. The marked red lines shown in Figure \ref{fig:netstorage} are the potentially added lines, while the black ones are the alreay established ones. Table \ref{tab:top10_stor} presents the top 10 best configurations under faults. 
+Just as in previous phases, a contingency analysis is performed to verify if new lines are required, and if so, which ones should be. The marked red lines shown in Figure \ref{fig:netstorage} are the potentially added lines, while the black ones are the already established ones. Table \ref{tab:top10_stor} presents the top 10 best configurations under faults. 
 
 \begin{table}[!htb]\centering
   \begin{tabular}{ccc}
@@ -400,10 +398,10 @@ Just as in previous phases, a contingency analysis is performed to verify if new
     63 & [8-9, 10-12, 8-12] & 541.59 \\
     \hline
   \end{tabular}
-  \caption{Best configurations with the additional lines with storage and a dismantled plant}
+  \caption{Best configurations with the additional lines with storage and a rehabilitated plant}
   \label{tab:top10_stor}
 \end{table}
-The results indicate that, contrary to previous configurations, installing only the additional line from buses 8 to 9 is enough to meet the $N-1$ criteria. This is certainly a positive result, because in all other cases, at least two lines had to be added. Notice, however, that most configurations are the same as in Table \ref{tab:top10_rene}. This makes sense since the topology is basically identical, with just minor variations due to the added storage and the dismantled plant.
+The results indicate that, contrary to previous configurations, installing only the additional line from buses 8 to 9 is enough to meet the $N-1$ criteria. This is certainly a positive result, because in all other cases, at least two lines had to be added. Notice, however, that most configurations are the same as in Table \ref{tab:top10_rene}. This makes sense since the topology is basically identical, with just minor variations due to the added storage and the rehabilitated plant.
 
 The total installation cost increases a bit respect to the case where only renewables were added. Of course, new lines have been included to connect the storage unit to the system. Yet, the conclusion has not changed. Moving towards a smart grid, which includes a larger penetration of renewables, batteries, and other elements, supposes a large investment cost. The question is if this invesment ends up being worth it. Multiple reasons could be added into the equation, but what is for sure is that there is a climate emergency to combat. 
 
