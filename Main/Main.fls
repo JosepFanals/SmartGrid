@@ -831,6 +831,8 @@ INPUT ./Data/c4.png
 INPUT ./Data/c4.png
 INPUT ./Chapters/Conclusions.tex
 INPUT ./Chapters/Conclusions.tex
+INPUT ./Chapters/Biography.tex
+INPUT ./Chapters/Biography.tex
 INPUT ./Chapters/Code.tex
 INPUT ./Chapters/Code.tex
 INPUT /home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc

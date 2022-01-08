@@ -1,11 +1,11 @@
 # Fdb version 3
-["biber Main"] 1641599642 "Main.bcf" "Main.bbl" "Main" 1641600709
-  "Main.bcf" 1641600708 109361 083544c5627dfa86c47690bcc0b52504 "lualatex"
+["biber Main"] 1641599642 "Main.bcf" "Main.bbl" "Main" 1641601235
+  "Main.bcf" 1641601235 109361 083544c5627dfa86c47690bcc0b52504 "lualatex"
   "bib.bib" 1641596501 23362 a48a2aafa455bd51b35d02074e3cc845 ""
   (generated)
-  "Main.bbl"
   "Main.blg"
-["lualatex"] 1641600698 "Main.tex" "Main.pdf" "Main" 1641600709
+  "Main.bbl"
+["lualatex"] 1641601225 "Main.tex" "Main.pdf" "Main" 1641601235
   "/etc/texmf/tex/generic/config/language.dat" 1617738065 6482 7c24d55d2d2ecbcf1688a8f5ff2afb78 ""
   "/home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono10-regular.luc" 1635279088 77653 b9a4e9d8f24cded963f0660d431f9f01 ""
   "/home/josep/.texlive/texmf-var/luatex-cache/generic/fonts/otl/lmmono8-regular.luc" 1635279088 77260 8963ffe1577ad4b56d2749b72844cb8e ""
@@ -445,6 +445,7 @@
   "/usr/share/texmf-dist/tex/luatex/luaotfload/luaotfload.lua" 1617738065 13788 c3df7754a82557bc3e50d0714ad8a67c ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1638952822 5173226 0404cc9a00088c27e60c9396b8eb58ed ""
   "/var/lib/texmf/web2c/luahbtex/lualatex.fmt" 1638952800 3314096 d445e305de161816e6ee2afcc661dcb0 ""
+  "Chapters/Biography.tex" 1641601225 595 8a996779a21e56a9748fb063abde068e ""
   "Chapters/Code.tex" 1639511692 34758 b634e0c96d7d1d08b32ae07bcdf50c3d ""
   "Chapters/Conclusions.tex" 1641596201 0 d41d8cd98f00b204e9800998ecf8427e ""
   "Chapters/Introduction.tex" 1639511560 5766 8af762fdbf54b7c2b50e6c2c29343fb5 ""
@@ -475,18 +476,18 @@
   "Data/phase4/battery.csv" 1639329950 483 cfb6097c0ec8ac5c27f4011ddbaae824 ""
   "Data/phase4/dism.csv" 1639329950 349 46ba53f1793dcf661eaf0026d6de306e ""
   "Data/phase4/horiz.csv" 1639329950 115 a6de3b3d20637f4677ec0d96e2ed8cc7 ""
-  "Main.aux" 1641600708 33166 16ac1768a4b2230622f32e854b7b9b32 "lualatex"
+  "Main.aux" 1641601235 33597 e02fb1bc0533aa783994a7d1ae165792 "lualatex"
   "Main.bbl" 1641599643 58778 89aa050bb8331eb1e2bde70545b203f9 "biber Main"
-  "Main.out" 1641600708 4585 2a3f3589640ea4e81fea38f0d1747c53 "lualatex"
-  "Main.run.xml" 1641600708 2430 28e010c9c360f1fb1a6e45a8614850f2 "lualatex"
-  "Main.tex" 1641596538 1264 0130e81a187c88638f9c3270e68a94d0 ""
-  "Main.toc" 1641600708 3962 339fcfbca9050e4f77e41dd23f933a97 "lualatex"
+  "Main.out" 1641601235 4684 1353046f7a7f4236300e53fee22fc550 "lualatex"
+  "Main.run.xml" 1641601235 2430 28e010c9c360f1fb1a6e45a8614850f2 "lualatex"
+  "Main.tex" 1641600854 1318 9e1692c8e13b08df8f9b8310aa417e79 ""
+  "Main.toc" 1641601235 4065 aab5d1f0fb1bc7f6115144f3a4f1988a "lualatex"
   "preamble.sty" 1641596681 4776 ea26b5a289eb4791c86d735e83d7db2f ""
   (generated)
-  "Main.pdf"
-  "Main.toc"
-  "Main.aux"
-  "Main.log"
-  "Main.bcf"
-  "Main.out"
   "Main.run.xml"
+  "Main.out"
+  "Main.pdf"
+  "Main.log"
+  "Main.aux"
+  "Main.toc"
+  "Main.bcf"

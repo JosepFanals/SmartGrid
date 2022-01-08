@@ -65,6 +65,8 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{34}{chapter.7}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {8}Code}{35}{chapter.8}%
+\contentsline {chapter}{\numberline {8}Biographies}{35}{chapter.8}%
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{50}{chapter*.42}%
+\contentsline {chapter}{\numberline {9}Code}{36}{chapter.9}%
+\defcounter {refsection}{0}\relax 
+\contentsline {chapter}{Bibliography}{51}{chapter*.42}%
