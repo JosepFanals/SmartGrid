@@ -1,4 +1,4 @@
-This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  8 JAN 2022 00:20
+This is LuaHBTeX, Version 1.13.0 (TeX Live 2021/Arch Linux)  (format=lualatex 2021.12.8)  8 JAN 2022 01:13
  restricted system commands enabled.
  file:line:error style messages enabled.
 **Main.tex
@@ -1557,7 +1557,7 @@ Package biblatex Info: ... file 'Main.bbl' found.
  (./Main.bbl)
 Package biblatex Info: Reference section=0 on input line 7.
 Package biblatex Info: Reference segment=0 on input line 7.
-<Data/Logo.png, id=183, 640.3925pt x 170.6375pt>
+<Data/Logo.png, id=167, 640.3925pt x 170.6375pt>
 File: Data/Logo.png Graphic file (type png)
 <use Data/Logo.png>
 Package luatex.def Info: Data/Logo.png  used on input line 39.
@@ -1789,56 +1789,56 @@ Chapter 6.
 (./Chapters/SGAM.tex [27
 
 ]
-<Data/components.png, id=580, 495.35063pt x 502.12593pt>
+<Data/components.png, id=560, 495.35063pt x 502.12593pt>
 File: Data/components.png Graphic file (type png)
 <use Data/components.png>
 Package luatex.def Info: Data/components.png  used on input line 65.
 (luatex.def)             Requested size: 270.30118pt x 273.99416pt.
-<Data/legends.png, id=581, 255.20343pt x 548.0475pt>
+<Data/legends.png, id=561, 255.20343pt x 548.0475pt>
 File: Data/legends.png Graphic file (type png)
 <use Data/legends.png>
 Package luatex.def Info: Data/legends.png  used on input line 67.
 (luatex.def)             Requested size: 125.19194pt x 268.85503pt.
  [28<./Data/components.png><./Data/legends.png>]
-<Data/business.png, id=592, 491.58656pt x 502.87875pt>
+<Data/business.png, id=571, 491.58656pt x 502.87875pt>
 File: Data/business.png Graphic file (type png)
 <use Data/business.png>
 Package luatex.def Info: Data/business.png  used on input line 76.
 (luatex.def)             Requested size: 227.62204pt x 232.85402pt.
-<Data/function.png, id=593, 489.32813pt x 490.83376pt>
+<Data/function.png, id=572, 489.32813pt x 490.83376pt>
 File: Data/function.png Graphic file (type png)
 <use Data/function.png>
 Package luatex.def Info: Data/function.png  used on input line 83.
 (luatex.def)             Requested size: 227.62204pt x 228.32521pt.
  [29<./Data/business.png><./Data/function.png>]
-<Data/i1.png, id=602, 517.935pt x 560.0925pt>
+<Data/i1.png, id=582, 517.935pt x 560.0925pt>
 File: Data/i1.png Graphic file (type png)
 <use Data/i1.png>
 Package luatex.def Info: Data/i1.png  used on input line 94.
 (luatex.def)             Requested size: 256.0748pt x 276.92615pt.
-<Data/c1.png, id=603, 497.60907pt x 524.71031pt>
+<Data/c1.png, id=583, 497.60907pt x 524.71031pt>
 File: Data/c1.png Graphic file (type png)
 <use Data/c1.png>
 Package luatex.def Info: Data/c1.png  used on input line 101.
 (luatex.def)             Requested size: 256.0748pt x 270.02466pt.
-<Data/i2.png, id=604, 494.59781pt x 502.12593pt>
+<Data/i2.png, id=584, 494.59781pt x 502.12593pt>
 File: Data/i2.png Graphic file (type png)
 <use Data/i2.png>
 Package luatex.def Info: Data/i2.png  used on input line 115.
 (luatex.def)             Requested size: 256.0748pt x 259.97304pt.
  [30<./Data/i1.png><./Data/c1.png>]
-<Data/c2.png, id=613, 490.83376pt x 499.8675pt>
+<Data/c2.png, id=593, 490.83376pt x 499.8675pt>
 File: Data/c2.png Graphic file (type png)
 <use Data/c2.png>
 Package luatex.def Info: Data/c2.png  used on input line 122.
 (luatex.def)             Requested size: 256.0748pt x 260.79448pt.
  [31<./Data/i2.png><./Data/c2.png>]
-<Data/i3.png, id=620, 509.65407pt x 502.87875pt>
+<Data/i3.png, id=600, 509.65407pt x 502.87875pt>
 File: Data/i3.png Graphic file (type png)
 <use Data/i3.png>
 Package luatex.def Info: Data/i3.png  used on input line 135.
 (luatex.def)             Requested size: 256.0748pt x 252.68182pt.
-<Data/c3.png, id=621, 496.85625pt x 500.62032pt>
+<Data/c3.png, id=601, 496.85625pt x 500.62032pt>
 File: Data/c3.png Graphic file (type png)
 <use Data/c3.png>
 Package luatex.def Info: Data/c3.png  used on input line 142.
@@ -1846,12 +1846,12 @@ Package luatex.def Info: Data/c3.png  used on input line 142.
  [32
 
 <./Data/i3.png><./Data/c3.png>]
-<Data/i4.png, id=628, 492.33937pt x 519.44063pt>
+<Data/i4.png, id=608, 492.33937pt x 519.44063pt>
 File: Data/i4.png Graphic file (type png)
 <use Data/i4.png>
 Package luatex.def Info: Data/i4.png  used on input line 156.
 (luatex.def)             Requested size: 270.30118pt x 285.1939pt.
-<Data/c4.png, id=629, 491.58656pt x 496.85625pt>
+<Data/c4.png, id=609, 491.58656pt x 496.85625pt>
 File: Data/c4.png Graphic file (type png)
 <use Data/c4.png>
 Package luatex.def Info: Data/c4.png  used on input line 163.
@@ -1881,26 +1881,26 @@ Overfull \hbox (16.07753pt too wide) in paragraph at lines 77--77
 
 [53] (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 1353046F7A7F4236300E53FEE22FC550;4684.
+(rerunfilecheck)             Checksum: 54BA288FD40DB5027003162EEACB1E80;3604.
 Package logreq Info: Writing requests to 'Main.run.xml'.
 
 \openout1 = Main.run.xml
 )
 
 Here is how much of LuaTeX's memory you used:
- 79694 strings out of 478531
- 1820015,3417909 words of node,token memory allocated
+ 79794 strings out of 478531
+ 1820112,3417909 words of node,token memory allocated
  1734 words of node memory still in use:
    30 hlist, 2 vlist, 14 rule, 1 dir, 2 glue, 4 kern, 1 glyph, 145 attribute, 88 glue_spec, 110 attribute_list, 2 write, 24 pdf_literal, 14 pdf_action, 24 pdf_colorstack nodes
-   avail lists: 1:24,2:29577,3:9206,4:32808,5:32814,6:151,7:48614,8:185,9:82373,10:58,11:3156
- 96053 multiletter control sequences out of 65536+600000
+   avail lists: 1:18,2:29578,3:9207,4:32808,5:32814,6:150,7:48614,8:185,9:82373,10:58,11:3156
+ 96156 multiletter control sequences out of 65536+600000
  80 fonts using 7147863 bytes
  112i,19n,117p,1734b,2474s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/opentype/public/lm/lmromancaps10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-italic.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmmono8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman7-bold.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmmono10-regular.otf>{/usr/share/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}</usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman8-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-regular.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman10-bold.otf></usr/share/texmf-dist/fonts/opentype/public/lm/lmroman12-bold.otf></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr5.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-Output written on Main.pdf (54 pages, 1167209 bytes).
+Output written on Main.pdf (54 pages, 1170287 bytes).
 
-PDF statistics: 1910 PDF objects out of 2073 (max. 8388607)
- 1741 compressed objects within 18 object streams
- 1163 named destinations out of 1200 (max. 131072)
- 536 words of extra memory for PDF output out of 10000 (max. 100000000)
+PDF statistics: 1894 PDF objects out of 2073 (max. 8388607)
+ 1725 compressed objects within 18 object streams
+ 1160 named destinations out of 1200 (max. 131072)
+ 504 words of extra memory for PDF output out of 10000 (max. 100000000)
 

@@ -55,14 +55,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.2}Mapping}{28}{section.6.2}%
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.1}PUC 01: Demand and generation forecasting}{30}{subsection.6.2.1}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.2}PUC 02: Grid Operation Scheduling}{31}{subsection.6.2.2}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.3}PUC 03: Grid ovservability and monitoring}{32}{subsection.6.2.3}%
-\defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.2.4}PUC 04: Fault detection and localization}{33}{subsection.6.2.4}%
-\defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{34}{chapter.7}%
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {8}Biographies}{35}{chapter.8}%

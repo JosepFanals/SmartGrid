@@ -1402,6 +1402,26 @@
       \field{title}{RESOLVD-Renewable penetration levered by efficient Low Voltage Distribution grids. Specifications and use case analysis.}
       \field{year}{2019}
     \endentry
+    \entry{repoo}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=b026a5a2060ecf477a264b1b9c66a96f}{%
+           family={{Fanals, J.}},
+           familyi={F\bibinitperiod}}}%
+      }
+      \strng{namehash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \strng{fullhash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \strng{bibnamehash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \strng{authorbibnamehash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \strng{authornamehash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \strng{authorfullhash}{b026a5a2060ecf477a264b1b9c66a96f}
+      \field{sortinit}{5}
+      \field{sortinithash}{20e9b4b0b173788c5dace24730f47d8c}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://github.com/JosepFanals/SmartGrid}}
+      \field{note}{Accessed: 2022-01-01}
+      \field{title}{SmartGrid. Github repository}
+    \endentry
   \enddatalist
 \endrefsection
 \endinput
