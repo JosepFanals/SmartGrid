@@ -1,0 +1,135 @@
+\usetheme[width=2cm]{PaloAlto}
+
+% ---general packages---
+\usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.16}
+\pgfplotsset{samples=2000}
+\usepackage{steinmetz}
+\usepackage{textcomp}
+\usepackage{ragged2e}
+\usepackage[RPvoltages]{circuitikz}
+\usetikzlibrary{arrows, shapes, decorations.markings, arrows.meta}
+\usepackage{import}
+\usepackage{xifthen}
+\usepackage{pdfpages}
+\usepackage{transparent}
+\usepackage{svg}
+\usepackage{bm}
+
+\newcommand{\incfig}[1]{%
+    \def\svgwidth{\columnwidth}
+    \import{./Data/}{#1.pdf_tex}
+}
+
+
+
+% ---colors---
+\usepackage{xcolor}
+\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+\definecolor{halfgray}{gray}{0.55}
+% \definecolor{somegray}{withe}{0.99}
+\definecolor{ipython_frame}{RGB}{207, 207, 207}
+\definecolor{ipython_bg}{RGB}{247, 247, 247}
+\definecolor{ipython_red}{RGB}{186, 33, 33}
+\definecolor{ipython_green}{RGB}{0, 128, 0}
+\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+\definecolor{ipython_purple}{RGB}{170, 34, 255}
+
+
+% ---apply colors---
+% \setbeamercolor{frametitle}{bg=halfgray}     %controls the color of the headline
+% \setbeamercolor{sidebar}{bg=halfgray}        %controls the color of the sidebar
+\setbeamercolor{logo}{bg=white}  %controls the color of the logo area
+
+\setbeamertemplate{caption}[numbered]
+
+\makeatletter
+\beamer@headheight=1.5\baselineskip     %controls the height of the headline, default is 2.5    
+\makeatother
+
+\logo{
+  % \includegraphics[height=0.7cm]{Images/logo-ETSEIB-UPC.png}
+  % \includegraphics[height=0.7cm]{Images/logo2.png}
+  \includegraphics[height=0.7cm]{Images/i01_logo3.png}
+}
+
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsection}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsubsection}
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}
+{\leavevmode\leftskip=2em\rlap{\hskip-2em$\quad$\inserttocsectionnumber.\inserttocsubsectionnumber}$\quad$\inserttocsubsection\par}
+
+\addtobeamertemplate{footline}
+{%
+   \usebeamercolor[fg]{author in sidebar}
+   \vskip-1cm\hskip10pt
+   \insertframenumber\,/\,\inserttotalframenumber\kern1em\vskip2pt%
+}
+
+\newlength\secinsidebarindent
+\setlength\secinsidebarindent{10pt}
+
+\setbeamertemplate{itemize item}{\scriptsize\raise1.25pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{itemize subsubitem}{\tiny\raise1.5pt\hbox{\donotcoloroutermaths$\blacktriangleright$}}
+\setbeamertemplate{enumerate item}{\insertenumlabel.}
+\setbeamertemplate{enumerate subitem}{\insertenumlabel.\insertsubenumlabel}
+\setbeamertemplate{enumerate subsubitem}{\insertenumlabel.\insertsubenumlabel.\insertsubsubenumlabel}
+\setbeamertemplate{enumerate mini template}{\insertenumlabel}
+
+
+
+%% ---before---
+%\useoutertheme{miniframes} % Alternatively: miniframes, infolines, split
+%\useinnertheme{circles}
+
+%%\definecolor{UBCblue}{rgb}{0.04706, 0.13725, 0.26667} % UBC Blue (primary)
+%\definecolor{UBCblue}{rgb}{0.04, 0.13, 0.35} % UBC Blue (primary)
+%\definecolor{gry}{rgb}{0.2, 0.2, 0.2} % gray
+%\definecolor{vlt}{rgb}{0.2, 0.15, 0.3} % violet
+%\definecolor{wht}{rgb}{0.9, 0.9, 0.9} % white
+
+%\usecolortheme[named=UBCblue]{structure}
+%\setbeamercolor{background canvas}{bg=gry}
+%\setbeamercolor{normal text}{fg=wht}\usebeamercolor*{normal text}
+%%\usecolortheme[named=Mahogany]{structure} % Sample dvipsnames color
+
+%\usepackage{listings}
+%\usepackage{tikz}
+%\usetikzlibrary{positioning,fit,arrows.meta,backgrounds,shapes,arrows}
+%\usepackage{pas-tableur}
+%% \usepackage[table]{xcolor}% http://ctan.org/pkg/xcolor
+%\usepackage{colortbl}
+
+%\usepackage{xcolor}
+%\definecolor{maroon}{cmyk}{0, 0.87, 0.68, 0.32}
+%\definecolor{halfgray}{gray}{0.55}
+%\definecolor{ipython_frame}{RGB}{207, 207, 207}
+%\definecolor{ipython_bg}{RGB}{247, 247, 247}
+%\definecolor{ipython_red}{RGB}{186, 33, 33}
+%\definecolor{ipython_green}{RGB}{0, 128, 0}
+%\definecolor{ipython_cyan}{RGB}{64, 128, 128}
+%\definecolor{ipython_purple}{RGB}{170, 34, 255}
+
+
+%%\lstset{basicstyle=\ttfamily, keywordstyle=\bfseries}
+%\lstset
+%{ %Formatting for code in appendix
+%    language=Python,
+%    basicstyle=\tiny,
+%	keywordstyle=\color{ipython_green}\bfseries,
+%    numbers=left,
+%    stepnumber=1,
+%    showstringspaces=false,
+%    tabsize=4,
+%    breaklines=true,
+%    breakatwhitespace=false,
+%	xleftmargin=12pt,
+%	%identifierstyle=\color{black}\ttfamily,
+%    commentstyle=\color{ipython_cyan}\ttfamily,
+%    stringstyle=\color{ipython_red}\ttfamily,
+%	rulecolor=\color{ipython_frame},
+%}
+
+

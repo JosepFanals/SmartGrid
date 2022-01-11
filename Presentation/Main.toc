@@ -1,0 +1,20 @@
+\beamer@sectionintoc {1}{Introduction}{3}{0}{1}
+\beamer@sectionintoc {2}{Phase 1}{4}{0}{2}
+\beamer@subsectionintoc {2}{1}{Results}{5}{0}{2}
+\beamer@subsectionintoc {2}{2}{Problems identification}{7}{0}{2}
+\beamer@subsectionintoc {2}{3}{Context}{8}{0}{2}
+\beamer@subsectionintoc {2}{4}{Aim of the project}{9}{0}{2}
+\beamer@sectionintoc {3}{Models}{10}{0}{3}
+\beamer@subsectionintoc {3}{1}{General scheme}{10}{0}{3}
+\beamer@subsectionintoc {3}{2}{MPPT}{11}{0}{3}
+\beamer@subsectionintoc {3}{3}{Machine-side converter}{12}{0}{3}
+\beamer@subsectionintoc {3}{4}{Grid-side converter}{13}{0}{3}
+\beamer@subsectionintoc {3}{5}{Supercapacitor control}{14}{0}{3}
+\beamer@sectionintoc {4}{Sizing}{16}{0}{4}
+\beamer@subsectionintoc {4}{1}{Calculations}{16}{0}{4}
+\beamer@subsectionintoc {4}{2}{Configuration}{17}{0}{4}
+\beamer@sectionintoc {5}{Results}{18}{0}{5}
+\beamer@subsectionintoc {5}{1}{Indicators}{18}{0}{5}
+\beamer@subsectionintoc {5}{2}{Example}{19}{0}{5}
+\beamer@sectionintoc {6}{Conclusions}{20}{0}{6}
+\beamer@sectionintoc {7}{Bibliography}{21}{0}{7}
