@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.8)  12 JAN 2022 01:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.8)  12 JAN 2022 01:18
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -1150,7 +1150,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (./Main.nav)
-<Images/i01_logo3.png, id=85, 501.875pt x 200.75pt>
+<Images/i01_logo3.png, id=81, 501.875pt x 200.75pt>
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
 Package pdftex.def Info: Images/i01_logo3.png  used on input line 19.
@@ -1184,14 +1184,11 @@ Package pdftex.def Info: Images/i01_logo3.png  used on input line 28.
  [3
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 41
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
 Package pdftex.def Info: Images/i01_logo3.png  used on input line 41.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[4
+ [4
 
 ]
 Overfull \vbox (8.77309pt too high) detected at line 208
@@ -1323,14 +1320,11 @@ Package pdftex.def Info: Images/i01_logo3.png  used on input line 293.
  [8
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 306
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
 Package pdftex.def Info: Images/i01_logo3.png  used on input line 306.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[9
+ [9
 
 ]
 Overfull \vbox (8.77309pt too high) detected at line 504
@@ -1344,56 +1338,53 @@ Package pdftex.def Info: Images/i01_logo3.png  used on input line 504.
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 546.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 546.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 546.
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 547.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 546.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [11
 
 ]
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 577.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 576.
 LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 577.
-LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 577.
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 576.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 576.
  (/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
 File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
 )
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 577.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 576.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [12
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 605.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 604.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [13
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 615
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 615.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 614.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[14
+ [14
 
 ]
-Overfull \vbox (8.77309pt too high) detected at line 845
+Overfull \vbox (8.77309pt too high) detected at line 844
  []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 845.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 844.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
 [15
 
@@ -1415,7 +1406,7 @@ PGFPlots: reading {Data/phase3/Ppv.csv}
 NOTE: coordinate (24,) has been dropped because of a coordinate filter. (see also unbounded coords=jump). 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 867.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 866.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
 [16
 
@@ -1436,41 +1427,38 @@ PGFPlots: reading {Data/phase3/Pwind.csv}
 Missing character: There is no ; in font nullfont!
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 890.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 889.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [17
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 914.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 913.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [18
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 939.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 938.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [19
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 952
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 952.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 951.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[20
+ [20
 
 ]
-Overfull \vbox (8.77309pt too high) detected at line 1193
+Overfull \vbox (8.77309pt too high) detected at line 1192
  []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1193.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1192.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
 [21
 
@@ -1489,7 +1477,7 @@ Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/phase4/horiz.csv}
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1210.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1209.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [22
 
@@ -1502,108 +1490,115 @@ Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/phase4/dism.csv}
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1226.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1225.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [23
 
 ]
-Overfull \vbox (3.30711pt too high) detected at line 1268
+Overfull \vbox (3.30711pt too high) detected at line 1267
  []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1268.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1267.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
 [24
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1294.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1293.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [25
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 1306
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1306.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1305.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[26
+ [26
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1357.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1356.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [27
 
 ]
-<Data/actors.png, id=1436, 71.51718pt x 122.70844pt>
+<Data/actors.png, id=1399, 71.51718pt x 122.70844pt>
 File: Data/actors.png Graphic file (type png)
 <use Data/actors.png>
-Package pdftex.def Info: Data/actors.png  used on input line 1388.
+Package pdftex.def Info: Data/actors.png  used on input line 1387.
 (pdftex.def)             Requested size: 49.75066pt x 85.35826pt.
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1388.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1387.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [28
 
  <./Data/actors.png (PNG copy)>]
-<Data/business.png, id=1480, 491.58656pt x 502.87875pt>
+<Data/business.png, id=1443, 491.58656pt x 502.87875pt>
 File: Data/business.png Graphic file (type png)
 <use Data/business.png>
-Package pdftex.def Info: Data/business.png  used on input line 1401.
+Package pdftex.def Info: Data/business.png  used on input line 1400.
 (pdftex.def)             Requested size: 170.71652pt x 174.63667pt.
-<Data/function.png, id=1481, 489.32813pt x 490.83376pt>
+<Data/function.png, id=1444, 489.32813pt x 490.83376pt>
 File: Data/function.png Graphic file (type png)
 <use Data/function.png>
-Package pdftex.def Info: Data/function.png  used on input line 1401.
+Package pdftex.def Info: Data/function.png  used on input line 1400.
 (pdftex.def)             Requested size: 170.71652pt x 171.24016pt.
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1401.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1400.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [29
 
  <./Data/business.png (PNG copy)> <./Data/function.png (PNG copy)>] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 1404
- []
-
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1404.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1403.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[30
+ [30
 
 ]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1414.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1413.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [31
 
 ] (./Main.toc)
-Overfull \vbox (10.38782pt too high) detected at line 1416
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1415.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [32
+
+]
+<Data/git.png, id=1653, 621.82312pt x 432.11438pt>
+File: Data/git.png Graphic file (type png)
+<use Data/git.png>
+Package pdftex.def Info: Data/git.png  used on input line 1427.
+(pdftex.def)             Requested size: 227.62204pt x 158.17868pt.
+
+Overfull \vbox (9.58586pt too high) detected at line 1427
  []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1416.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1427.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
-[32
+[33
 
-]
+ <./Data/git.png (PNG copy)>]
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1426.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1439.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [33
+ [34
 
-]) [34
+]) [35
 
 ]
 \tf@nav=\write6
@@ -1621,21 +1616,21 @@ LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
 
  (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 2C9A9381ADF9664479A79B4079B5B7DB;1942.
+(rerunfilecheck)             Checksum: 235E883974E46711EADF65DE6544BC26;1780.
  ) 
 Here is how much of TeX's memory you used:
- 62039 strings out of 478994
- 1609536 string characters out of 5864751
- 2443486 words of memory out of 5000000
- 78473 multiletter control sequences out of 15000+600000
+ 62129 strings out of 478994
+ 1612056 string characters out of 5864751
+ 2445167 words of memory out of 5000000
+ 78561 multiletter control sequences out of 15000+600000
  424943 words of font info for 94 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,20n,132p,726b,2265s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb>
-Output written on Main.pdf (34 pages, 430943 bytes).
+Output written on Main.pdf (35 pages, 477950 bytes).
 PDF statistics:
  1853 PDF objects out of 2073 (max. 8388607)
- 1760 compressed objects within 18 object streams
- 107 named destinations out of 1000 (max. 500000)
- 273 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1758 compressed objects within 18 object streams
+ 108 named destinations out of 1000 (max. 500000)
+ 270 words of extra memory for PDF output out of 10000 (max. 10000000)
 
