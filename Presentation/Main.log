@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.8)  11 JAN 2022 23:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2021/Arch Linux) (preloaded format=pdflatex 2021.12.8)  12 JAN 2022 00:58
 entering extended mode
  \write18 enabled.
  file:line:error style messages enabled.
@@ -913,6 +913,53 @@ LaTeX Font Info:    Redeclaring math alphabet \mathbf on input line 141.
 LaTeX Info: Redefining \bm on input line 209.
 )
 \secinsidebarindent=\skip85
+) (/usr/share/texmf-dist/tex/latex/algorithm2e/algorithm2e.sty
+Package: algorithm2e 2017/07/18 v5.2 algorithms environments
+\c@AlgoLine=\count350
+\algocf@hangindent=\skip86
+ (/usr/share/texmf-dist/tex/latex/ifoddpage/ifoddpage.sty
+Package: ifoddpage 2016/04/23 v1.1 Conditionals for odd/even page detection
+\c@checkoddpage=\count351
+) (/usr/share/texmf-dist/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+) (/usr/share/texmf-dist/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\skiptotal=\skip87
+\skiplinenumber=\skip88
+\skiprule=\skip89
+\skiphlne=\skip90
+\skiptext=\skip91
+\skiplength=\skip92
+\algomargin=\skip93
+\skipalgocfslide=\skip94
+\algowidth=\dimen352
+\inoutsize=\dimen353
+\inoutindent=\dimen354
+\interspacetitleruled=\dimen355
+\interspacealgoruled=\dimen356
+\interspacetitleboxruled=\dimen357
+\algocf@ruledwidth=\skip95
+\algocf@inoutbox=\box102
+\algocf@inputbox=\box103
+\AlCapSkip=\skip96
+\AlCapHSkip=\skip97
+\algoskipindent=\skip98
+\algocf@nlbox=\box104
+\algocf@hangingbox=\box105
+\algocf@untilbox=\box106
+\algocf@skipuntil=\skip99
+\algocf@capbox=\box107
+\algocf@lcaptionbox=\skip100
+\algoheightruledefault=\skip101
+\algoheightrule=\skip102
+\algotitleheightruledefault=\skip103
+\algotitleheightrule=\skip104
+\c@algocfline=\count352
+\c@algocfproc=\count353
+\c@algocf=\count354
+\algocf@algoframe=\box108
+\algocf@algobox=\box109
 )
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -936,8 +983,8 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 (/usr/share/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2021-03-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count350
-\l__pdf_internal_box=\box102
+\l__color_backend_stack_int=\count355
+\l__pdf_internal_box=\box110
 ) (./Main.aux)
 \openout1 = `Main.aux'.
 
@@ -996,16 +1043,16 @@ LaTeX Font Info:    ... okay on input line 19.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count351
-\scratchdimen=\dimen352
-\scratchbox=\box103
-\nofMPsegments=\count352
-\nofMParguments=\count353
+\scratchcounter=\count356
+\scratchdimen=\dimen358
+\scratchbox=\box111
+\nofMPsegments=\count357
+\nofMParguments=\count358
 \everyMPshowfont=\toks53
-\MPscratchCnt=\count354
-\MPscratchDim=\dimen353
-\MPnumerator=\count355
-\makeMPintoPDFobject=\count356
+\MPscratchCnt=\count359
+\MPscratchDim=\dimen359
+\MPnumerator=\count360
+\makeMPintoPDFobject=\count361
 \everyMPtoPDFconversion=\toks54
 ) (/usr/share/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1021,7 +1068,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ) (/usr/share/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count357
+\c@section@level=\count362
 )
 LaTeX Info: Redefining \ref on input line 19.
 LaTeX Info: Redefining \pageref on input line 19.
@@ -1103,7 +1150,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 )
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ) (./Main.nav)
-<Images/i01_logo3.png, id=93, 501.875pt x 200.75pt>
+<Images/i01_logo3.png, id=141, 501.875pt x 200.75pt>
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
 Package pdftex.def Info: Images/i01_logo3.png  used on input line 19.
@@ -1123,7 +1170,11 @@ LaTeX Font Info:    Trying to load font information for OT1+mathkerncmss on inpu
  (/usr/share/texmf-dist/tex/latex/sansmathaccent/ot1mathkerncmss.fd
 File: ot1mathkerncmss.fd 2020/01/31 Fontinst v1.933 font definitions for OT1/mathkerncmss.
 ))
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (117.45024pt too high) detected at line 30
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
@@ -1132,7 +1183,7 @@ Package pdftex.def Info: Images/i01_logo3.png  used on input line 30.
  [2
 
  <./Images/i01_logo3.png>] (./Frames2.tex
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
@@ -1140,93 +1191,29 @@ Package pdftex.def Info: Images/i01_logo3.png  used on input line 28.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [3
 
-]
-Overfull \vbox (8.77309pt too high) detected at line 197
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 41
  []
 
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 197.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 41.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [4
 
 ]
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no . in font nullfont!
-Missing character: There is no 0 in font nullfont!
-Missing character: There is no 1 in font nullfont!
-Missing character: There is no p in font nullfont!
-Missing character: There is no t in font nullfont!
-PGFPlots: reading {Data/phase1/ph1_vpu.csv}
-Missing character: There is no ; in font nullfont!
+Overfull \vbox (8.77309pt too high) detected at line 208
+ []
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 224.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 208.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [5
 
@@ -1236,6 +1223,83 @@ Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase1/ph1_vpu.csv}
+Missing character: There is no ; in font nullfont!
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 235.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [6
+
+]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/phase1/ph1_line.csv}
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -1263,24 +1327,328 @@ Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/phase1/ph1_line.csv}
 Missing character: There is no ; in font nullfont!
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 245.
-(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [6
-
-]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
-
-File: Images/i01_logo3.png Graphic file (type png)
-<use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 282.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 256.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
  [7
 
 ]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 293.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [8
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 306
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 306.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [9
+
+]
+Overfull \vbox (8.77309pt too high) detected at line 504
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 504.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [10
+
+]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 547.
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 547.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [11
+
+]
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <9> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 577.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <5> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 577.
+LaTeX Font Info:    Trying to load font information for TS1+cmss on input line 577.
+ (/usr/share/texmf-dist/tex/latex/base/ts1cmss.fd
+File: ts1cmss.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 577.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [12
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 605.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [13
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 615
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 615.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [14
+
+]
+Overfull \vbox (8.77309pt too high) detected at line 845
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 845.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [15
+
+]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase3/G.csv}
+
+NOTE: coordinate (24,) has been dropped because of a coordinate filter. (see also unbounded coords=jump). 
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase3/Ppv.csv}
+NOTE: coordinate (24,) has been dropped because of a coordinate filter. (see also unbounded coords=jump). 
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 867.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [16
+
+]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase3/vw.csv}
+Missing character: There is no ; in font nullfont!
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase3/Pwind.csv}
+Missing character: There is no ; in font nullfont!
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 890.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [17
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 914.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [18
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 939.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [19
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 952
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 952.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [20
+
+]
+Overfull \vbox (8.77309pt too high) detected at line 1193
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1193.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [21
+
+]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase4/battery.csv}
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase4/horiz.csv}
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1210.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [22
+
+]
+Missing character: There is no . in font nullfont!
+Missing character: There is no 0 in font nullfont!
+Missing character: There is no 1 in font nullfont!
+Missing character: There is no p in font nullfont!
+Missing character: There is no t in font nullfont!
+PGFPlots: reading {Data/phase4/dism.csv}
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1226.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [23
+
+]
+Overfull \vbox (3.30711pt too high) detected at line 1268
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1268.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [24
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1294.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [25
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 1306
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1306.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [26
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1357.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [27
+
+]
+<Data/actors.png, id=1958, 71.51718pt x 122.70844pt>
+File: Data/actors.png Graphic file (type png)
+<use Data/actors.png>
+Package pdftex.def Info: Data/actors.png  used on input line 1388.
+(pdftex.def)             Requested size: 49.75066pt x 85.35826pt.
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1388.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [28
+
+ <./Data/actors.png (PNG copy)>]
+<Data/business.png, id=2017, 491.58656pt x 502.87875pt>
+File: Data/business.png Graphic file (type png)
+<use Data/business.png>
+Package pdftex.def Info: Data/business.png  used on input line 1405.
+(pdftex.def)             Requested size: 170.71652pt x 174.63667pt.
+<Data/function.png, id=2018, 489.32813pt x 490.83376pt>
+File: Data/function.png Graphic file (type png)
+<use Data/function.png>
+Package pdftex.def Info: Data/function.png  used on input line 1405.
+(pdftex.def)             Requested size: 170.71652pt x 171.24016pt.
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1405.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [29
+
+ <./Data/business.png (PNG copy)> <./Data/function.png (PNG copy)>]
 Missing character: There is no ] in font nullfont!
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
@@ -1289,46 +1657,39 @@ Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/vw3.csv}
 
-Overfull \vbox (0.19763pt too high) detected at line 311
+Overfull \vbox (0.19763pt too high) detected at line 1436
  []
 
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 311.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1436.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [8
+ [30
 
 ]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 330.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1455.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [9
+ [31
 
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ] in font nullfont!
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 1459
+ []
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 502.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1459.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [10
+ [32
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1342,43 +1703,13 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 564.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1627.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [11
-
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ] in font nullfont!
-Missing character: There is no [ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ] in font nullfont!
-
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
-
-File: Images/i01_logo3.png Graphic file (type png)
-<use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 690.
-(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [12
+ [33
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1392,34 +1723,13 @@ Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ] in font nullfont!
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 745.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1689.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [13
-
-]
-Missing character: There is no [ in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no e in font nullfont!
-Missing character: There is no r in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no a in font nullfont!
-Missing character: There is no n in font nullfont!
-Missing character: There is no ] in font nullfont!
-\absvshift=\dimen354
-
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
-
-File: Images/i01_logo3.png Graphic file (type png)
-<use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 805.
-(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [14
+ [34
 
 ]
 Missing character: There is no [ in font nullfont!
@@ -1442,62 +1752,150 @@ Missing character: There is no c in font nullfont!
 Missing character: There is no a in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no ] in font nullfont!
-Package pgfplots info on input line 916: Using 'lua backend=false' for axis: xmode=log unsupported (yet).
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1815.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [35
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ] in font nullfont!
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1870.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [36
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ] in font nullfont!
+\absvshift=\dimen360
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 1930.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [37
+
+]
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ] in font nullfont!
+Missing character: There is no [ in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no ] in font nullfont!
+Package pgfplots info on input line 2041: Using 'lua backend=false' for axis: xmode=log unsupported (yet).
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/Calculations/mag_low.csv}
-Package pgfplots info on input line 916: Using 'lua backend=false' for axis: xmode=log unsupported (yet).
+Package pgfplots info on input line 2041: Using 'lua backend=false' for axis: xmode=log unsupported (yet).
 Missing character: There is no . in font nullfont!
 Missing character: There is no 0 in font nullfont!
 Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/Calculations/mag_high.csv}
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 2041.
+LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <7> not available
+(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 2041.
 
-Overfull \vbox (18.11507pt too high) detected at line 916
+Overfull \vbox (18.11507pt too high) detected at line 2041
  []
 
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 916.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2041.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [15
+ [38
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 2046
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2046.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [39
 
 ] (./Data/supercap3.pdf_tex
-<./Data//supercap3.pdf, id=845, page=1, 576.65915pt x 131.37067pt>
+<./Data//supercap3.pdf, id=2734, page=1, 576.65915pt x 131.37067pt>
 File: ./Data//supercap3.pdf Graphic file (type pdf)
 <use ./Data//supercap3.pdf, page 1>
 Package pdftex.def Info: ./Data//supercap3.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 369.88585pt x 84.26335pt.
-<./Data//supercap3.pdf, id=846, page=2, 576.65915pt x 131.37067pt>
+<./Data//supercap3.pdf, id=2735, page=2, 576.65915pt x 131.37067pt>
 File: ./Data//supercap3.pdf Graphic file (type pdf)
 <use ./Data//supercap3.pdf, page 2>
 Package pdftex.def Info: ./Data//supercap3.pdf , page2 used on input line 64.
 (pdftex.def)             Requested size: 369.88585pt x 84.26335pt.
-<./Data//supercap3.pdf, id=847, page=3, 576.65915pt x 131.37067pt>
+<./Data//supercap3.pdf, id=2736, page=3, 576.65915pt x 131.37067pt>
 File: ./Data//supercap3.pdf Graphic file (type pdf)
 <use ./Data//supercap3.pdf, page 3>
 Package pdftex.def Info: ./Data//supercap3.pdf , page3 used on input line 67.
 (pdftex.def)             Requested size: 369.88585pt x 84.26335pt.
-<./Data//supercap3.pdf, id=848, page=4, 576.65915pt x 131.37067pt>
+<./Data//supercap3.pdf, id=2737, page=4, 576.65915pt x 131.37067pt>
 File: ./Data//supercap3.pdf Graphic file (type pdf)
 <use ./Data//supercap3.pdf, page 4>
 Package pdftex.def Info: ./Data//supercap3.pdf , page4 used on input line 70.
 (pdftex.def)             Requested size: 369.88585pt x 84.26335pt.
 )
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 938.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2063.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [16
+ [40
 
  <./Data//supercap3.pdf> <./Data//supercap3.pdf
 
@@ -1509,34 +1907,34 @@ pdfTeX warning: pdflatex (file ./Data//supercap3.pdf): PDF inclusion: multiple p
 
 pdfTeX warning: pdflatex (file ./Data//supercap3.pdf): PDF inclusion: multiple pdfs with page group included in a single page
 >] (./Data/config_caps2.pdf_tex
-<./Data//config_caps2.pdf, id=921, page=1, 576.65915pt x 212.94727pt>
+<./Data//config_caps2.pdf, id=2822, page=1, 576.65915pt x 212.94727pt>
 File: ./Data//config_caps2.pdf Graphic file (type pdf)
 <use ./Data//config_caps2.pdf, page 1>
 Package pdftex.def Info: ./Data//config_caps2.pdf , page1 used on input line 56.
 (pdftex.def)             Requested size: 369.88585pt x 136.58795pt.
-<./Data//config_caps2.pdf, id=922, page=2, 576.65915pt x 212.94727pt>
+<./Data//config_caps2.pdf, id=2823, page=2, 576.65915pt x 212.94727pt>
 File: ./Data//config_caps2.pdf Graphic file (type pdf)
 <use ./Data//config_caps2.pdf, page 2>
 Package pdftex.def Info: ./Data//config_caps2.pdf , page2 used on input line 60.
 (pdftex.def)             Requested size: 369.88585pt x 136.58795pt.
-<./Data//config_caps2.pdf, id=923, page=3, 576.65915pt x 212.94727pt>
+<./Data//config_caps2.pdf, id=2824, page=3, 576.65915pt x 212.94727pt>
 File: ./Data//config_caps2.pdf Graphic file (type pdf)
 <use ./Data//config_caps2.pdf, page 3>
 Package pdftex.def Info: ./Data//config_caps2.pdf , page3 used on input line 62.
 (pdftex.def)             Requested size: 369.88585pt x 136.58795pt.
-<./Data//config_caps2.pdf, id=924, page=4, 576.65915pt x 212.94727pt>
+<./Data//config_caps2.pdf, id=2825, page=4, 576.65915pt x 212.94727pt>
 File: ./Data//config_caps2.pdf Graphic file (type pdf)
 <use ./Data//config_caps2.pdf, page 4>
 Package pdftex.def Info: ./Data//config_caps2.pdf , page4 used on input line 65.
 (pdftex.def)             Requested size: 369.88585pt x 136.58795pt.
 )
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 955.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2080.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [17
+ [41
 
  <./Data//config_caps2.pdf> <./Data//config_caps2.pdf
 
@@ -1547,14 +1945,27 @@ pdfTeX warning: pdflatex (file ./Data//config_caps2.pdf): PDF inclusion: multipl
 > <./Data//config_caps2.pdf
 
 pdfTeX warning: pdflatex (file ./Data//config_caps2.pdf): PDF inclusion: multiple pdfs with page group included in a single page
->]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+>] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 2084
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 982.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2084.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [18
+ [42
+
+]
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2107.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [43
 
 ]
 Missing character: There is no ] in font nullfont!
@@ -1570,49 +1981,69 @@ Missing character: There is no 1 in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no t in font nullfont!
 PGFPlots: reading {Data/Pgrid.csv}
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <10.95> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 1014.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <8> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 1014.
-LaTeX Font Info:    Font shape `OT1/cmss/b/n' in size <6> not available
-(Font)              Font shape `OT1/cmss/bx/n' tried instead on input line 1014.
 
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1014.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2139.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [19
+ [44
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 2143
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2143.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [45
 
 ]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1025.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2150.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [20
+ [46
+
+] (./Main.toc)
+Overfull \vbox (202.91707pt too high) detected at line 2154
+ []
+
+
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
+
+File: Images/i01_logo3.png Graphic file (type png)
+<use Images/i01_logo3.png>
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2154.
+(pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
+ [47
 
 ]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1095.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2220.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [21
+ [48
 
 ]
-Overfull \vbox (5.49236pt too high) has occurred while \output is active []
+Overfull \vbox (114.82579pt too high) has occurred while \output is active []
 
 File: Images/i01_logo3.png Graphic file (type png)
 <use Images/i01_logo3.png>
-Package pdftex.def Info: Images/i01_logo3.png  used on input line 1135.
+Package pdftex.def Info: Images/i01_logo3.png  used on input line 2260.
 (pdftex.def)             Requested size: 49.79222pt x 19.91684pt.
- [22
+ [49
 
-]) [23
+]) [50
 
 ]
 \tf@nav=\write6
@@ -1630,21 +2061,21 @@ LaTeX3 Info: Redefining command \BeforeClosingMainAux with sig. 'm' on line
 
  (./Main.aux)
 Package rerunfilecheck Info: File `Main.out' has not changed.
-(rerunfilecheck)             Checksum: 3D5D3F355647686C1BA95B7EA83FAC72;2284.
+(rerunfilecheck)             Checksum: A03E5B6DB6ACEEB7EC5898B135E11A26;3616.
  ) 
 Here is how much of TeX's memory you used:
- 56077 strings out of 478994
- 1433433 string characters out of 5864751
- 3052976 words of memory out of 5000000
- 72560 multiletter control sequences out of 15000+600000
- 430852 words of font info for 108 fonts, out of 8000000 for 9000
+ 64623 strings out of 478994
+ 1679534 string characters out of 5864751
+ 3291563 words of memory out of 5000000
+ 80967 multiletter control sequences out of 15000+600000
+ 432601 words of font info for 114 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  131i,20n,132p,726b,2374s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb>
-Output written on Main.pdf (23 pages, 609408 bytes).
+{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{/usr/share/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmib10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmss9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssbx10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmssi9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy9.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/symbols/msam7.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfso0800.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfso1000.pfb></usr/share/texmf-dist/fonts/type1/public/cm-super/sfsx0900.pfb>
+Output written on Main.pdf (50 pages, 894023 bytes).
 PDF statistics:
- 1332 PDF objects out of 1440 (max. 8388607)
- 1239 compressed objects within 13 object streams
- 82 named destinations out of 1000 (max. 500000)
- 314 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3607 PDF objects out of 4296 (max. 8388607)
+ 3459 compressed objects within 35 object streams
+ 164 named destinations out of 1000 (max. 500000)
+ 425 words of extra memory for PDF output out of 10000 (max. 10000000)
 
